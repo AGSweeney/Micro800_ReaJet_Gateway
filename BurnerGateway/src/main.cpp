@@ -24,6 +24,15 @@
 * www.netburner.com
 ******************************************************************************/
 
+/*
+ * CIP Data Gateway
+ *
+ * Copyright (c) 2026 Adam G. Sweeney
+ *
+ * SPDX-License-Identifier: MIT
+ * See the LICENSE file in the repository root for full license text.
+ */
+
 #include <init.h>
 #include <nbrtos.h>
 #include <netinterface.h>

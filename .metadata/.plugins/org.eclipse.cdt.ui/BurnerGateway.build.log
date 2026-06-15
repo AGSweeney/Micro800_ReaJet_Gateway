@@ -1,9 +1,9 @@
-12:06:24 **** Build of configuration Release for project BurnerGateway ****
+12:27:24 **** Build of configuration Release for project BurnerGateway ****
 make -j12 loadapp LOAD_TARGET=NBIMAGE NBIMAGE=BurnerGateway.bin DEVIP=192.168.131.218 
 Sending BurnerGateway.bin to 192.168.131.218
 <HEAD><TITLE>Program Successful</TITLE></HEAD>
-2026-06-15 12:06:25 URL:http://192.168.131.218:20034/appupdate.htm [87] -> "-" [1]
+2026-06-15 12:27:25 URL:http://192.168.131.218:20034/appupdate.htm [87] -> "-" [1]
 <BODY><H1>Program success!</H1></BODY>
 
-12:06:25 Build Finished. 0 errors, 0 warnings. (took 1s.43ms)
+12:27:25 Build Finished. 0 errors, 0 warnings. (took 1s.49ms)
 

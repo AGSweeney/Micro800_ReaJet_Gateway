@@ -1,3 +1,12 @@
+/*
+ * CIP Data Gateway
+ *
+ * Copyright (c) 2026 Adam G. Sweeney
+ *
+ * SPDX-License-Identifier: MIT
+ * See the LICENSE file in the repository root for full license text.
+ */
+
 #ifdef BURNERGATEWAY_MAIN_TU
 static void WriteLe16(uint8_t *p, uint16_t v)
 {
