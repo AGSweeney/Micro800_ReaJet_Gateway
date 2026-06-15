@@ -1,0 +1,311 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>CIP Data Gateway - REAJet Status</title>
+</head>
+<body>
+<div class="app">
+  <div class="header-card">
+    <div class="brand">
+      <div>
+        <a href="/" class="nav-link"><- Back to Home</a>
+        <h1>REAJet Status Probe</h1>
+        <p class="subtitle">Manual diagnostics</p>
+      </div>
+      <div class="header-actions">
+        <button class="button help-btn" type="button" onclick="openPageHelp()">Help</button>
+        <div class="logo"></div>
+      </div>
+    </div>
+    <p class="lead">Probe a REAJet directly without saving it as the configured gateway destination.</p>
+  </div>
+
+  <div class="card">
+    <h2>Probe Target</h2>
+    <div class="row">
+      <label for="ip">REAJet IP</label>
+      <input id="ip" type="text" placeholder="192.168.0.124" value="192.168.0.124">
+    </div>
+    <div class="row">
+      <label for="plcPort">REA-PLC Port</label>
+      <input id="plcPort" type="number" min="1" max="65535" value="22170">
+    </div>
+    <div class="row">
+      <label for="piPort">REA-PI Port</label>
+      <input id="piPort" type="number" min="1" max="65535" value="22171">
+    </div>
+    <div class="row">
+      <label for="version">REA-PI Version</label>
+      <input id="version" type="text" value="2.0">
+    </div>
+    <div class="row">
+      <label for="reaPi">Include REA-PI</label>
+      <select id="reaPi">
+        <option value="0" selected>No, REA-PLC only</option>
+        <option value="1">Yes</option>
+      </select>
+    </div>
+    <div class="actions">
+      <button class="button primary" type="button" onclick="probeStatus()">Probe Status</button>
+      <button class="button" type="button" onclick="loadConfiguredReajet()">Use Configured REAJet</button>
+    </div>
+    <p id="probeStatus" class="hint"></p>
+  </div>
+
+  <div class="card" id="summaryCard" style="display:none;">
+    <h2>Status Summary</h2>
+    <div id="summaryPills" class="selected-plc-body"></div>
+    <table class="grid">
+      <tbody id="summaryRows"></tbody>
+    </table>
+  </div>
+
+  <div class="card" id="reaPlcCard" style="display:none;">
+    <h2>REA-PLC GETSTATUS</h2>
+    <table class="grid">
+      <tbody id="reaPlcRows"></tbody>
+    </table>
+    <div class="activity-item">
+      <span class="activity-label">Raw response</span>
+      <span id="rawReaPlc" class="activity-value is-empty" data-placeholder="No response"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">Decoded</span>
+      <span id="decodedReaPlc" class="activity-value is-empty" data-placeholder="No decoded response"></span>
+    </div>
+  </div>
+
+  <div class="card" id="reaPiCard" style="display:none;">
+    <h2>REA-PI XML</h2>
+    <table class="grid">
+      <tbody id="reaPiRows"></tbody>
+    </table>
+    <div class="activity-item">
+      <span class="activity-label">Protocol Line</span>
+      <span id="protocolLine" class="activity-value is-empty" data-placeholder="No protocol line"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">Welcome XML</span>
+      <span id="welcomeXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">VersionSelect XML Sent</span>
+      <span id="versionSelectXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">VersionSelect Frame Sent</span>
+      <span id="versionSelectFrame" class="activity-value is-empty" data-placeholder="No frame"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">VersionSelect Raw RX</span>
+      <span id="versionSelectRxRaw" class="activity-value is-empty" data-placeholder="No raw RX"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">VersionSelection XML</span>
+      <span id="versionXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">Last Command XML Sent</span>
+      <span id="lastCommandXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">GETDEVICEINFO XML</span>
+      <span id="deviceInfoXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">INSTALLATIONACTIVITY XML</span>
+      <span id="installationActivityXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">GETPRODUCTIONDATA XML</span>
+      <span id="productionDataXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">GETNETWORKCONFIG XML</span>
+      <span id="networkConfigXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">GETPRODUCTSENSORLEVEL XML</span>
+      <span id="sensorLevelsXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">GETIOINPUTLEVEL XML</span>
+      <span id="ioInputXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">GETIOOUTPUTLEVEL XML</span>
+      <span id="ioOutputXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+    <div class="activity-item">
+      <span class="activity-label">GETLABELCONTENT XML</span>
+      <span id="labelContentXml" class="activity-value is-empty" data-placeholder="No XML"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+function setStatus(msg, isError) {
+  var el = document.getElementById("probeStatus");
+  el.textContent = msg;
+  el.style.color = isError ? "#b00020" : "#2e7d32";
+}
+
+function boolText(v) {
+  return v ? "Yes" : "No";
+}
+
+function valueText(v, fallback) {
+  if (v === null || typeof v === "undefined" || v === "") {
+    return fallback || "";
+  }
+  return String(v);
+}
+
+function setText(id, text) {
+  var el = document.getElementById(id);
+  el.textContent = text || "";
+  if (text) {
+    el.classList.remove("is-empty");
+  } else {
+    el.classList.add("is-empty");
+  }
+}
+
+function rowHtml(label, value) {
+  return "<tr><th>" + label + "</th><td>" + valueText(value, "-") + "</td></tr>";
+}
+
+function pillsHtml(items) {
+  var html = "";
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i];
+    html += "<span class='pill " + (it.cls || "") + "'><b>" + it.label + "</b> " + it.value + "</span>";
+  }
+  return html;
+}
+
+function renderStatus(data) {
+  document.getElementById("summaryCard").style.display = "block";
+  document.getElementById("reaPlcCard").style.display = "block";
+  document.getElementById("reaPiCard").style.display = data.reaPiEnabled ? "block" : "none";
+
+  var reaPlc = data.reaPlc || {};
+  var reaPi = data.reaPi || {};
+  document.getElementById("summaryPills").innerHTML = pillsHtml([
+    { label: "Probe", value: data.ok ? "OK" : "Partial/Failed", cls: data.ok ? "good" : "bad" },
+    { label: "REA-PLC", value: reaPlc.ok ? "OK" : "Failed", cls: reaPlc.ok ? "good" : "bad" },
+    { label: "REA-PI", value: data.reaPiEnabled ? (reaPi.versionSelected ? "OK" : (reaPi.connected ? "TCP Only" : "Failed")) : "Skipped", cls: data.reaPiEnabled ? (reaPi.versionSelected ? "good" : "bad") : "warn" },
+    { label: "IP", value: data.ip || "" }
+  ]);
+
+  document.getElementById("summaryRows").innerHTML =
+    rowHtml("Job Assigned", boolText(reaPlc.jobAssigned)) +
+    rowHtml("Job Released", boolText(reaPlc.jobReleased)) +
+    rowHtml("Printer Active", boolText(reaPlc.printerActive)) +
+    rowHtml("Job State Raw", valueText(reaPlc.jobStateRaw)) +
+    rowHtml("Clock Speed", data.clockSpeedValid ? (Number(data.clockSpeedMpm).toFixed(3) + " m/min") : "-") +
+    rowHtml("Clock Speed 2", data.clockSpeed2Valid ? (Number(data.clockSpeed2Mpm).toFixed(3) + " m/min") : "-") +
+    rowHtml("Trigger Levels", reaPlc.triggerLevelValid ? (reaPlc.triggerLevels || []).join(", ") : "-") +
+    rowHtml("Job File", data.jobSetFileNameValid ? data.jobSetFileName : "-") +
+    rowHtml("Print Speed Error", data.printSpeedErrorValid ? data.printSpeedErrorCode : "-");
+
+  document.getElementById("reaPlcRows").innerHTML =
+    rowHtml("Port", data.plcPort) +
+    rowHtml("OK", boolText(reaPlc.ok)) +
+    rowHtml("Device Status", reaPlc.deviceStatus) +
+    rowHtml("Job Status", reaPlc.jobStatus) +
+    rowHtml("Status Field", reaPlc.statusField) +
+    rowHtml("Status Words", (reaPlc.statusWords || []).join(", "));
+  setText("rawReaPlc", reaPlc.rawResponse || "");
+  setText("decodedReaPlc", reaPlc.decoded || "");
+
+  document.getElementById("reaPiRows").innerHTML =
+    rowHtml("Port", data.piPort) +
+    rowHtml("Version", data.reaPiVersion) +
+    rowHtml("Connected", boolText(reaPi.connected)) +
+    rowHtml("Version Selected", boolText(reaPi.versionSelected)) +
+    rowHtml("GETDEVICEINFO", boolText(reaPi.deviceInfoOk)) +
+    rowHtml("INSTALLATIONACTIVITY", boolText(reaPi.installationActivityOk)) +
+    rowHtml("Print Counter", reaPi.printCounterValid ? reaPi.printCounter : "-") +
+    rowHtml("Printer Date/Time", reaPi.dateTimeText || "-") +
+    rowHtml("Production Data", boolText(reaPi.productionDataOk)) +
+    rowHtml("Network Config", boolText(reaPi.networkConfigOk)) +
+    rowHtml("Product Sensors", boolText(reaPi.sensorLevelsOk)) +
+    rowHtml("IO Inputs", boolText(reaPi.ioInputOk)) +
+    rowHtml("IO Outputs", boolText(reaPi.ioOutputOk)) +
+    rowHtml("Label Content", boolText(reaPi.labelContentOk)) +
+    rowHtml("REA-PI Error", reaPi.error || "-") +
+    rowHtml("GETDEVICEINFO Error", reaPi.deviceInfoError || "-") +
+    rowHtml("Diagnostic Hint", reaPi.diagnosticHint || "-") +
+    rowHtml("Product Speed", reaPi.productSpeedValid ? (Number(reaPi.productSpeedMpm).toFixed(3) + " m/min") : "-") +
+    rowHtml("Encoder 1 Speed", reaPi.encoder1SpeedValid ? (Number(reaPi.encoder1SpeedMpm).toFixed(3) + " m/min") : "-") +
+    rowHtml("Encoder 2 Speed", reaPi.encoder2SpeedValid ? (Number(reaPi.encoder2SpeedMpm).toFixed(3) + " m/min") : "-");
+  setText("protocolLine", reaPi.protocolLine || "");
+  setText("welcomeXml", reaPi.welcomeXml || "");
+  setText("versionSelectXml", reaPi.versionSelectXml || "");
+  setText("versionSelectFrame", reaPi.versionSelectFrame || "");
+  setText("versionSelectRxRaw", reaPi.versionSelectRxRaw || "");
+  setText("versionXml", reaPi.versionXml || "");
+  setText("lastCommandXml", reaPi.lastCommandXml || "");
+  setText("deviceInfoXml", reaPi.deviceInfoXml || "");
+  setText("installationActivityXml", reaPi.installationActivityXml || "");
+  setText("productionDataXml", reaPi.productionDataXml || "");
+  setText("networkConfigXml", reaPi.networkConfigXml || "");
+  setText("sensorLevelsXml", reaPi.sensorLevelsXml || "");
+  setText("ioInputXml", reaPi.ioInputXml || "");
+  setText("ioOutputXml", reaPi.ioOutputXml || "");
+  setText("labelContentXml", reaPi.labelContentXml || "");
+}
+
+async function probeStatus() {
+  var ip = document.getElementById("ip").value.trim();
+  var plcPort = document.getElementById("plcPort").value.trim() || "22170";
+  var piPort = document.getElementById("piPort").value.trim() || "22171";
+  var version = document.getElementById("version").value.trim() || "2.0";
+  var reaPi = document.getElementById("reaPi").value;
+  if (!ip) {
+    setStatus("Enter a REAJet IP address.", true);
+    return;
+  }
+  setStatus("Probing " + ip + "...", false);
+  try {
+    const response = await fetch("/api/reajet/manual_status?ip=" + encodeURIComponent(ip) +
+      "&plcPort=" + encodeURIComponent(plcPort) +
+      "&piPort=" + encodeURIComponent(piPort) +
+      "&version=" + encodeURIComponent(version) +
+      "&reaPi=" + encodeURIComponent(reaPi));
+    const data = await response.json();
+    if (!response.ok || !data) {
+      throw new Error((data && data.error) || ("HTTP " + response.status));
+    }
+    renderStatus(data);
+    setStatus(data.ok ? "Probe complete." : "Probe returned partial data.", !data.ok);
+  } catch (err) {
+    setStatus("Probe failed: " + err.message, true);
+  }
+}
+
+async function loadConfiguredReajet() {
+  try {
+    const response = await fetch("/api/reajet/config");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    if (data && data.ip) {
+      document.getElementById("ip").value = data.ip;
+      document.getElementById("plcPort").value = String(data.port || 22170);
+      document.getElementById("piPort").value = String(data.reaPiPort || 22171);
+      document.getElementById("reaPi").value = data.reaPiEnabled ? "1" : "0";
+      setStatus("Loaded configured REAJet target.", false);
+    } else {
+      setStatus("No configured REAJet target is saved.", true);
+    }
+  } catch (err) {
+    setStatus("Load failed: " + err.message, true);
+  }
+}
+</script>
+<script src="help.js"></script>
+</body>
+</html>

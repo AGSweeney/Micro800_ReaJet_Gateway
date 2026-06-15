@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>CIP Data Gateway</title>
+</head>
+<body>
+<div class="app">
+  <div class="header-card">
+    <div class="brand">
+      <div>
+        <h1>CIP Data Gateway</h1>
+        <p class="subtitle">Configuration Console</p>
+      </div>
+      <div class="logo"></div>
+    </div>
+    <p class="lead">Network, device, and mapping configuration for Micro800 and REAJet.</p>
+  </div>
+
+  <div class="home-grid">
+    <div class="card config-card" onclick="window.location.href='/network.html'">
+      <div class="icon" aria-hidden="true">&#127760;</div>
+      <h2>Network Configuration</h2>
+      <p class="description">
+        Configure Ethernet0 addressing mode, static IP, gateway, and DNS settings.
+      </p>
+    </div>
+
+    <div class="card config-card" onclick="window.location.href='/devices.html'">
+      <div class="icon" aria-hidden="true">&#128187;</div>
+      <h2>Device Configuration</h2>
+      <p class="description">
+        Select the Micro800 PLC and configure REAJet IP, port, and mapping scan interval.
+      </p>
+    </div>
+
+    <div class="card config-card" onclick="window.location.href='/status.html'">
+      <div class="icon" aria-hidden="true">&#128202;</div>
+      <h2>REAJet Status Probe</h2>
+      <p class="description">
+        Manually probe a REAJet for REA-PLC and REA-PI status without saving configuration.
+      </p>
+    </div>
+
+    <div class="card config-card" onclick="window.location.href='/mapping.html'">
+      <div class="icon" aria-hidden="true">&#128260;</div>
+      <h2>Print Mappings</h2>
+      <p class="description">
+        Browse PLC tags, build print mappings, and monitor runtime status.
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    (c) 2026 Adam G. Sweeney | Vanfab, Inc | Van Voorst Lumber Company
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1964 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>CIP Data Gateway - Print Mappings</title>
+</head>
+<body>
+<div class="app app-wide">
+  <div class="header-card">
+    <div class="brand">
+      <div>
+        <a href="/" class="nav-link"><- Back to Home</a>
+        <h1>Print Mappings</h1>
+        <p class="subtitle">Configure PLC tags and REAJet print destinations</p>
+      </div>
+      <div class="header-actions">
+        <button class="button help-btn" type="button" onclick="openPageHelp()">Help</button>
+        <div class="logo"></div>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <button class="button" type="button" onclick="exportMappings()">Export Mappings</button>
+      <button class="button" type="button" onclick="importMappings()">Import Mappings</button>
+      <button class="button" type="button" onclick="resetMappingStats()">Reset Stats</button>
+    </div>
+  </div>
+
+  <div class="card status-card">
+    <div class="status-top">
+      <h2>Status</h2>
+      <div class="status-toolbar">
+        <div class="status-indicator-row">
+          <span id="runtimeScannerBadge" class="status-pill bad">
+            <span class="status-pill-label">Scanner</span>
+            <span class="status-pill-value">Unknown</span>
+          </span>
+          <span id="plcStatusPill" class="status-pill bad">
+            <span class="status-pill-label">PLC</span>
+            <span class="status-pill-value">Offline</span>
+          </span>
+          <span id="reajetStatusPill" class="status-pill bad">
+            <span class="status-pill-label">REAJet</span>
+            <span class="status-pill-value">Offline</span>
+          </span>
+        </div>
+        <div class="status-metrics">
+          <div class="status-metric">
+            <span class="status-metric-value" id="mappingCount">0</span>
+            <span class="status-metric-label">Mappings</span>
+          </div>
+          <div class="status-metric">
+            <span class="status-metric-value" id="runtimeCycles">0</span>
+            <span class="status-metric-label">Cycles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-activity">
+      <div class="status-activity-title">Last Activity</div>
+      <div class="activity-grid">
+        <div class="activity-item">
+          <label>Job Sent</label>
+          <div id="runtimeLastJob" class="activity-value activity-value-compact" data-placeholder="None"></div>
+        </div>
+        <div class="activity-item">
+          <label>Text Sent</label>
+          <div id="runtimeLastText" class="activity-value activity-value-compact" data-placeholder="None"></div>
+        </div>
+      </div>
+      <div class="activity-grid">
+        <div class="activity-item">
+          <label>Last Command</label>
+          <div id="runtimeLastCmd" class="activity-value activity-value-compact" data-placeholder="None"></div>
+        </div>
+        <div class="activity-item">
+          <label>Verified Job State</label>
+          <div id="runtimeLastJobStateVerified" class="activity-value activity-value-compact" data-placeholder="None"></div>
+        </div>
+      </div>
+      <div class="activity-item">
+        <label>Transmitted ASCII</label>
+        <div id="runtimeLastAscii" class="activity-value" data-placeholder="Waiting for transmission..."></div>
+      </div>
+      <div class="activity-item">
+        <label>REA Status</label>
+        <div id="runtimeLastResponseDecoded" class="activity-value" data-placeholder="Waiting for response..."></div>
+      </div>
+      <div class="activity-grid">
+        <div class="activity-item">
+          <label>Error Code</label>
+          <div id="runtimeLastErrorCode" class="activity-value activity-value-compact"></div>
+        </div>
+        <div class="activity-item">
+          <label>Raw Response</label>
+          <div id="runtimeLastResponse" class="activity-value activity-value-compact" data-placeholder="64-byte frame"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-card-footer">
+      <button class="button" id="runtimeWorkerBtn" type="button" onclick="toggleRuntimeWorker()">Stop Scanner</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Print Mappings</h2>
+    <div class="actions">
+      <button class="button primary" type="button" onclick="showMappingEditor()">+ Add Mapping</button>
+    </div>
+    <table id="mappingTable" class="grid mapping-grid" style="display:none;">
+      <thead>
+        <tr>
+          <th class="col-id">ID</th>
+          <th class="col-tag">Job Tag</th>
+          <th class="col-tag">Text Tag</th>
+          <th class="col-tag">Trigger</th>
+          <th class="col-command">REA Command</th>
+          <th class="col-target">REA Target</th>
+          <th class="col-enabled">On</th>
+          <th class="col-actions">Action</th>
+        </tr>
+      </thead>
+      <tbody id="mappingBody"></tbody>
+    </table>
+    <p id="mappingHint" class="hint">No mappings yet.</p>
+    <div class="message" id="mappingMessage"></div>
+  </div>
+
+  <div class="card">
+    <h2>Configured Tags</h2>
+    <div class="actions">
+      <button class="button" type="button" onclick="openTagBrowser()">Browse PLC Tags</button>
+    </div>
+    <p id="tagStatus" class="hint"></p>
+    <table id="tagTable" class="grid" style="display:none;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tag Path</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tagBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal-overlay" id="mappingEditorModal">
+  <div class="modal modal-wide">
+    <div class="modal-header">
+      <h2 id="mappingEditorTitle">Add Mapping</h2>
+      <button class="modal-close" type="button" onclick="hideMappingEditor()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-content">
+      <div class="editor-grid">
+        <div class="field full">
+          <label for="mapJobTag">Job Tag (PLC)</label>
+          <select id="mapJobTag"></select>
+        </div>
+        <div class="field full">
+          <label for="mapTextTag">Text Tag (PLC)</label>
+          <select id="mapTextTag"></select>
+        </div>
+        <div class="field full">
+          <label for="mapTriggerTag">Trigger Tag (PLC BOOL)</label>
+          <select id="mapTriggerTag"></select>
+        </div>
+        <div class="field full">
+          <label for="mapResponseTag">Response Tag (PLC ACK)</label>
+          <select id="mapResponseTag"></select>
+        </div>
+        <div class="field full">
+          <label for="mapErrorTag">Error Tag (PLC status)</label>
+          <select id="mapErrorTag"></select>
+        </div>
+        <div class="field full">
+          <label for="mapSpeedTag">Speed Tag (PLC REAL, written after Start in job-change workflow)</label>
+          <select id="mapSpeedTag"></select>
+        </div>
+        <div class="field full" id="mapJobChangeWorkflowRow">
+          <label><input id="mapJobChangeWorkflow" type="checkbox" checked> Job change workflow (0003 Stop -> 0001 Assign -> 0004/0005 Update -> 0002 Start -> speed readback)</label>
+        </div>
+        <div class="field">
+          <label for="mapTextType">Text Type</label>
+          <input id="mapTextType" type="text" readonly>
+        </div>
+        <div class="field">
+          <label for="mapDestCommand">REA-PLC Command</label>
+          <select id="mapDestCommand">
+            <option value="0001">0001 Assign print job</option>
+            <option value="0002">0002 Start print job</option>
+            <option value="0003">0003 Stop print job</option>
+            <option value="0004" selected>0004 Overwrite object contents</option>
+            <option value="0005">0005 Overwrite object properties</option>
+            <option value="0008">0008 Get status information</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mapDestType">Destination Type</label>
+          <select id="mapDestType">
+            <option value="BOOL">BOOL</option>
+            <option value="INT">INT</option>
+            <option value="DINT">DINT</option>
+            <option value="REAL">REAL</option>
+            <option value="STRING">STRING</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="mapDestTarget">REA Target</label>
+          <select id="mapDestTarget"></select>
+        </div>
+        <div class="field full">
+          <label for="mapAsciiPreview">REA ASCII Preview</label>
+          <input id="mapAsciiPreview" type="text" readonly>
+        </div>
+        <div class="field full">
+          <label><input id="mapEnabled" type="checkbox" checked> Enable Mapping</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer actions">
+      <button class="button primary" type="button" onclick="saveMappingEditor()">Save Mapping</button>
+      <button class="button" type="button" onclick="hideMappingEditor()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="tagBrowserModal">
+  <div class="modal modal-wide">
+    <div class="modal-header">
+      <h2>Browse PLC Tags</h2>
+      <button class="modal-close" type="button" onclick="hideTagBrowser()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-content">
+      <div class="actions">
+        <button class="button primary" type="button" onclick="browsePlcTags()">Browse From Selected PLC</button>
+        <button class="button" type="button" onclick="loadTagList()">Refresh Configured List</button>
+      </div>
+      <div class="row">
+        <label for="udtCsvFile">UDT CSV Import</label>
+        <input id="udtCsvFile" type="file" accept=".csv,text/csv">
+      </div>
+      <div class="actions">
+        <button class="button" type="button" onclick="importUdtCsv(false)">Import UDT CSV</button>
+        <button class="button" type="button" onclick="importUdtCsv(true)">Replace And Import CSV</button>
+        <button class="button" type="button" onclick="clearImportedBrowseTags()">Clear Stored CSV Tags</button>
+      </div>
+      <div class="row">
+        <label for="browseFilter">Browse Filter</label>
+        <input id="browseFilter" type="text" placeholder="Filter browsed tags (name contains...)">
+      </div>
+      <table id="browseTable" class="grid" style="display:none;">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Array</th>
+            <th>Len</th>
+            <th>Type</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="browseBody"></tbody>
+      </table>
+      <div class="row">
+        <label for="manualTagPath">Manual Tag Path</label>
+        <input id="manualTagPath" type="text" placeholder="Enter full tag path (including full UDT member path)">
+      </div>
+      <div class="actions">
+        <button class="button" type="button" onclick="addManualTag()">Add Tag Path</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var gMappings = [];
+var gBrowsedTags = [];
+var gConfiguredTags = [];
+var gLocalChangeCount = 0;
+var gEditingMappingId = null;
+var gExpandedBrowseArrays = {};
+var gExpandedBrowseStructs = {};
+var gImportedTagMetaByPath = {};
+var gRuntimeStoppedByUser = false;
+var kImportedMetaStorageKey = "gateway.importedTagMeta";
+var kMappingsExportFilename = "cip-data-gateway-mappings.json";
+var kReajetTargetLabels = {
+  "0004": {
+    "0;1;message1;Text_1": "String 1  [group=1, object=message1, content=Text_1]",
+    "0;1;message1;Text_2": "String 2  [group=1, object=message1, content=Text_2]",
+    "0;1;message1;Text_3": "String 3  [group=1, object=message1, content=Text_3]",
+    "0;1;message1;Text_4": "String 4  [group=1, object=message1, content=Text_4]",
+    "0;1;message2;Text_5": "String 5  [group=1, object=message2, content=Text_5]",
+    "0;1;message2;Text_6": "String 6  [group=1, object=message2, content=Text_6]",
+    "0;1;message2;Text_7": "String 7  [group=1, object=message2, content=Text_7]",
+    "0;1;message2;Text_8": "String 8  [group=1, object=message2, content=Text_8]",
+    "0;1;Bitmap_1;Bitmap_1": "Bitmap 1  [group=1, object=Bitmap_1, content=Bitmap_1]"
+  },
+  "0005": {
+    "0;1;message1;Text_1;Content@value": "String 1 Content@value",
+    "0;1;message1;;Position/X@value": "message1 Position/X@value",
+    "0;1;message1;;Position/Y@value": "message1 Position/Y@value",
+    "0;1;message1;;Rotation@value": "message1 Rotation@value",
+    "0;1;message1;;HiddenCount@value": "message1 HiddenCount@value",
+    "0;1;message1;;Inverted@value": "message1 Inverted@value"
+  }
+};
+var kReajetTargetsByCommand = {
+  "0001": [
+    "0|demojob_1ph.job",
+    "0|default.job"
+  ],
+  "0002": [
+    "0"
+  ],
+  "0003": [
+    "0"
+  ],
+  "0004": [
+    "0;1;message1;Text_1",
+    "0;1;message1;Text_2",
+    "0;1;message1;Text_3",
+    "0;1;message1;Text_4",
+    "0;1;message2;Text_5",
+    "0;1;message2;Text_6",
+    "0;1;message2;Text_7",
+    "0;1;message2;Text_8",
+    "0;1;Bitmap_1;Bitmap_1"
+  ],
+  "0005": [
+    "0;1;message1;Text_1;Content@value",
+    "0;1;message1;;Position/X@value",
+    "0;1;message1;;Position/Y@value",
+    "0;1;message1;;Rotation@value",
+    "0;1;message1;;HiddenCount@value",
+    "0;1;message1;;Inverted@value"
+  ],
+  "0008": [
+    "(none)"
+  ]
+};
+
+function getReajetTargetLabel(command, target) {
+  if (!target) {
+    return "";
+  }
+  var byCommand = kReajetTargetLabels[command || ""] || null;
+  if (byCommand && byCommand[target]) {
+    return byCommand[target];
+  }
+  return target;
+}
+
+function getReajetTargetSummaryLabel(command, target) {
+  var label = getReajetTargetLabel(command, target);
+  if (!label) {
+    return "";
+  }
+  var bracket = label.indexOf("[");
+  if (bracket >= 0) {
+    label = label.substring(0, bracket);
+  }
+  return label.replace(/\s+/g, " ").trim();
+}
+
+function nextMappingId() {
+  var maxId = 0;
+  for (var i = 0; i < gMappings.length; i++) {
+    var id = Number(gMappings[i].id || 0);
+    if (id > maxId) maxId = id;
+  }
+  return maxId + 1;
+}
+
+function decodeCipTypeName(typeCode) {
+  switch (Number(typeCode || 0)) {
+    case 0xC1: return "BOOL";
+    case 0xC2: return "SINT";
+    case 0xC3: return "INT";
+    case 0xC4: return "DINT";
+    case 0xC5: return "LINT";
+    case 0xC6: return "USINT";
+    case 0xC7: return "UINT";
+    case 0xC8: return "UDINT";
+    case 0xC9: return "ULINT";
+    case 0xCA: return "REAL";
+    case 0xCB: return "LREAL";
+    case 0xCC: return "TIME";
+    case 0xCD: return "DATE";
+    case 0xCE: return "TIME_OF_DAY";
+    case 0xCF: return "DATE_AND_TIME";
+    case 0xD1: return "BYTE";
+    case 0xD2: return "WORD";
+    case 0xD3: return "DWORD";
+    case 0xD4: return "LWORD";
+    case 0xDA: return "STRING";
+    default: return "";
+  }
+}
+
+function setMappingMessage(msg, isError) {
+  var el = document.getElementById("mappingMessage");
+  el.textContent = msg || "";
+  el.className = "message " + (isError ? "error" : "success");
+  if (!msg) {
+    el.className = "message";
+    el.style.display = "none";
+  } else {
+    el.style.display = "block";
+  }
+}
+
+function setTagStatus(msg, isError) {
+  var el = document.getElementById("tagStatus");
+  el.textContent = msg;
+  el.style.color = isError ? "#b00020" : "#2e7d32";
+}
+
+function countActiveMappingsLocal() {
+  var n = 0;
+  for (var i = 0; i < gMappings.length; i++) {
+    if (!gMappings[i].enabled || !gMappings[i].triggerTag) {
+      continue;
+    }
+    var cmd = String(gMappings[i].destCommand || "0004");
+    if ((cmd === "0004" || cmd === "0005") && !gMappings[i].textTag) {
+      continue;
+    }
+    if (cmd === "0001" && !gMappings[i].jobTag && !gMappings[i].textTag) {
+      continue;
+    }
+    n++;
+  }
+  return n;
+}
+
+function scannerStateLabel(state) {
+  if (state === "running") return "Running";
+  if (state === "stopped") return "Stopped";
+  if (state === "idle_no_active_mappings") return "Idle (no active mappings)";
+  if (state === "idle_no_mappings") return "Idle (no mappings)";
+  return "Unknown";
+}
+
+function updateRuntimeScannerUi(data) {
+  var state = data && data.scannerState ? String(data.scannerState) : "idle_no_mappings";
+  var runtimeRunning = !!(data && data.runtimeRunning);
+  var activeCount = (data && data.activeCount != null) ? Number(data.activeCount) : countActiveMappingsLocal();
+  var cycles = (data && data.runtimeCycles != null) ? Number(data.runtimeCycles) : 0;
+
+  setStatusPill("runtimeScannerBadge", "Scanner", scannerStateLabel(state),
+    state === "running" ? "good" : (state === "stopped" ? "warn" : "bad"));
+
+  var mappingEl = document.getElementById("mappingCount");
+  if (mappingEl) {
+    mappingEl.textContent = String(activeCount);
+  }
+  var cyclesEl = document.getElementById("runtimeCycles");
+  if (cyclesEl) {
+    cyclesEl.textContent = String(cycles);
+  }
+
+  var btn = document.getElementById("runtimeWorkerBtn");
+  if (btn) {
+    if (activeCount <= 0) {
+      btn.disabled = true;
+      btn.textContent = "No Active Mappings";
+    } else {
+      btn.disabled = false;
+      btn.textContent = runtimeRunning ? "Stop Scanner" : "Start Scanner";
+    }
+  }
+}
+
+function updateStats() {
+  var mappingEl = document.getElementById("mappingCount");
+  if (mappingEl) {
+    mappingEl.textContent = String(countActiveMappingsLocal());
+  }
+}
+
+function commandNameForCode(destCommand) {
+  if (destCommand === "0001") return "Assign print job";
+  if (destCommand === "0002") return "Start print job";
+  if (destCommand === "0003") return "Stop print job";
+  if (destCommand === "0004") return "Overwrite object contents";
+  if (destCommand === "0005") return "Overwrite object properties";
+  if (destCommand === "0008") return "Get status information";
+  return "";
+}
+
+async function loadMappingsFromStorage() {
+  try {
+    const response = await fetch("/api/mappings/list");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    var incoming = Array.isArray(data.tags) ? data.tags : [];
+    gMappings = [];
+    for (var i = 0; i < incoming.length; i++) {
+      var m = incoming[i] || {};
+      var cmd = String(m.destCommand || "0004");
+      gMappings.push({
+        id: Number(m.id || 0),
+        jobTag: String(m.jobTag || ""),
+        textTag: String(m.textTag || m.sourceTag || ""),
+        triggerTag: String(m.triggerTag || ""),
+        responseTag: String(m.responseTag || ""),
+        errorTag: String(m.errorTag || ""),
+        speedTag: String(m.speedTag || ""),
+        sourceType: "",
+        destCommand: cmd,
+        destCommandName: commandNameForCode(cmd),
+        jobChangeWorkflow: !!m.jobChangeWorkflow,
+        destTarget: String(m.destTarget || ""),
+        destType: String(m.destType || "STRING"),
+        enabled: !!m.enabled
+      });
+    }
+    setActivityValue("runtimeLastJob", data.lastJob || "");
+    setActivityValue("runtimeLastText", data.lastText || "");
+    setActivityValue("runtimeLastCmd", data.lastTxCmd || "");
+    setActivityValue("runtimeLastJobStateVerified", data.lastJobStateVerified || "");
+    setActivityValue("runtimeLastAscii", formatTransmittedAscii(
+      data.lastAsciiStop,
+      data.lastAsciiJob,
+      data.lastAsciiText,
+      data.lastAsciiStart,
+      data.lastAscii));
+    setActivityValue("runtimeLastResponse", data.lastResponse || "");
+    var errCode = (data.lastErrorCode != null) ? String(data.lastErrorCode) : "";
+    var errText = String(data.lastErrorText || "");
+    setActivityValue("runtimeLastErrorCode", errCode + (errText ? (" (" + errText + ")") : ""));
+    var decodedTone = "";
+    var decodedText = String(data.lastResponseDecoded || "");
+    if (data.lastResponseAck === true) {
+      decodedTone = "ok";
+    } else if ((data.lastResponse || decodedText) && decodedText.indexOf("Sending REA-PLC command") !== 0) {
+      decodedTone = "err";
+    }
+    setActivityValue("runtimeLastResponseDecoded", decodedText, decodedTone);
+    gRuntimeStoppedByUser = !!data.runtimeStoppedByUser;
+    updateRuntimeScannerUi(data);
+  } catch (e) {
+    gMappings = [];
+    setMappingMessage("Failed to load mappings from gateway: " + e.message, true);
+  }
+  renderMappingTable();
+  updateStats();
+}
+
+function escHtml(text) {
+  return String(text || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function tdClip(text, className) {
+  var t = String(text || "");
+  var cls = "cell-clip" + (className ? (" " + className) : "");
+  return "<td class=\"" + cls + "\" title=\"" + escHtml(t) + "\">" + escHtml(t) + "</td>";
+}
+
+function renderMappingTable() {
+  var body = document.getElementById("mappingBody");
+  var table = document.getElementById("mappingTable");
+  body.innerHTML = "";
+  if (!gMappings.length) {
+    table.style.display = "none";
+    document.getElementById("mappingHint").textContent = "No mappings yet.";
+    return;
+  }
+  for (var i = 0; i < gMappings.length; i++) {
+    var m = gMappings[i];
+    var tr = document.createElement("tr");
+    var commandLabel = m.destCommand ? (m.destCommand + " " + (m.destCommandName || "")) : "";
+    if (m.jobChangeWorkflow && (m.destCommand === "0004" || m.destCommand === "0005")) {
+      commandLabel += " + workflow";
+    } else if ((m.destCommand === "0004" || m.destCommand === "0005") && !m.jobChangeWorkflow) {
+      commandLabel += " (no stop/start)";
+    }
+    var targetLabel = getReajetTargetSummaryLabel(m.destCommand, (m.destTarget || m.destField || ""));
+    tr.innerHTML =
+      tdClip(String(Number(m.id || i + 1)), "col-id") +
+      tdClip(m.jobTag, "col-tag") +
+      tdClip(m.textTag || m.sourceTag, "col-tag") +
+      tdClip(m.triggerTag, "col-tag") +
+      tdClip(commandLabel, "col-command") +
+      tdClip(targetLabel, "col-target") +
+      tdClip(m.enabled ? "Yes" : "No", "col-enabled") +
+      "<td class=\"col-actions mapping-actions\">" +
+      "<button class='button small' type='button' onclick='editMapping(" + Number(m.id || 0) + ")'>Edit</button>" +
+      "<button class='button small' type='button' onclick='deleteMapping(" + Number(m.id || 0) + ")'>Delete</button>" +
+      "</td>";
+    body.appendChild(tr);
+  }
+  table.style.display = "table";
+  document.getElementById("mappingHint").textContent = "Click Edit to update mapping details.";
+}
+
+function fillTagSelect(selectId, includeEmpty, typeFilter) {
+  var select = document.getElementById(selectId);
+  if (!select) {
+    return;
+  }
+  select.innerHTML = "";
+  if (includeEmpty) {
+    var emptyOpt = document.createElement("option");
+    emptyOpt.value = "";
+    emptyOpt.textContent = "(none)";
+    select.appendChild(emptyOpt);
+  }
+  if (!gConfiguredTags.length) {
+    var opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "No configured tags available";
+    select.appendChild(opt);
+    return;
+  }
+  function appendOptions(filterType) {
+    var count = 0;
+    for (var i = 0; i < gConfiguredTags.length; i++) {
+      var t = gConfiguredTags[i];
+      if (filterType) {
+        var typeName = String(t.typeName || decodeCipTypeName(t.typeCode || 0) || "").toUpperCase();
+        if (typeName !== filterType) {
+          continue;
+        }
+      }
+      var opt = document.createElement("option");
+      opt.value = t.path || "";
+      opt.textContent = t.path || "";
+      select.appendChild(opt);
+      count++;
+    }
+    return count;
+  }
+
+  var added = appendOptions(typeFilter);
+  if (typeFilter && added === 0) {
+    added = appendOptions(null);
+  }
+  if (!added && !includeEmpty) {
+    var noneOpt = document.createElement("option");
+    noneOpt.value = "";
+    noneOpt.textContent = typeFilter ? ("No matching tags available") : "No configured tags available";
+    select.appendChild(noneOpt);
+  }
+}
+
+function refreshMappingTagOptions() {
+  fillTagSelect("mapJobTag", true);
+  fillTagSelect("mapTextTag", true);
+  fillTagSelect("mapTriggerTag", false, "BOOL");
+  fillTagSelect("mapResponseTag", true, "BOOL");
+  fillTagSelect("mapErrorTag", true);
+  fillTagSelect("mapSpeedTag", true, "REAL");
+  syncEditorTextType();
+}
+
+function getConfiguredTagByPath(path) {
+  for (var i = 0; i < gConfiguredTags.length; i++) {
+    if (gConfiguredTags[i].path === path) {
+      return gConfiguredTags[i];
+    }
+  }
+  return null;
+}
+
+function syncEditorTextType() {
+  var path = document.getElementById("mapTextTag").value;
+  var tag = getConfiguredTagByPath(path);
+  document.getElementById("mapTextType").value = tag ? formatConfiguredTagType(tag) : "Unknown";
+}
+
+function toHexAscii(value, width) {
+  var hex = Number(value || 0).toString(16).toUpperCase();
+  while (hex.length < width) {
+    hex = "0" + hex;
+  }
+  if (hex.length > width) {
+    hex = hex.substring(hex.length - width);
+  }
+  return hex;
+}
+
+function refreshReajetTargetOptions(selectedValue) {
+  var command = document.getElementById("mapDestCommand").value;
+  var select = document.getElementById("mapDestTarget");
+  select.innerHTML = "";
+  var options = kReajetTargetsByCommand[command] || [];
+  for (var i = 0; i < options.length; i++) {
+    var opt = document.createElement("option");
+    opt.value = options[i];
+    opt.textContent = getReajetTargetLabel(command, options[i]);
+    select.appendChild(opt);
+  }
+  if (selectedValue) {
+    select.value = selectedValue;
+  }
+  if (!select.value && options.length) {
+    select.value = options[0];
+  }
+  updateAsciiPreview();
+}
+
+function buildReajet0001Parameter(jobValue, destTarget) {
+  var value = String(jobValue || "").trim();
+  if (value) {
+    var pipe = value.indexOf("|");
+    if (pipe >= 0) {
+      return value.substring(0, pipe) + value.substring(pipe + 1);
+    }
+    return "0" + value;
+  }
+  var parts = (destTarget || "0|default.job").split("|");
+  return (parts[0] || "0") + (parts.slice(1).join("|") || "default.job");
+}
+
+function buildReajetAsciiPreview(jobTag, textTag, destCommand, destTarget) {
+  var instruction = destCommand || "0004";
+  var id = "00000001";
+  var jobToken = "{JOB:" + (jobTag || "job") + "}";
+  var textToken = "{TEXT:" + (textTag || "text") + "}";
+  var parameter = "";
+
+  if (instruction === "0001") {
+    parameter = buildReajet0001Parameter(jobToken, destTarget);
+  } else if (instruction === "0002" || instruction === "0003") {
+    parameter = (jobTag && jobTag.length) ? jobToken : "0";
+  } else if (instruction === "0008") {
+    parameter = "";
+  } else if (instruction === "0004") {
+    var idBlock = (destTarget && destTarget !== "(none)") ? destTarget : "0;1;message1;Text_1";
+    var idLen = toHexAscii(idBlock.length, 4);
+    var contentLen = toHexAscii(textToken.length, 4);
+    parameter = idLen + idBlock + contentLen + textToken;
+    if (jobTag) {
+      parameter = "[0001:" + buildReajet0001Parameter(jobToken, destTarget) + "] " + parameter;
+    }
+  } else if (instruction === "0005") {
+    var propBlock = (destTarget && destTarget !== "(none)") ? destTarget : "0;1;message1;Text_1;Content@value";
+    var propLen = toHexAscii(propBlock.length, 4);
+    var propValueLen = toHexAscii(textToken.length, 4);
+    parameter = propLen + propBlock + propValueLen + textToken;
+    if (jobTag) {
+      parameter = "[0001:" + buildReajet0001Parameter(jobToken, destTarget) + "] " + parameter;
+    }
+  } else {
+    parameter = "";
+  }
+
+  var length = toHexAscii(parameter.length, 6);
+  return instruction + id + length + parameter;
+}
+
+function buildReajetAsciiFromValue(jobValue, textValue, destCommand, destTarget) {
+  var instruction = destCommand || "0004";
+  var id = "00000001";
+  var textToken = String(textValue == null ? "" : textValue);
+  var parameter = "";
+
+  if (instruction === "0001") {
+    parameter = buildReajet0001Parameter(jobValue, destTarget);
+  } else if (instruction === "0002" || instruction === "0003") {
+    parameter = (jobValue && String(jobValue).length) ? String(jobValue) : ((destTarget && destTarget !== "(none)") ? destTarget : "0");
+  } else if (instruction === "0008") {
+    parameter = "";
+  } else if (instruction === "0004") {
+    var idBlock = (destTarget && destTarget !== "(none)") ? destTarget : "0;1;message1;Text_1";
+    var idLen = toHexAscii(idBlock.length, 4);
+    var contentLen = toHexAscii(textToken.length, 4);
+    parameter = idLen + idBlock + contentLen + textToken;
+  } else if (instruction === "0005") {
+    var propBlock = (destTarget && destTarget !== "(none)") ? destTarget : "0;1;message1;Text_1;Content@value";
+    var propLen = toHexAscii(propBlock.length, 4);
+    var propValueLen = toHexAscii(textToken.length, 4);
+    parameter = propLen + propBlock + propValueLen + textToken;
+  } else {
+    parameter = "";
+  }
+
+  var length = toHexAscii(parameter.length, 6);
+  return instruction + id + length + parameter;
+}
+
+function syncJobChangeWorkflowUi() {
+  var cmd = document.getElementById("mapDestCommand").value;
+  var row = document.getElementById("mapJobChangeWorkflowRow");
+  var box = document.getElementById("mapJobChangeWorkflow");
+  var supported = (cmd === "0004" || cmd === "0005");
+  if (row) {
+    row.style.display = supported ? "" : "none";
+  }
+  if (box && !supported) {
+    box.checked = false;
+  }
+}
+
+function updateAsciiPreview() {
+  var jobTag = document.getElementById("mapJobTag").value.trim();
+  var textTag = document.getElementById("mapTextTag").value.trim();
+  var destCommand = document.getElementById("mapDestCommand").value;
+  var destTarget = document.getElementById("mapDestTarget").value;
+  var jobChangeWorkflow = document.getElementById("mapJobChangeWorkflow").checked;
+  var lines = [];
+  if (jobChangeWorkflow && (destCommand === "0004" || destCommand === "0005")) {
+    lines.push(buildReajetAsciiPreview("", "", "0003", destTarget));
+    if (jobTag) {
+      lines.push(buildReajetAsciiPreview(jobTag, "", "0001", destTarget));
+    }
+    lines.push(buildReajetAsciiPreview(jobTag, textTag, destCommand, destTarget));
+    lines.push(buildReajetAsciiPreview("", "", "0002", destTarget));
+  } else {
+    lines.push(buildReajetAsciiPreview(jobTag, textTag, destCommand, destTarget));
+  }
+  document.getElementById("mapAsciiPreview").value = lines.join("\n");
+}
+
+function showModal(modalId) {
+  var modal = document.getElementById(modalId);
+  if (!modal) return;
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function hideModal(modalId) {
+  var modal = document.getElementById(modalId);
+  if (!modal) return;
+  modal.classList.remove("show");
+  if (!document.querySelector(".modal-overlay.show")) {
+    document.body.style.overflow = "";
+  }
+}
+
+function openTagBrowser() {
+  showModal("tagBrowserModal");
+}
+
+function hideTagBrowser() {
+  hideModal("tagBrowserModal");
+}
+
+function showMappingEditor() {
+  gEditingMappingId = null;
+  document.getElementById("mappingEditorTitle").textContent = "Add Mapping";
+  refreshMappingTagOptions();
+  document.getElementById("mapJobTag").value = "";
+  document.getElementById("mapTextTag").value = "";
+  document.getElementById("mapTriggerTag").value = "";
+  document.getElementById("mapResponseTag").value = "";
+  document.getElementById("mapErrorTag").value = "";
+  document.getElementById("mapSpeedTag").value = "";
+  document.getElementById("mapDestCommand").value = "0004";
+  refreshReajetTargetOptions();
+  document.getElementById("mapDestType").value = "STRING";
+  document.getElementById("mapEnabled").checked = true;
+  document.getElementById("mapJobChangeWorkflow").checked = true;
+  syncJobChangeWorkflowUi();
+  showModal("mappingEditorModal");
+  updateAsciiPreview();
+}
+
+function hideMappingEditor() {
+  gEditingMappingId = null;
+  hideModal("mappingEditorModal");
+}
+
+function editMapping(id) {
+  var target = null;
+  for (var i = 0; i < gMappings.length; i++) {
+    if (Number(gMappings[i].id) === Number(id)) {
+      target = gMappings[i];
+      break;
+    }
+  }
+  if (!target) {
+    return;
+  }
+  gEditingMappingId = Number(target.id);
+  document.getElementById("mappingEditorTitle").textContent = "Edit Mapping";
+  refreshMappingTagOptions();
+  document.getElementById("mapJobTag").value = target.jobTag || "";
+  document.getElementById("mapTextTag").value = target.textTag || target.sourceTag || "";
+  document.getElementById("mapTriggerTag").value = target.triggerTag || "";
+  document.getElementById("mapResponseTag").value = target.responseTag || "";
+  document.getElementById("mapErrorTag").value = target.errorTag || "";
+  document.getElementById("mapSpeedTag").value = target.speedTag || "";
+  syncEditorTextType();
+  document.getElementById("mapDestCommand").value = target.destCommand || "0004";
+  refreshReajetTargetOptions(target.destTarget || target.destField || "");
+  document.getElementById("mapDestType").value = target.destType || "STRING";
+  document.getElementById("mapEnabled").checked = !!target.enabled;
+  document.getElementById("mapJobChangeWorkflow").checked = !!target.jobChangeWorkflow;
+  syncJobChangeWorkflowUi();
+  showModal("mappingEditorModal");
+  updateAsciiPreview();
+}
+
+async function saveMappingEditor() {
+  var jobTag = document.getElementById("mapJobTag").value.trim();
+  var textTag = document.getElementById("mapTextTag").value.trim();
+  var triggerTag = document.getElementById("mapTriggerTag").value.trim();
+  var responseTag = document.getElementById("mapResponseTag").value.trim();
+  var errorTag = document.getElementById("mapErrorTag").value.trim();
+  var speedTag = document.getElementById("mapSpeedTag").value.trim();
+  var textType = document.getElementById("mapTextType").value.trim();
+  var destCommand = document.getElementById("mapDestCommand").value;
+  var destTarget = document.getElementById("mapDestTarget").value.trim();
+  var destType = document.getElementById("mapDestType").value;
+  var enabled = document.getElementById("mapEnabled").checked;
+  var jobChangeWorkflow = document.getElementById("mapJobChangeWorkflow").checked;
+
+  if (!triggerTag) {
+    setMappingMessage("Choose a BOOL trigger tag first.", true);
+    return;
+  }
+  if ((destCommand === "0004" || destCommand === "0005") && !textTag) {
+    setMappingMessage("Choose a text tag for 0004/0005 mappings.", true);
+    return;
+  }
+  if (destCommand === "0001" && !jobTag && !textTag) {
+    setMappingMessage("Choose a job or text tag for assign mappings.", true);
+    return;
+  }
+  if (!destCommand) {
+    setMappingMessage("Choose a REA command.", true);
+    return;
+  }
+  if (destCommand !== "0008" && !destTarget) {
+    setMappingMessage("Choose a REA target.", true);
+    return;
+  }
+  var destCommandName = "";
+  if (destCommand === "0001") destCommandName = "Assign print job";
+  if (destCommand === "0002") destCommandName = "Start print job";
+  if (destCommand === "0003") destCommandName = "Stop print job";
+  if (destCommand === "0004") destCommandName = "Overwrite object contents";
+  if (destCommand === "0005") destCommandName = "Overwrite object properties";
+  if (destCommand === "0008") destCommandName = "Get status information";
+  var asciiPreview = buildReajetAsciiPreview(jobTag, textTag, destCommand, destTarget);
+
+  var targetId = (gEditingMappingId == null) ? nextMappingId() : Number(gEditingMappingId);
+  try {
+    const saveResp = await fetch("/api/mappings/save?id=" + encodeURIComponent(targetId) +
+      "&jobTag=" + encodeURIComponent(jobTag) +
+      "&textTag=" + encodeURIComponent(textTag) +
+      "&triggerTag=" + encodeURIComponent(triggerTag) +
+      "&responseTag=" + encodeURIComponent(responseTag) +
+      "&errorTag=" + encodeURIComponent(errorTag) +
+      "&speedTag=" + encodeURIComponent(speedTag) +
+      "&destCommand=" + encodeURIComponent(destCommand) +
+      "&destTarget=" + encodeURIComponent(destTarget) +
+      "&destType=" + encodeURIComponent(destType) +
+      "&enabled=" + (enabled ? "1" : "0") +
+      "&jobChangeWorkflow=" + (jobChangeWorkflow ? "1" : "0"));
+    if (!saveResp.ok) {
+      throw new Error("HTTP " + saveResp.status);
+    }
+  } catch (err) {
+    setMappingMessage("Mapping save failed: " + err.message, true);
+    return;
+  }
+
+  if (gEditingMappingId == null) {
+    gMappings.push({
+      id: targetId,
+      jobTag: jobTag,
+      textTag: textTag,
+      triggerTag: triggerTag,
+      responseTag: responseTag,
+      errorTag: errorTag,
+      speedTag: speedTag,
+      textType: textType,
+      destCommand: destCommand,
+      destCommandName: destCommandName,
+      destTarget: destTarget,
+      destType: destType,
+      asciiPreview: asciiPreview,
+      enabled: enabled,
+      jobChangeWorkflow: jobChangeWorkflow
+    });
+    setMappingMessage("Mapping added.", false);
+  } else {
+    for (var i = 0; i < gMappings.length; i++) {
+      if (Number(gMappings[i].id) === Number(gEditingMappingId)) {
+        gMappings[i].jobTag = jobTag;
+        gMappings[i].textTag = textTag;
+        gMappings[i].triggerTag = triggerTag;
+        gMappings[i].responseTag = responseTag;
+        gMappings[i].errorTag = errorTag;
+        gMappings[i].speedTag = speedTag;
+        gMappings[i].textType = textType;
+        gMappings[i].destCommand = destCommand;
+        gMappings[i].destCommandName = destCommandName;
+        gMappings[i].destTarget = destTarget;
+        gMappings[i].destType = destType;
+        gMappings[i].asciiPreview = asciiPreview;
+        gMappings[i].enabled = enabled;
+        gMappings[i].jobChangeWorkflow = jobChangeWorkflow;
+        break;
+      }
+    }
+    setMappingMessage("Mapping updated.", false);
+  }
+  gLocalChangeCount++;
+  renderMappingTable();
+  updateStats();
+  hideMappingEditor();
+}
+
+async function deleteMapping(id) {
+  try {
+    const delResp = await fetch("/api/mappings/delete?id=" + encodeURIComponent(id));
+    if (!delResp.ok) {
+      throw new Error("HTTP " + delResp.status);
+    }
+  } catch (err) {
+    setMappingMessage("Delete failed: " + err.message, true);
+    return;
+  }
+  var next = [];
+  for (var i = 0; i < gMappings.length; i++) {
+    if (Number(gMappings[i].id) !== Number(id)) {
+      next.push(gMappings[i]);
+    }
+  }
+  gMappings = next;
+  gLocalChangeCount++;
+  renderMappingTable();
+  updateStats();
+  setMappingMessage("Mapping deleted.", false);
+}
+
+function normalizeMappingForExport(m) {
+  var cmd = String(m.destCommand || "0004");
+  return {
+    id: Number(m.id || 0),
+    enabled: !!m.enabled,
+    jobTag: String(m.jobTag || ""),
+    textTag: String(m.textTag || m.sourceTag || ""),
+    triggerTag: String(m.triggerTag || ""),
+    responseTag: String(m.responseTag || ""),
+    errorTag: String(m.errorTag || ""),
+    speedTag: String(m.speedTag || ""),
+    destCommand: cmd,
+    destTarget: String(m.destTarget || m.destField || ""),
+    destType: String(m.destType || "STRING"),
+    jobChangeWorkflow: !!m.jobChangeWorkflow
+  };
+}
+
+function buildMappingsExportPayload() {
+  var mappings = [];
+  for (var i = 0; i < gMappings.length; i++) {
+    mappings.push(normalizeMappingForExport(gMappings[i]));
+  }
+  return {
+    format: "cip-data-gateway-mappings",
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    mappings: mappings
+  };
+}
+
+function buildMappingSaveUrl(m) {
+  var id = Number(m.id || 0);
+  var jobTag = String(m.jobTag || "");
+  var textTag = String(m.textTag || m.sourceTag || "");
+  var triggerTag = String(m.triggerTag || "");
+  var responseTag = String(m.responseTag || "");
+  var errorTag = String(m.errorTag || "");
+  var speedTag = String(m.speedTag || "");
+  var destCommand = String(m.destCommand || "0004");
+  var destTarget = String(m.destTarget || m.destField || "");
+  var destType = String(m.destType || "STRING");
+  var enabled = !!m.enabled;
+  var jobChangeWorkflow = !!m.jobChangeWorkflow;
+  return "/api/mappings/save?id=" + encodeURIComponent(id) +
+    "&jobTag=" + encodeURIComponent(jobTag) +
+    "&textTag=" + encodeURIComponent(textTag) +
+    "&triggerTag=" + encodeURIComponent(triggerTag) +
+    "&responseTag=" + encodeURIComponent(responseTag) +
+    "&errorTag=" + encodeURIComponent(errorTag) +
+    "&speedTag=" + encodeURIComponent(speedTag) +
+    "&destCommand=" + encodeURIComponent(destCommand) +
+    "&destTarget=" + encodeURIComponent(destTarget) +
+    "&destType=" + encodeURIComponent(destType) +
+    "&enabled=" + (enabled ? "1" : "0") +
+    "&jobChangeWorkflow=" + (jobChangeWorkflow ? "1" : "0");
+}
+
+function extractMappingsFromImport(parsed) {
+  if (Array.isArray(parsed)) {
+    return parsed;
+  }
+  if (parsed && typeof parsed === "object") {
+    if (Array.isArray(parsed.mappings)) {
+      return parsed.mappings;
+    }
+    if (Array.isArray(parsed.tags)) {
+      return parsed.tags;
+    }
+  }
+  return null;
+}
+
+function normalizeImportedMapping(m, fallbackId) {
+  var cmd = String(m.destCommand || "0004");
+  return {
+    id: Number(m.id || fallbackId),
+    enabled: (m.enabled === false || m.enabled === 0 || m.enabled === "0") ? false : true,
+    jobTag: String(m.jobTag || ""),
+    textTag: String(m.textTag || m.sourceTag || ""),
+    triggerTag: String(m.triggerTag || ""),
+    responseTag: String(m.responseTag || ""),
+    errorTag: String(m.errorTag || ""),
+    speedTag: String(m.speedTag || ""),
+    destCommand: cmd,
+    destTarget: String(m.destTarget || m.destField || ""),
+    destType: String(m.destType || "STRING")
+  };
+}
+
+function validateImportedMappings(mappings) {
+  for (var i = 0; i < mappings.length; i++) {
+    var m = mappings[i];
+    if (!m.id || m.id <= 0) {
+      return "Mapping at index " + i + " has an invalid id.";
+    }
+    if (!m.triggerTag) {
+      return "Mapping " + m.id + " is missing triggerTag.";
+    }
+    if ((m.destCommand === "0004" || m.destCommand === "0005") && !m.textTag) {
+      return "Mapping " + m.id + " requires textTag for command " + m.destCommand + ".";
+    }
+    if (m.destCommand === "0001" && !m.jobTag && !m.textTag) {
+      return "Mapping " + m.id + " requires jobTag or textTag for command 0001.";
+    }
+  }
+  return "";
+}
+
+async function exportMappings() {
+  try {
+    await loadMappingsFromStorage();
+    var payload = buildMappingsExportPayload();
+    var data = JSON.stringify(payload, null, 2);
+    var blob = new Blob([data], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = kMappingsExportFilename;
+    a.click();
+    URL.revokeObjectURL(url);
+    setMappingMessage("Mappings exported to " + kMappingsExportFilename + ".", false);
+  } catch (err) {
+    setMappingMessage("Export failed: " + err.message, true);
+  }
+}
+
+function importMappings() {
+  var input = document.createElement("input");
+  input.type = "file";
+  input.accept = "application/json,.json";
+  input.onchange = async function(e) {
+    var file = e.target.files[0];
+    if (!file) {
+      return;
+    }
+    var reader = new FileReader();
+    reader.onload = async function() {
+      try {
+        var parsed = JSON.parse(reader.result);
+        var rawMappings = extractMappingsFromImport(parsed);
+        if (!rawMappings || !rawMappings.length) {
+          setMappingMessage("Import failed. No mappings found in file.", true);
+          return;
+        }
+        var mappings = [];
+        for (var i = 0; i < rawMappings.length; i++) {
+          mappings.push(normalizeImportedMapping(rawMappings[i], i + 1));
+        }
+        var validationError = validateImportedMappings(mappings);
+        if (validationError) {
+          setMappingMessage("Import failed. " + validationError, true);
+          return;
+        }
+        var clearResp = await fetch("/api/mappings/clear");
+        if (!clearResp.ok) {
+          throw new Error("clear HTTP " + clearResp.status);
+        }
+        for (var j = 0; j < mappings.length; j++) {
+          var saveResp = await fetch(buildMappingSaveUrl(mappings[j]));
+          var saveData = {};
+          try {
+            saveData = await saveResp.json();
+          } catch (parseErr) {
+            saveData = {};
+          }
+          if (!saveResp.ok || !saveData.ok) {
+            var errDetail = saveData.error ? (" (" + saveData.error + ")") : "";
+            throw new Error("save mapping " + mappings[j].id + " failed" + errDetail);
+          }
+        }
+        gLocalChangeCount++;
+        await loadMappingsFromStorage();
+        setMappingMessage("Imported " + mappings.length + " mapping(s) from " + file.name + ".", false);
+      } catch (err) {
+        setMappingMessage("Import failed: " + err.message, true);
+        try {
+          await loadMappingsFromStorage();
+        } catch (reloadErr) {
+        }
+      }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+async function resetMappingStats() {
+  try {
+    const response = await fetch("/api/mappings/runtime?action=reset");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    if (!data || !data.ok) {
+      throw new Error("Gateway rejected reset");
+    }
+    gLocalChangeCount = 0;
+    await loadMappingsFromStorage();
+    setMappingMessage("Stats reset.", false);
+  } catch (err) {
+    setMappingMessage("Reset stats failed: " + err.message, true);
+  }
+}
+
+function formatTransmittedAscii(stopAscii, jobAscii, textAscii, startAscii, fallbackAscii) {
+  var lines = [];
+  if (stopAscii) {
+    lines.push(String(stopAscii));
+  }
+  if (jobAscii) {
+    lines.push(String(jobAscii));
+  }
+  if (textAscii) {
+    lines.push(String(textAscii));
+  }
+  if (startAscii) {
+    lines.push(String(startAscii));
+  }
+  if (lines.length) {
+    return lines.join("\n");
+  }
+  return String(fallbackAscii || "");
+}
+
+function setActivityValue(elId, text, tone) {
+  var el = document.getElementById(elId);
+  if (!el) return;
+  var value = String(text || "");
+  el.textContent = value;
+  el.classList.toggle("is-empty", !value);
+  el.classList.remove("activity-ok", "activity-err");
+  if (tone === "ok") {
+    el.classList.add("activity-ok");
+  } else if (tone === "err") {
+    el.classList.add("activity-err");
+  }
+}
+
+function setStatusPill(elId, label, value, tone) {
+  var el = document.getElementById(elId);
+  if (!el) return;
+  el.className = "status-pill " + (tone || "bad");
+  el.innerHTML =
+    "<span class='status-pill-label'>" + label + "</span>" +
+    "<span class='status-pill-value'>" + value + "</span>";
+}
+
+function setOnlineStatusPill(elId, label, online) {
+  setStatusPill(elId, label, online ? "Online" : "Offline", online ? "good" : "bad");
+}
+
+async function loadConnectionSummary(probeReajet) {
+  var plcOnline = false;
+  var reaOnline = false;
+  try {
+    const plcResp = await fetch("/api/plc/selected");
+    if (plcResp.ok) {
+      const plc = await plcResp.json();
+      plcOnline = !!(plc && plc.ip && plc.ip !== "0.0.0.0" && plc.connectOk);
+    }
+  } catch (err) {
+    plcOnline = false;
+  }
+  try {
+    var reaUrl = "/api/reajet/config";
+    if (probeReajet) {
+      reaUrl += "?probe=1";
+    }
+    const reaResp = await fetch(reaUrl);
+    if (reaResp.ok) {
+      const rea = await reaResp.json();
+      reaOnline = !!(rea && rea.ok && rea.ip && rea.connectOk);
+    }
+  } catch (err) {
+    reaOnline = false;
+  }
+  setOnlineStatusPill("plcStatusPill", "PLC", plcOnline);
+  setOnlineStatusPill("reajetStatusPill", "REAJet", reaOnline);
+}
+
+async function toggleRuntimeWorker() {
+  var action = gRuntimeStoppedByUser ? "start" : "stop";
+  try {
+    const response = await fetch("/api/mappings/runtime?action=" + action);
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    await loadMappingsFromStorage();
+  } catch (err) {
+    setMappingMessage("Runtime toggle failed: " + err.message, true);
+  }
+}
+
+function formatTagTypeLabel(typeName, isArrayElement) {
+  var base = String(typeName || "").trim();
+  if (base.endsWith("[]")) {
+    base = base.substring(0, base.length - 2).trim();
+  }
+  if (!base) {
+    return "";
+  }
+  if (isArrayElement) {
+    return base + " (array element)";
+  }
+  return base;
+}
+
+function formatConfiguredTagType(tag) {
+  var path = String(tag.path || "");
+  var meta = gImportedTagMetaByPath[path] || null;
+  var typeName = String(tag.typeName || "").trim();
+  if (!typeName || typeName === "Imported") {
+    typeName = decodeCipTypeName(tag.typeCode || 0) || "";
+  }
+  if ((!typeName || typeName === "Imported") && meta && meta.typeName) {
+    typeName = String(meta.typeName || "").trim();
+  }
+  var label = formatTagTypeLabel(typeName, !!tag.isArrayElement);
+  if (label) {
+    return label;
+  }
+  if (tag.isUdtPath) {
+    return "UDT member";
+  }
+  if (tag.isArrayElement) {
+    return "Array element";
+  }
+  return "Unknown";
+}
+
+function renderTags(tags) {
+  gConfiguredTags = tags.slice();
+  var body = document.getElementById("tagBody");
+  body.innerHTML = "";
+  for (var i = 0; i < tags.length; i++) {
+    var t = tags[i];
+    var type = formatConfiguredTagType(t);
+    var tr = document.createElement("tr");
+    tr.innerHTML =
+      "<td>" + (t.index ?? i) + "</td>" +
+      "<td>" + (t.path || "") + "</td>" +
+      "<td>" + type + "</td>" +
+      "<td><button class='button small' type='button' onclick='removeTag(" + (t.index ?? i) + ")'>Remove</button></td>";
+    body.appendChild(tr);
+  }
+  document.getElementById("tagTable").style.display = tags.length ? "table" : "none";
+  refreshMappingTagOptions();
+  updateStats();
+}
+
+function renderBrowsedTags(tags) {
+  var filterText = document.getElementById("browseFilter").value.trim().toLowerCase();
+  var body = document.getElementById("browseBody");
+  body.innerHTML = "";
+
+  var effectiveByName = {};
+  var childCountByName = {};
+  for (var k = 0; k < tags.length; k++) {
+    var raw = tags[k] || {};
+    var rawName = String(raw.name || "");
+    if (!rawName) {
+      continue;
+    }
+    var meta = gImportedTagMetaByPath[rawName] || null;
+    var effectiveType = raw.typeName || decodeCipTypeName(raw.typeCode || (Number(raw.symbolType || 0) & 0xFF)) || "";
+    var effectiveIsArray = !!raw.isArray;
+    var effectiveArrayLength = Number(raw.arrayLength || 0);
+    if (effectiveType === "Imported" && meta) {
+      effectiveType = meta.typeName || effectiveType;
+      if (meta.isArray) {
+        effectiveIsArray = true;
+        effectiveArrayLength = Number(meta.arrayLength || 0);
+      }
+    }
+    effectiveByName[rawName] = {
+      name: rawName,
+      typeName: effectiveType,
+      isArray: effectiveIsArray,
+      arrayLength: effectiveArrayLength,
+      arrayBaseIndex: meta ? Number(meta.arrayBaseIndex || 0) : 0,
+      symbolType: Number(raw.symbolType || 0)
+    };
+
+    var dotIdx = rawName.lastIndexOf(".");
+    if (dotIdx > 0) {
+      var parentPath = rawName.substring(0, dotIdx);
+      childCountByName[parentPath] = (childCountByName[parentPath] || 0) + 1;
+    }
+  }
+
+  function hasCollapsedStructAncestor(path) {
+    var dot = path.indexOf(".");
+    while (dot > 0) {
+      var ancestor = path.substring(0, dot);
+      if ((childCountByName[ancestor] || 0) > 0 && !gExpandedBrowseStructs[ancestor]) {
+        return true;
+      }
+      dot = path.indexOf(".", dot + 1);
+    }
+    return false;
+  }
+
+  var shown = 0;
+  for (var i = 0; i < tags.length; i++) {
+    var t = tags[i] || {};
+    var name = String(t.name || "");
+    if (filterText && name.toLowerCase().indexOf(filterText) < 0) {
+      continue;
+    }
+    if (hasCollapsedStructAncestor(name)) {
+      continue;
+    }
+
+    var effective = effectiveByName[name] || {
+      name: name,
+      typeName: "",
+      isArray: false,
+      arrayLength: 0,
+      arrayBaseIndex: 0,
+      symbolType: Number(t.symbolType || 0)
+    };
+    var structChildCount = Number(childCountByName[name] || 0);
+    var isExpandableStruct = structChildCount > 0;
+    var isStructExpanded = !!gExpandedBrowseStructs[name];
+    var isExpandableArray = !!effective.isArray && Number(effective.arrayLength || 0) > 0 && name.indexOf("[") < 0;
+    var arrayGroupKey = "arr:" + name;
+    var isExpanded = !!gExpandedBrowseArrays[arrayGroupKey];
+
+    var tr = document.createElement("tr");
+    if (isExpandableArray || isExpandableStruct) {
+      tr.className = "tag-browser-group-row";
+    }
+    var tdName = document.createElement("td");
+
+    var depth = 0;
+    for (var d = 0; d < name.length; d++) {
+      if (name.charAt(d) === ".") {
+        depth++;
+      }
+    }
+    if (depth > 0) {
+      var indent = document.createElement("span");
+      indent.style.display = "inline-block";
+      indent.style.width = String(depth * 14) + "px";
+      tdName.appendChild(indent);
+    }
+
+    if (isExpandableStruct) {
+      var structChevron = document.createElement("span");
+      structChevron.className = isStructExpanded ? "tag-browser-chevron expanded" : "tag-browser-chevron";
+      structChevron.textContent = ">";
+      structChevron.title = isStructExpanded ? "Collapse UDT members" : "Expand UDT members";
+      structChevron.onclick = (function(keyCopy) {
+        return function() {
+          gExpandedBrowseStructs[keyCopy] = !gExpandedBrowseStructs[keyCopy];
+          renderBrowsedTags(gBrowsedTags);
+        };
+      })(name);
+      tdName.appendChild(structChevron);
+    } else if (isExpandableArray) {
+      var chevron = document.createElement("span");
+      chevron.className = isExpanded ? "tag-browser-chevron expanded" : "tag-browser-chevron";
+      chevron.textContent = ">";
+      chevron.title = isExpanded ? "Collapse array elements" : "Expand array elements";
+      chevron.onclick = (function(keyCopy) {
+        return function() {
+          gExpandedBrowseArrays[keyCopy] = !gExpandedBrowseArrays[keyCopy];
+          renderBrowsedTags(gBrowsedTags);
+        };
+      })(arrayGroupKey);
+      tdName.appendChild(chevron);
+    }
+    var nameText = document.createTextNode((isExpandableArray || isExpandableStruct) ? (" " + name) : name);
+    tdName.appendChild(nameText);
+    tr.appendChild(tdName);
+
+    var tdArray = document.createElement("td");
+    tdArray.textContent = effective.isArray ? "Yes" : "No";
+    tr.appendChild(tdArray);
+
+    var tdLen = document.createElement("td");
+    tdLen.textContent = (effective.isArray && effective.arrayLength) ? String(effective.arrayLength) : "";
+    tr.appendChild(tdLen);
+
+    var tdType = document.createElement("td");
+    var browseTypeName = effective.typeName || decodeCipTypeName(Number(effective.symbolType || 0) & 0xFF);
+    tdType.textContent = browseTypeName || ("0x" + Number(t.symbolType || 0).toString(16).toUpperCase());
+    tr.appendChild(tdType);
+
+    var tdAction = document.createElement("td");
+    var addBtn = document.createElement("button");
+    addBtn.className = "button small";
+    addBtn.type = "button";
+    addBtn.textContent = "Add";
+    addBtn.onclick = (function(pathCopy) {
+      return function() { addBrowsedTag(pathCopy); };
+    })(name);
+    tdAction.appendChild(addBtn);
+    tr.appendChild(tdAction);
+
+    body.appendChild(tr);
+    shown++;
+
+    if (!isExpandableStruct && isExpandableArray && isExpanded) {
+      var len = Number(effective.arrayLength || 0);
+      var maxRender = len > 128 ? 128 : len;
+      var baseIndex = Number(effective.arrayBaseIndex || 0);
+      for (var idx = 0; idx < maxRender; idx++) {
+        var childPath = name + "[" + (baseIndex + idx) + "]";
+        var childTr = document.createElement("tr");
+        childTr.className = "tag-browser-member-row";
+
+        var cName = document.createElement("td");
+        cName.textContent = childPath;
+        childTr.appendChild(cName);
+
+        var cArray = document.createElement("td");
+        cArray.textContent = "No";
+        childTr.appendChild(cArray);
+
+        var cLen = document.createElement("td");
+        cLen.textContent = "";
+        childTr.appendChild(cLen);
+
+        var cType = document.createElement("td");
+        cType.textContent = browseTypeName || ("0x" + Number(t.symbolType || 0).toString(16).toUpperCase());
+        childTr.appendChild(cType);
+
+        var cAction = document.createElement("td");
+        var cAdd = document.createElement("button");
+        cAdd.className = "button small";
+        cAdd.type = "button";
+        cAdd.textContent = "Add";
+        cAdd.onclick = (function(pathCopy) {
+          return function() { addBrowsedTag(pathCopy); };
+        })(childPath);
+        cAction.appendChild(cAdd);
+        childTr.appendChild(cAction);
+
+        body.appendChild(childTr);
+        shown++;
+      }
+
+      if (len > maxRender) {
+        var moreTr = document.createElement("tr");
+        moreTr.className = "tag-browser-member-row";
+        var moreTd = document.createElement("td");
+        moreTd.colSpan = 5;
+        moreTd.textContent = "Showing first " + maxRender + " of " + len + " elements. Refine with manual array range if needed.";
+        moreTr.appendChild(moreTd);
+        body.appendChild(moreTr);
+        shown++;
+      }
+    }
+  }
+  document.getElementById("browseTable").style.display = shown ? "table" : "none";
+  if (!shown && tags.length > 0) {
+    setTagStatus("Browse filter matched 0 tags.", false);
+  }
+}
+
+async function browsePlcTags() {
+  setTagStatus("Browsing selected PLC tags...", false);
+  try {
+    const response = await fetch("/api/plc/tags/browse");
+    const data = await response.json();
+    if (!response.ok || !data.ok) {
+      throw new Error(data.error || ("HTTP " + response.status));
+    }
+    gBrowsedTags = Array.isArray(data.tags) ? data.tags : [];
+    renderBrowsedTags(gBrowsedTags);
+    setTagStatus("Browsed " + (data.count || gBrowsedTags.length || 0) + " PLC tag(s).", false);
+  } catch (err) {
+    gBrowsedTags = [];
+    renderBrowsedTags(gBrowsedTags);
+    setTagStatus("Browse failed: " + err.message, true);
+  }
+}
+
+async function addBrowsedTag(path) {
+  if (!path) {
+    return;
+  }
+  try {
+    const response = await fetch("/api/plc/tags/add?path=" + encodeURIComponent(path));
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    setTagStatus("Added tag path: " + path, false);
+    loadTagList();
+  } catch (err) {
+    setTagStatus("Add failed: " + err.message, true);
+  }
+}
+
+async function loadTagList() {
+  try {
+    const response = await fetch("/api/plc/tags");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    const tags = Array.isArray(data.tags) ? data.tags : [];
+    renderTags(tags);
+    setTagStatus("Loaded " + (data.count || 0) + " tag path(s).", false);
+  } catch (err) {
+    renderTags([]);
+    setTagStatus("Failed to load tags: " + err.message, true);
+  }
+}
+
+async function addManualTag() {
+  const path = document.getElementById("manualTagPath").value.trim();
+  if (!path) {
+    setTagStatus("Enter a full tag path first.", true);
+    return;
+  }
+  try {
+    const response = await fetch("/api/plc/tags/add?path=" + encodeURIComponent(path));
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    setTagStatus("Tag path added.", false);
+    document.getElementById("manualTagPath").value = "";
+    loadTagList();
+  } catch (err) {
+    setTagStatus("Add failed: " + err.message, true);
+  }
+}
+
+async function removeTag(idx) {
+  try {
+    const response = await fetch("/api/plc/tags/remove/" + idx);
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    setTagStatus("Tag removed.", false);
+    loadTagList();
+  } catch (err) {
+    setTagStatus("Remove failed: " + err.message, true);
+  }
+}
+
+function splitCsvLine(line) {
+  var fields = [];
+  var current = "";
+  var inQuotes = false;
+  for (var i = 0; i < line.length; i++) {
+    var ch = line[i];
+    if (ch === "\"") {
+      if (inQuotes && i + 1 < line.length && line[i + 1] === "\"") {
+        current += "\"";
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (ch === "," && !inQuotes) {
+      fields.push(current);
+      current = "";
+    } else {
+      current += ch;
+    }
+  }
+  fields.push(current);
+  return fields;
+}
+
+function isCsvPrimitiveType(typeName) {
+  var t = String(typeName || "").trim().toUpperCase();
+  return t === "BOOL" || t === "SINT" || t === "INT" || t === "DINT" ||
+         t === "LINT" || t === "USINT" || t === "UINT" || t === "UDINT" ||
+         t === "ULINT" || t === "REAL" || t === "LREAL" || t === "TIME" ||
+         t === "DATE" || t === "TOD" || t === "TIME_OF_DAY" ||
+         t === "DATE_AND_TIME" || t === "BYTE" || t === "WORD" ||
+         t === "DWORD" || t === "LWORD" || t === "STRING";
+}
+
+function parseUdtCsvTagPaths(csvText) {
+  var lines = String(csvText || "").replace(/\r/g, "").split("\n");
+  var arrayInfo = {};
+  var indexedElementPattern = /\[\d+\]$/;
+
+  for (var scan = 0; scan < lines.length; scan++) {
+    var scanLine = lines[scan];
+    if (!scanLine || scan < 2) {
+      continue;
+    }
+    var scanFields = splitCsvLine(scanLine);
+    if (!scanFields || scanFields.length < 1) {
+      continue;
+    }
+    var scanName = (scanFields[0] || "").trim();
+    var indexMatch = /^(.+)\[(\d+)\]$/.exec(scanName);
+    if (!indexMatch) {
+      continue;
+    }
+    var basePath = indexMatch[1];
+    var indexValue = Number(indexMatch[2]);
+    if (isNaN(indexValue)) {
+      continue;
+    }
+    if (!arrayInfo[basePath]) {
+      arrayInfo[basePath] = { min: indexValue, max: indexValue };
+    } else {
+      arrayInfo[basePath].min = Math.min(arrayInfo[basePath].min, indexValue);
+      arrayInfo[basePath].max = Math.max(arrayInfo[basePath].max, indexValue);
+    }
+  }
+
+  var out = [];
+  var seen = {};
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i];
+    if (!line) {
+      continue;
+    }
+    if (i < 2) {
+      continue; // CCW export header rows
+    }
+    var fields = splitCsvLine(line);
+    if (!fields || fields.length < 3) {
+      continue;
+    }
+    var name = (fields[0] || "").trim();
+    var dimension = (fields.length > 5 ? fields[5] : "").trim();
+    if (!name) {
+      continue;
+    }
+    // Skip indexed array elements (root or nested). Keep container rows such as
+    // RuntimeLabelArray.JobName and expand [1..n] in the tag browser UI.
+    if (indexedElementPattern.test(name)) {
+      continue;
+    }
+    var hasDot = name.indexOf(".") >= 0;
+    var isBaseArray = dimension.length > 0 && dimension[0] === "[";
+    var typeName = (fields[2] || "").trim().toUpperCase();
+    var isUdtRoot = (!hasDot && name.indexOf("[") < 0 && !isBaseArray && typeName && !isCsvPrimitiveType(typeName));
+
+    if (!(hasDot || isBaseArray || isUdtRoot)) {
+      continue;
+    }
+    if (!/^[A-Za-z0-9_.\[\]:-]+$/.test(name)) {
+      continue;
+    }
+
+    var arrLen = 0;
+    var arrBase = 0;
+    var isArray = false;
+    if (isBaseArray) {
+      var dimMatch = /^\[(\d+)\.\.(\d+)\]$/.exec(dimension);
+      if (dimMatch) {
+        arrBase = Number(dimMatch[1]);
+        var hi = Number(dimMatch[2]);
+        if (!isNaN(arrBase) && !isNaN(hi) && hi >= arrBase) {
+          arrLen = (hi - arrBase + 1);
+          isArray = arrLen > 0;
+        }
+      }
+    } else if (arrayInfo[name]) {
+      arrBase = arrayInfo[name].min;
+      arrLen = (arrayInfo[name].max - arrayInfo[name].min + 1);
+      isArray = arrLen > 0;
+    }
+
+    if (!seen[name]) {
+      seen[name] = true;
+      out.push({
+        path: name,
+        typeName: typeName || "Imported",
+        isArray: isArray,
+        arrayLength: arrLen,
+        arrayBaseIndex: arrBase
+      });
+    }
+  }
+  return out;
+}
+
+function saveImportedTagMeta() {
+  try {
+    localStorage.setItem(kImportedMetaStorageKey, JSON.stringify(gImportedTagMetaByPath));
+  } catch (e) {
+    // ignore storage failures
+  }
+}
+
+function loadImportedTagMeta() {
+  try {
+    var raw = localStorage.getItem(kImportedMetaStorageKey);
+    if (!raw) {
+      gImportedTagMetaByPath = {};
+      return;
+    }
+    var parsed = JSON.parse(raw);
+    gImportedTagMetaByPath = (parsed && typeof parsed === "object") ? parsed : {};
+  } catch (e) {
+    gImportedTagMetaByPath = {};
+  }
+}
+
+function mergeImportedTagMeta(entries, replaceFirst) {
+  if (replaceFirst) {
+    gImportedTagMetaByPath = {};
+  }
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i];
+    if (!e || !e.path) {
+      continue;
+    }
+    gImportedTagMetaByPath[e.path] = {
+      typeName: e.typeName || "Imported",
+      isArray: !!e.isArray,
+      arrayLength: Number(e.arrayLength || 0),
+      arrayBaseIndex: Number(e.arrayBaseIndex || 0)
+    };
+  }
+  saveImportedTagMeta();
+}
+
+async function clearImportedBrowseTags() {
+  try {
+    const response = await fetch("/api/plc/tags/import/clear");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    gImportedTagMetaByPath = {};
+    saveImportedTagMeta();
+    setTagStatus("Stored CSV tags cleared. Browse PLC tags to refresh the list.", false);
+  } catch (err) {
+    setTagStatus("Clear failed: " + err.message, true);
+  }
+}
+
+async function importUdtCsv(replaceFirst) {
+  var fileInput = document.getElementById("udtCsvFile");
+  var file = fileInput && fileInput.files && fileInput.files.length ? fileInput.files[0] : null;
+  if (!file) {
+    setTagStatus("Choose a CSV file first.", true);
+    return;
+  }
+
+  try {
+    setTagStatus("Reading CSV file...", false);
+    var csvText = await file.text();
+    var entries = parseUdtCsvTagPaths(csvText);
+    if (!entries.length) {
+      setTagStatus("No UDT/array tag paths found in CSV.", true);
+      return;
+    }
+
+    if (replaceFirst) {
+      const clearResp = await fetch("/api/plc/tags/import/clear");
+      if (!clearResp.ok) {
+        throw new Error("clear HTTP " + clearResp.status);
+      }
+    }
+
+    for (var i = 0; i < entries.length; i++) {
+      var addResp = await fetch("/api/plc/tags/import/add_nosave?path=" + encodeURIComponent(entries[i].path));
+      if (!addResp.ok) {
+        var failBody = await addResp.json().catch(function() { return {}; });
+        throw new Error("add HTTP " + addResp.status + " at " + entries[i].path +
+          (failBody.error ? (" (" + failBody.error + ")") : ""));
+      }
+    }
+
+    const commitResp = await fetch("/api/plc/tags/import/commit");
+    if (!commitResp.ok) {
+      throw new Error("commit HTTP " + commitResp.status);
+    }
+
+    mergeImportedTagMeta(entries, !!replaceFirst);
+    await browsePlcTags();
+    setTagStatus("CSV import complete. Loaded " + entries.length +
+      " tag path(s). Expand arrays (e.g. RuntimeLabelArray.JobName) to pick [1..n] elements.", false);
+  } catch (err) {
+    setTagStatus("CSV import failed: " + err.message, true);
+  }
+}
+
+loadConnectionSummary(true);
+loadTagList();
+loadImportedTagMeta();
+loadMappingsFromStorage();
+renderMappingTable();
+updateStats();
+document.querySelectorAll(".modal-overlay").forEach(function(overlay) {
+  overlay.addEventListener("click", function(e) {
+    if (e.target === overlay) {
+      overlay.classList.remove("show");
+      if (!document.querySelector(".modal-overlay.show")) {
+        document.body.style.overflow = "";
+      }
+    }
+  });
+});
+document.addEventListener("keydown", function(e) {
+  if (e.key !== "Escape") return;
+  document.querySelectorAll(".modal-overlay.show").forEach(function(overlay) {
+    overlay.classList.remove("show");
+  });
+  document.body.style.overflow = "";
+});
+document.getElementById("browseFilter").addEventListener("input", function() {
+  renderBrowsedTags(gBrowsedTags);
+});
+document.getElementById("mapJobTag").addEventListener("change", updateAsciiPreview);
+document.getElementById("mapTextTag").addEventListener("change", syncEditorTextType);
+document.getElementById("mapTextTag").addEventListener("change", updateAsciiPreview);
+document.getElementById("mapDestCommand").addEventListener("change", function() {
+  refreshReajetTargetOptions();
+  syncJobChangeWorkflowUi();
+  updateAsciiPreview();
+});
+document.getElementById("mapJobChangeWorkflow").addEventListener("change", updateAsciiPreview);
+document.getElementById("mapDestTarget").addEventListener("change", updateAsciiPreview);
+refreshReajetTargetOptions();
+setInterval(function() {
+  loadMappingsFromStorage();
+  loadConnectionSummary(false);
+}, 2000);
+</script>
+<script src="help.js"></script>
+</body>
+</html>

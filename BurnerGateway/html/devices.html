@@ -1,0 +1,340 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>CIP Data Gateway - Devices</title>
+</head>
+<body>
+<div class="app">
+  <div class="header-card">
+    <div class="brand">
+      <div>
+        <a href="/" class="nav-link"><- Back to Home</a>
+        <h1>Device Configuration</h1>
+        <p class="subtitle">PLC and REAJet connection settings</p>
+      </div>
+      <div class="header-actions">
+        <button class="button help-btn" type="button" onclick="openPageHelp()">Help</button>
+        <div class="logo"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Micro800 PLC</h2>
+    <div id="selectedPlc" class="selected-plc">
+      <div class="selected-plc-title">Selected PLC</div>
+      <div id="selectedPlcBody" class="selected-plc-body">None selected</div>
+    </div>
+    <div class="actions">
+      <button class="button primary" type="button" onclick="scanPlcs()">Scan Micro800 Devices</button>
+      <button class="button" type="button" onclick="loadSelectedPlc()">Refresh</button>
+      <button class="button danger" type="button" onclick="clearPlc()">Remove PLC</button>
+    </div>
+    <p id="scanStatus" class="hint"></p>
+    <table id="scanTable" class="grid" style="display:none;">
+      <thead>
+        <tr>
+          <th>IP</th>
+          <th>Name</th>
+          <th>Vendor</th>
+          <th>Product</th>
+          <th>Revision</th>
+          <th>Micro800</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="scanBody"></tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>REAJet Destination</h2>
+    <div id="selectedReajet" class="selected-plc">
+      <div class="selected-plc-title">REAJet Status</div>
+      <div id="selectedReajetBody" class="selected-plc-body">Not configured</div>
+    </div>
+    <div class="row">
+      <label for="reajetIp">REAJet IP</label>
+      <input id="reajetIp" type="text" placeholder="192.168.0.124">
+    </div>
+    <div class="row">
+      <label for="reajetPort">REAJet Port</label>
+      <input id="reajetPort" type="number" min="1" max="65535" value="22170">
+    </div>
+    <div class="row">
+      <label for="reajetPollMs">Mapping scan interval (ms)</label>
+      <input id="reajetPollMs" type="number" min="10" max="5000" value="50">
+    </div>
+    <p class="hint">How often the gateway reads PLC mapping trigger tags (rising-edge detect). Default 50 ms.</p>
+    <div class="actions">
+      <button class="button primary" type="button" onclick="saveReajetConfig()">Save REAJet Settings</button>
+      <button class="button" type="button" onclick="refreshReajetStatus()">Refresh</button>
+      <button class="button danger" type="button" onclick="clearReajet()">Remove REAJet</button>
+    </div>
+    <p id="reajetStatus" class="hint"></p>
+  </div>
+</div>
+
+<script>
+function setScanStatus(msg, isError) {
+  var el = document.getElementById("scanStatus");
+  el.textContent = msg;
+  el.style.color = isError ? "#b00020" : "#2e7d32";
+}
+
+function setReajetStatus(msg, isError) {
+  var el = document.getElementById("reajetStatus");
+  el.textContent = msg;
+  el.style.color = isError ? "#b00020" : "#2e7d32";
+}
+
+function renderSelectedReajet(data) {
+  var html = "";
+  if (data && data.ok && data.ip) {
+    html += "<span class='pill'><b>IP</b> " + data.ip + "</span>";
+    html += "<span class='pill'><b>Port</b> " + String(data.port || 22170) + "</span>";
+    html += "<span class='pill'><b>Scan</b> " + String(data.pollMs || 50) + " ms</span>";
+    if (data.protocol) {
+      html += "<span class='pill'><b>Protocol</b> " + data.protocol + "</span>";
+    }
+    if (data.usesEot === true) {
+      html += "<span class='pill'><b>Framing</b> EOT (port 22169)</span>";
+    }
+    if (data.connectAttempted) {
+      if (data.connectOk) {
+        html += "<span class='pill good'><b>TCP</b> OK</span>";
+      } else {
+        html += "<span class='pill bad'><b>TCP</b> Failed</span>";
+      }
+      if (data.connectMessage) {
+        html += "<div class='selected-plc-note'>" + data.connectMessage + "</div>";
+      }
+    } else {
+      html += "<span class='selected-plc-note'>TCP not tested yet. Save settings or click Refresh.</span>";
+    }
+  } else {
+    html = "<span class='selected-plc-note'>Not configured</span>";
+  }
+  document.getElementById("selectedReajetBody").innerHTML = html;
+}
+
+function renderScanResults(devices) {
+  var body = document.getElementById("scanBody");
+  body.innerHTML = "";
+  for (var i = 0; i < devices.length; i++) {
+    var d = devices[i];
+    var tr = document.createElement("tr");
+    tr.innerHTML =
+      "<td>" + (d.ip || "") + "</td>" +
+      "<td>" + (d.name || "") + "</td>" +
+      "<td>" + (d.vendorId || 0) + "</td>" +
+      "<td>" + (d.productCode || 0) + "</td>" +
+      "<td>" + (d.revision || "") + "</td>" +
+      "<td>" + (d.micro800 ? "Yes" : "No") + "</td>" +
+      "<td><button class='button small' type='button' onclick='savePlc(" + i + ")'>Use</button></td>";
+    body.appendChild(tr);
+  }
+  document.getElementById("scanTable").style.display = devices.length ? "table" : "none";
+}
+
+async function scanPlcs() {
+  setScanStatus("Scanning network for EtherNet/IP devices...", false);
+  try {
+    const response = await fetch("/api/plc/scan");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    const devices = Array.isArray(data.devices) ? data.devices : [];
+    renderScanResults(devices);
+    setScanStatus("Scan complete: " + (data.count || 0) + " device(s) found.", false);
+  } catch (err) {
+    renderScanResults([]);
+    setScanStatus("Scan failed: " + err.message, true);
+  }
+}
+
+async function loadSelectedPlc() {
+  try {
+    const response = await fetch("/api/plc/selected");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    var html = "";
+    if (data && data.ip && data.ip !== "0.0.0.0") {
+      html += "<span class='pill'><b>IP</b> " + data.ip + "</span>";
+      html += "<span class='pill'><b>Model</b> " + (data.name || "unknown") + "</span>";
+      if (data.micro800 === true) {
+        html += "<span class='pill good'><b>Family</b> Micro800</span>";
+      } else {
+        html += "<span class='pill'><b>Family</b> Other</span>";
+      }
+      if (data.connectAttempted) {
+        if (data.connectOk) {
+          html += "<span class='pill good'><b>Auto-connect</b> OK</span>";
+        } else {
+          html += "<span class='pill bad'><b>Auto-connect</b> Failed</span>";
+        }
+        if (data.connectMessage) {
+          html += "<div class='selected-plc-note'>" + data.connectMessage + "</div>";
+        }
+      }
+    } else {
+      html = "<span class='selected-plc-note'>None selected</span>";
+    }
+    document.getElementById("selectedPlcBody").innerHTML = html;
+  } catch (err) {
+    document.getElementById("selectedPlcBody").innerHTML = "<span class='selected-plc-note'>Unavailable</span>";
+  }
+}
+
+async function savePlc(idx) {
+  try {
+    const response = await fetch("/api/plc/save/" + idx);
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    var msg = "Saved PLC target: " + (data.ip || "") + " (" + (data.name || "") + ")";
+    if (typeof data.connectOk !== "undefined") {
+      msg += data.connectOk ? " | connect OK" : " | connect FAILED";
+      if (data.connectMessage) {
+        msg += " (" + data.connectMessage + ")";
+      }
+    }
+    setScanStatus(msg, !data.connectOk && typeof data.connectOk !== "undefined");
+    loadSelectedPlc();
+  } catch (err) {
+    setScanStatus("Save failed: " + err.message, true);
+  }
+}
+
+async function clearPlc() {
+  if (!confirm("Remove the stored PLC target? Auto-connect and tag I/O will stop until you select a new PLC.")) {
+    return;
+  }
+  try {
+    const response = await fetch("/api/plc/clear");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    if (!data || !data.ok) {
+      throw new Error("Gateway rejected clear");
+    }
+    setScanStatus("PLC target removed.", false);
+    loadSelectedPlc();
+  } catch (err) {
+    setScanStatus("Remove failed: " + err.message, true);
+  }
+}
+
+async function saveReajetConfig() {
+  var ip = document.getElementById("reajetIp").value.trim();
+  var port = document.getElementById("reajetPort").value.trim();
+  var pollMs = document.getElementById("reajetPollMs").value.trim() || "50";
+  localStorage.setItem("gateway.reajet.ip", ip);
+  localStorage.setItem("gateway.reajet.port", port);
+  localStorage.setItem("gateway.reajet.pollMs", pollMs);
+  try {
+    const response = await fetch("/api/reajet/config/save?ip=" + encodeURIComponent(ip) +
+      "&port=" + encodeURIComponent(port) +
+      "&pollMs=" + encodeURIComponent(pollMs));
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    if (!data || !data.ok) {
+      throw new Error("Gateway rejected save");
+    }
+    document.getElementById("reajetIp").value = data.ip || "";
+    document.getElementById("reajetPort").value = String(data.port || 22170);
+    document.getElementById("reajetPollMs").value = String(data.pollMs || 50);
+    localStorage.setItem("gateway.reajet.ip", document.getElementById("reajetIp").value);
+    localStorage.setItem("gateway.reajet.port", document.getElementById("reajetPort").value);
+    localStorage.setItem("gateway.reajet.pollMs", document.getElementById("reajetPollMs").value);
+    renderSelectedReajet(data);
+    var msg = ip
+      ? ("Saved: " + (data.ip || "(empty)") + ":" + String(data.port || 22170) +
+         ", scan " + String(data.pollMs || 50) + " ms")
+      : "REAJet destination cleared.";
+    if (data.connectAttempted) {
+      msg += data.connectOk ? " | TCP OK" : " | TCP FAILED";
+      if (data.connectMessage) {
+        msg += " (" + data.connectMessage + ")";
+      }
+    }
+    setReajetStatus(msg, data.connectAttempted && !data.connectOk);
+  } catch (err) {
+    setReajetStatus("Gateway save failed: " + err.message, true);
+  }
+}
+
+async function clearReajet() {
+  if (!confirm("Remove the stored REAJet destination? Status polling and REA-PI will stop until you configure a new printer.")) {
+    return;
+  }
+  try {
+    const response = await fetch("/api/reajet/config/clear");
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    if (!data || !data.ok) {
+      throw new Error("Gateway rejected clear");
+    }
+    document.getElementById("reajetIp").value = "";
+    localStorage.setItem("gateway.reajet.ip", "");
+    renderSelectedReajet(data);
+    setReajetStatus("REAJet destination removed.", false);
+  } catch (err) {
+    setReajetStatus("Remove failed: " + err.message, true);
+  }
+}
+
+async function loadReajetConfig(probe) {
+  var fallbackIp = localStorage.getItem("gateway.reajet.ip") || "";
+  var fallbackPort = localStorage.getItem("gateway.reajet.port") || "22170";
+  var fallbackPoll = localStorage.getItem("gateway.reajet.pollMs") ||
+    localStorage.getItem("gateway.runtime.pollMs") || "50";
+  document.getElementById("reajetIp").value = fallbackIp;
+  document.getElementById("reajetPort").value = fallbackPort;
+  document.getElementById("reajetPollMs").value = fallbackPoll;
+  try {
+    var url = "/api/reajet/config";
+    if (probe) {
+      url += "?probe=1";
+    }
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+    const data = await response.json();
+    if (data && data.ok) {
+      document.getElementById("reajetIp").value = data.ip || "";
+      document.getElementById("reajetPort").value = String(data.port || 22170);
+      document.getElementById("reajetPollMs").value = String(data.pollMs || 50);
+      renderSelectedReajet(data);
+    }
+  } catch (err) {
+    document.getElementById("selectedReajetBody").innerHTML = "<span class='selected-plc-note'>Unavailable</span>";
+  }
+}
+
+async function refreshReajetStatus() {
+  setReajetStatus("Testing REAJet TCP connection...", false);
+  try {
+    await loadReajetConfig(true);
+    setReajetStatus("REAJet status refreshed.", false);
+  } catch (err) {
+    setReajetStatus("Refresh failed: " + err.message, true);
+  }
+}
+
+loadSelectedPlc();
+loadReajetConfig(false);
+</script>
+<script src="help.js"></script>
+</body>
+</html>
