@@ -3983,7 +3983,7 @@ END GROUP
                 0x8000db80                . = ALIGN (0x10)
                 0x8000db80                SRAM_END = .
 
-.text           0x40000490    0xe4bf0
+.text           0x40000490    0xe4d30
  nb-crt0.o()
  .text          0x40000490       0xaa c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455\nb-crt0.o
                 0x40000490                start
@@ -10058,2038 +10058,2038 @@ END GROUP
  .rodata._ZL12FilePointer7
                 0x40089c52     0x3d72 htmldata.o
  .rodata._ZL12FilePointer6
-                0x4008d9c4     0x342e htmldata.o
+                0x4008d9c4     0x356d htmldata.o
  .rodata._ZL12FilePointer5
-                0x40090df2     0x46d8 htmldata.o
+                0x40090f31     0x46d8 htmldata.o
  .rodata._ZL12FilePointer4
-                0x400954ca    0x1105d htmldata.o
+                0x40095609    0x1105d htmldata.o
  .rodata._ZL12FilePointer3
-                0x400a6527    0x268ac htmldata.o
+                0x400a6666    0x268ac htmldata.o
  .rodata._ZL12FilePointer2
-                0x400ccdd3      0x820 htmldata.o
+                0x400ccf12      0x820 htmldata.o
  .rodata._ZL12FilePointer1
-                0x400cd5f3     0x3e09 htmldata.o
+                0x400cd732     0x3e09 htmldata.o
  .rodata._ZL12FilePointer0
-                0x400d13fc     0x3278 htmldata.o
+                0x400d153b     0x3278 htmldata.o
  .rodata.LinkTime
-                0x400d4674       0x15 ./BurnerGateway_linkDTStamp.o
-                0x400d4674                LinkTime
+                0x400d47b3       0x15 ./BurnerGateway_linkDTStamp.o
+                0x400d47b3                LinkTime
  .rodata._Z17ConfigPostHandleriR12HTTP_Request.str1.1
-                0x400d4689        0x6 nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x400d47c8        0x6 nblibs\libnetburner.a(HttpConfigMirror.o)
                                  0x4d (size before relaxing)
  .rodata._Z17ConfigPageHandleriR12HTTP_Request.str1.1
-                0x400d468f       0x17 nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x400d47ce       0x17 nblibs\libnetburner.a(HttpConfigMirror.o)
  .rodata._Z17SchemaPageHandleriR12HTTP_Request.str1.1
-                0x400d46a6       0x4a nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x400d47e5       0x4a nblibs\libnetburner.a(HttpConfigMirror.o)
                                  0x50 (size before relaxing)
  .rodata._Z21ConfigRootPageHandleriR12HTTP_Request.str1.1
-                0x400d46f0       0x54 nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x400d482f       0x54 nblibs\libnetburner.a(HttpConfigMirror.o)
  .rodata._GLOBAL__sub_I__Z17ConfigPostHandleriR12HTTP_Request.str1.1
-                0x400d4744       0x1d nblibs\libnetburner.a(HttpConfigMirror.o)
- *fill*         0x400d4761        0x3 
+                0x400d4883       0x1d nblibs\libnetburner.a(HttpConfigMirror.o)
  .rodata._ZTV15HtmlPostHandler
-                0x400d4764       0x10 nblibs\libnetburner.a(HttpConfigMirror.o)
-                0x400d4764                _ZTV15HtmlPostHandler
+                0x400d48a0       0x10 nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x400d48a0                _ZTV15HtmlPostHandler
  .rodata._ZTV27CallBackFunctionPostHandler
-                0x400d4774       0x10 nblibs\libnetburner.a(HttpConfigMirror.o)
-                0x400d4774                _ZTV27CallBackFunctionPostHandler
+                0x400d48b0       0x10 nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x400d48b0                _ZTV27CallBackFunctionPostHandler
  .rodata._ZTV12AutoIPClient
-                0x400d4784        0xc nblibs\libnetburner.a(autoip.o)
-                0x400d4784                _ZTV12AutoIPClient
+                0x400d48c0        0xc nblibs\libnetburner.a(autoip.o)
+                0x400d48c0                _ZTV12AutoIPClient
  .rodata._ZN10reboot_obj16GetSortNameValueEv.str1.1
-                0x400d4790        0x5 nblibs\libnetburner.a(config_obj.o)
+                0x400d48cc        0x5 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11version_obj16GetSortNameValueEv.str1.1
-                0x400d4795        0x5 nblibs\libnetburner.a(config_obj.o)
+                0x400d48d1        0x5 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11config_uint12FdPrintValueEib.str1.1
-                0x400d479a        0x3 nblibs\libnetburner.a(config_obj.o)
+                0x400d48d6        0x3 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN10config_int12FdPrintValueEib.str1.1
-                0x400d479a        0x3 nblibs\libnetburner.a(config_obj.o)
+                0x400d48d6        0x3 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN14config_IPADDR412FdPrintValueEib.str1.1
-                0x400d479a        0x6 nblibs\libnetburner.a(config_obj.o)
+                0x400d48d6        0x6 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN13config_IPADDR12FdPrintValueEib.str1.1
-                0x400d47a0        0x5 nblibs\libnetburner.a(config_obj.o)
+                0x400d48dc        0x5 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN13config_MACADR12FdPrintValueEib.str1.1
-                0x400d47a5       0x20 nblibs\libnetburner.a(config_obj.o)
+                0x400d48e1       0x20 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN10config_obj14RawFdPrintTreeEiibmbb.str1.1
-                0x400d47c5       0x20 nblibs\libnetburner.a(config_obj.o)
+                0x400d4901       0x20 nblibs\libnetburner.a(config_obj.o)
                                  0x14 (size before relaxing)
  .rodata._ZN11config_bool12GetTextValueER8NBString.str1.1
-                0x400d47c5        0xb nblibs\libnetburner.a(config_obj.o)
+                0x400d4901        0xb nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN14config_chooser12GetTypeValueER8NBString.str1.1
-                0x400d47c5        0x7 nblibs\libnetburner.a(config_obj.o)
+                0x400d4901        0x7 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN13config_MACADR12GetTypeValueER8NBString.str1.1
-                0x400d47cc        0x7 nblibs\libnetburner.a(config_obj.o)
+                0x400d4908        0x7 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN10config_int12GetTypeValueER8NBString.str1.1
-                0x400d47cc        0x8 nblibs\libnetburner.a(config_obj.o)
+                0x400d4908        0x8 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11config_bool12GetTypeValueER8NBString.str1.1
-                0x400d47d4        0x8 nblibs\libnetburner.a(config_obj.o)
+                0x400d4910        0x8 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11config_leaf12GetTypeValueER8NBString.str1.1
-                0x400d47dc        0x8 nblibs\libnetburner.a(config_obj.o)
+                0x400d4918        0x8 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11config_pass12GetTextValueER8NBString.str1.1
-                0x400d47dc        0xc nblibs\libnetburner.a(config_obj.o)
+                0x400d4918        0xc nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN10config_obj12GetTextValueER8NBString.str1.1
-                0x400d47e8        0x3 nblibs\libnetburner.a(config_obj.o)
+                0x400d4924        0x3 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN13config_report12GetTextValueER8NBString.str1.1
-                0x400d47eb        0x3 nblibs\libnetburner.a(config_obj.o)
+                0x400d4927        0x3 nblibs\libnetburner.a(config_obj.o)
                                   0x5 (size before relaxing)
  .rodata._ZN11config_pass17CommitTestedValueEm.str1.1
-                0x400d47eb        0x7 nblibs\libnetburner.a(config_obj.o)
+                0x400d4927        0x7 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN13config_string12GetTextValueER8NBString.str1.1
-                0x400d47f2        0x2 nblibs\libnetburner.a(config_obj.o)
+                0x400d492e        0x2 nblibs\libnetburner.a(config_obj.o)
  .rodata._Z17FdEscapeJsonValueibPKc.str1.1
-                0x400d47f2        0xe nblibs\libnetburner.a(config_obj.o)
+                0x400d492e        0xe nblibs\libnetburner.a(config_obj.o)
                                  0x12 (size before relaxing)
  .rodata._ZN11config_leaf10RenderToFdEibmb.str1.1
-                0x400d4800        0x4 nblibs\libnetburner.a(config_obj.o)
+                0x400d493c        0x4 nblibs\libnetburner.a(config_obj.o)
                                   0xa (size before relaxing)
  .rodata._ZN11config_leaf12DoSchemaLineEiPKcS1_ibb.str1.1
-                0x400d4804       0x12 nblibs\libnetburner.a(config_obj.o)
+                0x400d4940       0x12 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN13config_IPADDR14ExtendedSchemaEiib.str1.1
-                0x400d4816        0xc nblibs\libnetburner.a(config_obj.o)
+                0x400d4952        0xc nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN14config_IPADDR414ExtendedSchemaEiib.str1.1
-                0x400d4822        0x5 nblibs\libnetburner.a(config_obj.o)
+                0x400d495e        0x5 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN13config_string14ExtendedSchemaEiib.str1.1
-                0x400d4827        0xf nblibs\libnetburner.a(config_obj.o)
+                0x400d4963        0xf nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11config_pass14ExtendedSchemaEiib.str1.1
-                0x400d4836        0x9 nblibs\libnetburner.a(config_obj.o)
+                0x400d4972        0x9 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11config_leaf13SchemaOptionsEiib.str1.1
-                0x400d483f       0x20 nblibs\libnetburner.a(config_obj.o)
+                0x400d497b       0x20 nblibs\libnetburner.a(config_obj.o)
  .rodata._ZN11config_leaf13FdPrintSchemaEiPS_ibm.str1.1
-                0x400d485f       0x3e nblibs\libnetburner.a(config_obj.o)
+                0x400d499b       0x3e nblibs\libnetburner.a(config_obj.o)
  .rodata._Z10ConfigSizev.str1.1
-                0x400d489d       0x1b nblibs\libnetburner.a(config_obj.o)
+                0x400d49d9       0x1b nblibs\libnetburner.a(config_obj.o)
  .rodata._GLOBAL__sub_I_detached.str1.1
-                0x400d48b8       0xad nblibs\libnetburner.a(config_obj.o)
+                0x400d49f4       0xad nblibs\libnetburner.a(config_obj.o)
                                  0xc5 (size before relaxing)
  .rodata._ZN11config_leaf15FlatParseBufferER19fifo_buffer_storagemPKc.str1.1
-                0x400d4965        0x3 nblibs\libnetburner.a(config_obj.o)
+                0x400d4aa1        0x3 nblibs\libnetburner.a(config_obj.o)
                                   0x6 (size before relaxing)
  .rodata._ZTV10fd_adapter
-                0x400d4968       0x14 nblibs\libnetburner.a(config_obj.o)
-                0x400d4968                _ZTV10fd_adapter
+                0x400d4aa4       0x14 nblibs\libnetburner.a(config_obj.o)
+                0x400d4aa4                _ZTV10fd_adapter
  .rodata._ZTV8root_obj
-                0x400d497c       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d497c                _ZTV8root_obj
+                0x400d4ab8       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d4ab8                _ZTV8root_obj
  .rodata._ZTV17detached_root_obj
-                0x400d49c0       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d49c0                _ZTV17detached_root_obj
+                0x400d4afc       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d4afc                _ZTV17detached_root_obj
  .rodata._ZTV10reboot_obj
-                0x400d4a04       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4a04                _ZTV10reboot_obj
+                0x400d4b40       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4b40                _ZTV10reboot_obj
  .rodata._ZTV16empty_config_obj
-                0x400d4a4c       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d4a4c                _ZTV16empty_config_obj
+                0x400d4b88       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d4b88                _ZTV16empty_config_obj
  .rodata._ZTV9SysRecord
-                0x400d4a90       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d4a90                _ZTV9SysRecord
+                0x400d4bcc       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d4bcc                _ZTV9SysRecord
  .rodata._ZTV13MonitorRecord
-                0x400d4ad4       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d4ad4                _ZTV13MonitorRecord
+                0x400d4c10       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d4c10                _ZTV13MonitorRecord
  .rodata._ZTV12config_value
-                0x400d4b18       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4b18                _ZTV12config_value
+                0x400d4c54       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4c54                _ZTV12config_value
  .rodata._ZTV11config_uint
-                0x400d4b60       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4b60                _ZTV11config_uint
+                0x400d4c9c       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4c9c                _ZTV11config_uint
  .rodata._ZTV10config_int
-                0x400d4ba8       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4ba8                _ZTV10config_int
+                0x400d4ce4       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4ce4                _ZTV10config_int
  .rodata._ZTV13config_report
-                0x400d4bf0       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4bf0                _ZTV13config_report
+                0x400d4d2c       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4d2c                _ZTV13config_report
  .rodata._ZTV11config_bool
-                0x400d4c38       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4c38                _ZTV11config_bool
+                0x400d4d74       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4d74                _ZTV11config_bool
  .rodata._ZTV13config_string
-                0x400d4c80       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4c80                _ZTV13config_string
+                0x400d4dbc       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4dbc                _ZTV13config_string
  .rodata._ZTV11config_pass
-                0x400d4cc8       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4cc8                _ZTV11config_pass
+                0x400d4e04       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4e04                _ZTV11config_pass
  .rodata._ZTV14config_IPADDR4
-                0x400d4d10       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4d10                _ZTV14config_IPADDR4
+                0x400d4e4c       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4e4c                _ZTV14config_IPADDR4
  .rodata._ZTV13config_IPADDR
-                0x400d4d58       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4d58                _ZTV13config_IPADDR
+                0x400d4e94       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4e94                _ZTV13config_IPADDR
  .rodata._ZTV13config_MACADR
-                0x400d4da0       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4da0                _ZTV13config_MACADR
+                0x400d4edc       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4edc                _ZTV13config_MACADR
  .rodata._ZTV14config_chooser
-                0x400d4de8       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d4de8                _ZTV14config_chooser
+                0x400d4f24       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d4f24                _ZTV14config_chooser
  .rodata._ZTV11version_obj
-                0x400d4e2c       0x48 nblibs\libnetburner.a(config_obj.o)
-                0x400d4e2c                _ZTV11version_obj
+                0x400d4f68       0x48 nblibs\libnetburner.a(config_obj.o)
+                0x400d4f68                _ZTV11version_obj
  .rodata._ZTV9FDCounter
-                0x400d4e74       0x14 nblibs\libnetburner.a(config_obj.o)
-                0x400d4e74                _ZTV9FDCounter
+                0x400d4fb0       0x14 nblibs\libnetburner.a(config_obj.o)
+                0x400d4fb0                _ZTV9FDCounter
  .rodata._ZTV13StorageWriter
-                0x400d4e88       0x14 nblibs\libnetburner.a(config_obj.o)
-                0x400d4e88                _ZTV13StorageWriter
+                0x400d4fc4       0x14 nblibs\libnetburner.a(config_obj.o)
+                0x400d4fc4                _ZTV13StorageWriter
  .rodata._ZTV10config_obj
-                0x400d4e9c       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d4e9c                _ZTV10config_obj
+                0x400d4fd8       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d4fd8                _ZTV10config_obj
  .rodata._ZTV11config_leaf
-                0x400d4ee0       0x44 nblibs\libnetburner.a(config_obj.o)
-                0x400d4ee0                _ZTV11config_leaf
+                0x400d501c       0x44 nblibs\libnetburner.a(config_obj.o)
+                0x400d501c                _ZTV11config_leaf
  .rodata._Z16DiscoverCallBackP7OS_FIFOt.str1.1
-                0x400d4f24        0xa nblibs\libnetburner.a(config_server.o)
+                0x400d5060        0xa nblibs\libnetburner.a(config_server.o)
  .rodata._Z23WriteOneDiscoveryResultR7IPADDR6R6MACADRiii.str1.1
-                0x400d4f2e      0x380 nblibs\libnetburner.a(config_server.o)
+                0x400d506a      0x380 nblibs\libnetburner.a(config_server.o)
  .rodata._Z12SendDiscoverv.str1.1
-                0x400d52ae        0xb nblibs\libnetburner.a(config_server.o)
+                0x400d53ea        0xb nblibs\libnetburner.a(config_server.o)
  .rodata._Z15SendErrorHeaderiPKc.str1.1
-                0x400d52b9       0x9c nblibs\libnetburner.a(config_server.o)
+                0x400d53f5       0x9c nblibs\libnetburner.a(config_server.o)
  .rodata._Z16ShowNetInterfaceiP11config_leaf.str1.1
-                0x400d5355       0x69 nblibs\libnetburner.a(config_server.o)
+                0x400d5491       0x69 nblibs\libnetburner.a(config_server.o)
  .rodata._ZN15GetRequestBlock9ProcessWrEi.str1.1
-                0x400d53be      0x544 nblibs\libnetburner.a(config_server.o)
+                0x400d54fa      0x544 nblibs\libnetburner.a(config_server.o)
                                 0x5da (size before relaxing)
  .rodata._Z14ConfigDataSinkR15GetRequestBlockPciiRPv.str1.1
-                0x400d5902        0xb nblibs\libnetburner.a(config_server.o)
+                0x400d5a3e        0xb nblibs\libnetburner.a(config_server.o)
  .rodata._ZN15GetRequestBlock14ProcessTimeOutEi.str1.1
-                0x400d590d       0x20 nblibs\libnetburner.a(config_server.o)
+                0x400d5a49       0x20 nblibs\libnetburner.a(config_server.o)
  .rodata._ZN15GetRequestBlock9DoGetHeadEib.str1.1
-                0x400d592d       0xcc nblibs\libnetburner.a(config_server.o)
+                0x400d5a69       0xcc nblibs\libnetburner.a(config_server.o)
                                  0xd3 (size before relaxing)
  .rodata._ZN15GetRequestBlock6DoPostEi.str1.1
-                0x400d59f9        0xf nblibs\libnetburner.a(config_server.o)
+                0x400d5b35        0xf nblibs\libnetburner.a(config_server.o)
  .rodata._Z17StartConfigServeri.str1.1
-                0x400d5a08        0xe nblibs\libnetburner.a(config_server.o)
+                0x400d5b44        0xe nblibs\libnetburner.a(config_server.o)
  .rodata._Z14ConfigUdpReplyR9UDPPacketi.str1.1
-                0x400d5a16        0x6 nblibs\libnetburner.a(config_server.o)
+                0x400d5b52        0x6 nblibs\libnetburner.a(config_server.o)
                                   0xd (size before relaxing)
  .rodata._ZN15GetRequestBlock9ProcessRdEi.str1.1
-                0x400d5a1c       0x4d nblibs\libnetburner.a(config_server.o)
+                0x400d5b58       0x4d nblibs\libnetburner.a(config_server.o)
                                  0x52 (size before relaxing)
- *fill*         0x400d5a69        0x3 
+ *fill*         0x400d5ba5        0x3 
  .rodata._ZTV16WebConfigServlet
-                0x400d5a6c       0x10 nblibs\libnetburner.a(config_server.o)
-                0x400d5a6c                _ZTV16WebConfigServlet
+                0x400d5ba8       0x10 nblibs\libnetburner.a(config_server.o)
+                0x400d5ba8                _ZTV16WebConfigServlet
  .rodata.str1.1
-                0x400d5a7c      0x5ed nblibs\libnetburner.a(config_server.o)
+                0x400d5bb8      0x5ed nblibs\libnetburner.a(config_server.o)
  .rodata._ZL12GetTabChoiceP11config_leafiR8NBString.str1.1
-                0x400d6069        0x1 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d61a5        0x1 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet4initE8NBStringi.str1.1
-                0x400d6069       0xc2 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d61a5       0xc2 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet6PromptEv.str1.1
-                0x400d612b       0x16 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d6267       0x16 nblibs\libnetburner.a(config_server_serial.o)
                                  0x19 (size before relaxing)
  .rodata._ZN19SerialConfigServlet5MatchEPKcbiib.str1.1
-                0x400d6141       0x22 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d627d       0x22 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet6DoSaveEv.str1.1
-                0x400d6163       0x14 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d629f       0x14 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet6DoHelpEv.str1.1
-                0x400d6177      0x298 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d62b3      0x298 nblibs\libnetburner.a(config_server_serial.o)
                                 0x29d (size before relaxing)
  .rodata._ZN19SerialConfigServlet7DoFlashEv.str1.1
-                0x400d640f       0x11 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d654b       0x11 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet8DoRebootEv.str1.1
-                0x400d6420        0x9 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d655c        0x9 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet14FindConfigLeafEcPi.str1.1
-                0x400d6429        0x7 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d6565        0x7 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet16FindNextTabEntryEiPiPPKcP8NBString.str1.1
-                0x400d6429        0xe nblibs\libnetburner.a(config_server_serial.o)
+                0x400d6565        0xe nblibs\libnetburner.a(config_server_serial.o)
                                  0x10 (size before relaxing)
  .rodata._ZN19SerialConfigServlet11TabCompleteEi.str1.1
-                0x400d6437        0x3 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d6573        0x3 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet14OutputTabEntryEii.str1.1
-                0x400d6437        0x4 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d6573        0x4 nblibs\libnetburner.a(config_server_serial.o)
  .rodata._ZN19SerialConfigServlet4DoLSEv.str1.1
-                0x400d643b        0xa nblibs\libnetburner.a(config_server_serial.o)
+                0x400d6577        0xa nblibs\libnetburner.a(config_server_serial.o)
  .rodata._GLOBAL__sub_I_EXTRA_RECORD_PAD.str1.1
-                0x400d6445       0x8c nblibs\libnetburner.a(config_server_serial.o)
+                0x400d6581       0x8c nblibs\libnetburner.a(config_server_serial.o)
                                  0x93 (size before relaxing)
  .rodata._ZN19SerialConfigServlet14ProcessReceiveEv.str1.1
-                0x400d64d1      0x1aa nblibs\libnetburner.a(config_server_serial.o)
+                0x400d660d      0x1aa nblibs\libnetburner.a(config_server_serial.o)
                                 0x1cd (size before relaxing)
- *fill*         0x400d667b        0x1 
+ *fill*         0x400d67b7        0x1 
  .rodata._ZTV19SerialConfigServlet
-                0x400d667c       0x10 nblibs\libnetburner.a(config_server_serial.o)
-                0x400d667c                _ZTV19SerialConfigServlet
+                0x400d67b8       0x10 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d67b8                _ZTV19SerialConfigServlet
  .rodata.str1.1
-                0x400d668c        0x8 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d67c8        0x8 nblibs\libnetburner.a(config_server_serial.o)
  .rodata.EXTRA_RECORD_PAD
-                0x400d6694        0x4 nblibs\libnetburner.a(config_server_serial.o)
-                0x400d6694                EXTRA_RECORD_PAD
+                0x400d67d0        0x4 nblibs\libnetburner.a(config_server_serial.o)
+                0x400d67d0                EXTRA_RECORD_PAD
  .rodata._ZN10DhcpObject11bDoFallBackEv.str1.1
-                0x400d6698       0x10 nblibs\libnetburner.a(dhcpc.o)
+                0x400d67d4       0x10 nblibs\libnetburner.a(dhcpc.o)
  .rodata._ZN10DhcpObject10LinkNotifyEb.str1.1
-                0x400d6698        0x5 nblibs\libnetburner.a(dhcpc.o)
+                0x400d67d4        0x5 nblibs\libnetburner.a(dhcpc.o)
  .rodata._Z17IsInterfaceActivei.str1.1
-                0x400d6698        0x7 nblibs\libnetburner.a(dhcpc.o)
+                0x400d67d4        0x7 nblibs\libnetburner.a(dhcpc.o)
  .rodata._ZTV10DhcpObject
-                0x400d6698        0xc nblibs\libnetburner.a(dhcpc.o)
-                0x400d6698                _ZTV10DhcpObject
+                0x400d67d4        0xc nblibs\libnetburner.a(dhcpc.o)
+                0x400d67d4                _ZTV10DhcpObject
  .rodata._Z14ShowActiveTimei.str1.1
-                0x400d66a4       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d67e0       0x18 nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._ZN12DiagLinkTime12ServeContentEi.str1.1
-                0x400d66bc        0x5 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d67f8        0x5 nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._ZN12DiagTaskList12ServeContentEi.str1.1
-                0x400d66bc        0x4 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d67f8        0x4 nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._ZN11DiagTcpList12ServeContentEi.str1.1
-                0x400d66bc       0x1f nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d67f8       0x1f nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._Z14ShowExtraCounti.str1.1
-                0x400d66db        0x3 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6817        0x3 nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._ZN15DiagConfigStore12ServeContentEi.str1.1
-                0x400d66db       0x37 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6817       0x37 nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._ZN11DiagFreeMem12ServeContentEi.str1.1
-                0x400d6712        0x4 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d684e        0x4 nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._ZN14DiagMallocInfo12ServeContentEi.str1.1
-                0x400d6712       0x48 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d684e       0x48 nblibs\libnetburner.a(diagnostics_set.o)
  .rodata._Z24RenderPredefMacrosToJsoni.str1.1
-                0x400d675a      0x555 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6896      0x555 nblibs\libnetburner.a(diagnostics_set.o)
                                 0x558 (size before relaxing)
  .rodata._GLOBAL__sub_I__ZN12DiagTaskList12ServeContentEi.str1.1
-                0x400d6caf       0x60 nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6deb       0x60 nblibs\libnetburner.a(diagnostics_set.o)
                                  0x67 (size before relaxing)
- *fill*         0x400d6d0f        0x1 
+ *fill*         0x400d6e4b        0x1 
  .rodata._ZTV12DiagCallBack
-                0x400d6d10        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d10                _ZTV12DiagCallBack
+                0x400d6e4c        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6e4c                _ZTV12DiagCallBack
  .rodata._ZTV12DiagLinkTime
-                0x400d6d1c        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d1c                _ZTV12DiagLinkTime
+                0x400d6e58        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6e58                _ZTV12DiagLinkTime
  .rodata._ZTV11DiagFreeMem
-                0x400d6d28        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d28                _ZTV11DiagFreeMem
+                0x400d6e64        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6e64                _ZTV11DiagFreeMem
  .rodata._ZTV14DiagMallocInfo
-                0x400d6d34        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d34                _ZTV14DiagMallocInfo
+                0x400d6e70        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6e70                _ZTV14DiagMallocInfo
  .rodata._ZTV13DiagBufferCnt
-                0x400d6d40        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d40                _ZTV13DiagBufferCnt
+                0x400d6e7c        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6e7c                _ZTV13DiagBufferCnt
  .rodata._ZTV11DiagRelease
-                0x400d6d4c        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d4c                _ZTV11DiagRelease
+                0x400d6e88        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6e88                _ZTV11DiagRelease
  .rodata._ZTV12DiagTaskList
-                0x400d6d58        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d58                _ZTV12DiagTaskList
+                0x400d6e94        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6e94                _ZTV12DiagTaskList
  .rodata._ZTV11DiagTcpList
-                0x400d6d64        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d64                _ZTV11DiagTcpList
+                0x400d6ea0        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6ea0                _ZTV11DiagTcpList
  .rodata._ZTV16DiagSystemMacros
-                0x400d6d70        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d70                _ZTV16DiagSystemMacros
+                0x400d6eac        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6eac                _ZTV16DiagSystemMacros
  .rodata._ZTV15DiagConfigStore
-                0x400d6d7c        0xc nblibs\libnetburner.a(diagnostics_set.o)
-                0x400d6d7c                _ZTV15DiagConfigStore
+                0x400d6eb8        0xc nblibs\libnetburner.a(diagnostics_set.o)
+                0x400d6eb8                _ZTV15DiagConfigStore
  .rodata._GLOBAL__sub_I__Z10ExpandReadiPci.str1.1
-                0x400d6d88        0x8 nblibs\libnetburner.a(extraio.o)
+                0x400d6ec4        0x8 nblibs\libnetburner.a(extraio.o)
  .rodata._GLOBAL__sub_I_fdaInfo.str1.1
-                0x400d6d88        0xb nblibs\libnetburner.a(fd_adapter.o)
- *fill*         0x400d6d93        0x1 
+                0x400d6ec4        0xb nblibs\libnetburner.a(fd_adapter.o)
+ *fill*         0x400d6ecf        0x1 
  .rodata._ZTV6FDInfo
-                0x400d6d94       0x40 nblibs\libnetburner.a(fdinfo.o)
-                0x400d6d94                _ZTV6FDInfo
+                0x400d6ed0       0x40 nblibs\libnetburner.a(fdinfo.o)
+                0x400d6ed0                _ZTV6FDInfo
  .rodata.write.str1.1
-                0x400d6dd4        0x2 nblibs\libnetburner.a(fileio.o)
+                0x400d6f10        0x2 nblibs\libnetburner.a(fileio.o)
  .rodata.read.str1.1
-                0x400d6dd4        0x3 nblibs\libnetburner.a(fileio.o)
+                0x400d6f10        0x3 nblibs\libnetburner.a(fileio.o)
  .rodata._GLOBAL__sub_I_pExtraFdFunc.str1.1
-                0x400d6dd4        0x6 nblibs\libnetburner.a(fileio.o)
+                0x400d6f10        0x6 nblibs\libnetburner.a(fileio.o)
  .rodata.str1.1
-                0x400d6dda       0x14 nblibs\libnetburner.a(fileio.o)
+                0x400d6f16       0x14 nblibs\libnetburner.a(fileio.o)
  .rodata.CSWTCH.58
-                0x400d6dee        0xc nblibs\libnetburner.a(fileio.o)
- *fill*         0x400d6dfa        0x2 
+                0x400d6f2a        0xc nblibs\libnetburner.a(fileio.o)
+ *fill*         0x400d6f36        0x2 
  .rodata._ZTV11STDIOFDInfo
-                0x400d6dfc       0x40 nblibs\libnetburner.a(fileio.o)
-                0x400d6dfc                _ZTV11STDIOFDInfo
+                0x400d6f38       0x40 nblibs\libnetburner.a(fileio.o)
+                0x400d6f38                _ZTV11STDIOFDInfo
  .rodata._Z15FindValidConfigv.str1.1
-                0x400d6e3c       0x22 nblibs\libnetburner.a(find_config.o)
- *fill*         0x400d6e5e        0x2 
+                0x400d6f78       0x22 nblibs\libnetburner.a(find_config.o)
+ *fill*         0x400d6f9a        0x2 
  .rodata._ZTV11FdMemReader
-                0x400d6e60       0x14 nblibs\libnetburner.a(find_config.o)
-                0x400d6e60                _ZTV11FdMemReader
+                0x400d6f9c       0x14 nblibs\libnetburner.a(find_config.o)
+                0x400d6f9c                _ZTV11FdMemReader
  .rodata._Z15StartHttpCustomP16listen_list_item.part.0.str1.1
-                0x400d6e74        0x5 nblibs\libnetburner.a(http.o)
+                0x400d6fb0        0x5 nblibs\libnetburner.a(http.o)
  .rodata._ZN12HTTP_Request11ProcessLineEPc.str1.1
-                0x400d6e79       0x9e nblibs\libnetburner.a(httpinternal.o)
+                0x400d6fb5       0x9e nblibs\libnetburner.a(httpinternal.o)
                                  0xb0 (size before relaxing)
  .rodata._Z16RedirectResponseiPKc.str1.1
-                0x400d6f17       0x25 nblibs\libnetburner.a(httpinternal.o)
+                0x400d7053       0x25 nblibs\libnetburner.a(httpinternal.o)
                                  0x2a (size before relaxing)
  .rodata._Z16NotFoundResponseiPKc.str1.1
-                0x400d6f3c       0xc3 nblibs\libnetburner.a(httpinternal.o)
+                0x400d7078       0xc3 nblibs\libnetburner.a(httpinternal.o)
  .rodata._Z17ForbiddenResponseiPKc.str1.1
-                0x400d6fff       0xbc nblibs\libnetburner.a(httpinternal.o)
+                0x400d713b       0xbc nblibs\libnetburner.a(httpinternal.o)
                                  0xcb (size before relaxing)
  .rodata._ZN12HTTP_Request21ExtractAuthenticationEPPcS1_.str1.1
-                0x400d70bb        0x6 nblibs\libnetburner.a(httpinternal.o)
+                0x400d71f7        0x6 nblibs\libnetburner.a(httpinternal.o)
                                   0xc (size before relaxing)
  .rodata._GLOBAL__sub_I_pHttpRealm.str1.1
-                0x400d70c1        0x1 nblibs\libnetburner.a(httpinternal.o)
- *fill*         0x400d70c1        0x3 
+                0x400d71fd        0x1 nblibs\libnetburner.a(httpinternal.o)
+ *fill*         0x400d71fd        0x3 
  .rodata._ZTV15HtmlPageHandler
-                0x400d70c4       0x10 nblibs\libnetburner.a(httpinternal.o)
-                0x400d70c4                _ZTV15HtmlPageHandler
+                0x400d7200       0x10 nblibs\libnetburner.a(httpinternal.o)
+                0x400d7200                _ZTV15HtmlPageHandler
  .rodata._ZTV19FileResponseHandler
-                0x400d70d4       0x10 nblibs\libnetburner.a(httpinternal.o)
-                0x400d70d4                _ZTV19FileResponseHandler
+                0x400d7210       0x10 nblibs\libnetburner.a(httpinternal.o)
+                0x400d7210                _ZTV19FileResponseHandler
  .rodata._Z21RequestAuthenticationiPKc.str1.1
-                0x400d70e4       0x61 nblibs\libnetburner.a(httppass.o)
+                0x400d7220       0x61 nblibs\libnetburner.a(httppass.o)
                                  0xfb (size before relaxing)
  .rodata._Z15InitializeStackv.str1.1
-                0x400d7145       0x7b nblibs\libnetburner.a(ip.o)
+                0x400d7281       0x7b nblibs\libnetburner.a(ip.o)
                                  0x85 (size before relaxing)
  .rodata._ZN17ParsedJsonDataSet10InsertNameEPKc.str1.1
-                0x400d71c0        0x7 nblibs\libnetburner.a(json_builder.o)
+                0x400d72fc        0x7 nblibs\libnetburner.a(json_builder.o)
  .rodata._ZN17ParsedJsonDataSet12InsertStringEPKc.str1.1
-                0x400d71c0        0x2 nblibs\libnetburner.a(json_builder.o)
+                0x400d72fc        0x2 nblibs\libnetburner.a(json_builder.o)
                                  0x12 (size before relaxing)
  .rodata._ZN17ParsedJsonDataSet3AddEPKcRK7IPADDR6.str1.1
-                0x400d71c2        0x5 nblibs\libnetburner.a(json_builder.o)
+                0x400d72fe        0x5 nblibs\libnetburner.a(json_builder.o)
  .rodata._ZN17ParsedJsonDataSet3AddEPKcRK6MACADR.str1.1
-                0x400d71c2       0x19 nblibs\libnetburner.a(json_builder.o)
+                0x400d72fe       0x19 nblibs\libnetburner.a(json_builder.o)
  .rodata._ZN17ParsedJsonDataSet13StartBuildingEv.str1.1
-                0x400d71db        0x2 nblibs\libnetburner.a(json_builder.o)
+                0x400d7317        0x2 nblibs\libnetburner.a(json_builder.o)
  .rodata._ZN17ParsedJsonDataSet13AddArrayStartEPKc.str1.1
-                0x400d71db       0x19 nblibs\libnetburner.a(json_builder.o)
+                0x400d7317       0x19 nblibs\libnetburner.a(json_builder.o)
                                   0x2 (size before relaxing)
  .rodata._ZN17ParsedJsonDataSet8EndArrayEv.str1.1
-                0x400d71db       0x19 nblibs\libnetburner.a(json_builder.o)
+                0x400d7317       0x19 nblibs\libnetburner.a(json_builder.o)
                                   0x2 (size before relaxing)
  .rodata._ZN17ParsedJsonDataSet9EndObjectEv.str1.1
-                0x400d71db        0x2 nblibs\libnetburner.a(json_builder.o)
+                0x400d7317        0x2 nblibs\libnetburner.a(json_builder.o)
  .rodata._ZN17ParsedJsonDataSet5ErrorER8NBString.str1.1
-                0x400d71db       0x1d nblibs\libnetburner.a(json_lexer.o)
+                0x400d7317       0x1d nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZN17ParsedJsonDataSet4WarnER8NBString.str1.1
-                0x400d71f8       0x1f nblibs\libnetburner.a(json_lexer.o)
+                0x400d7334       0x1f nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZN17ParsedJsonDataSet13AddStringCharEc.part.3.str1.1
-                0x400d7217       0x16 nblibs\libnetburner.a(json_lexer.o)
+                0x400d7353       0x16 nblibs\libnetburner.a(json_lexer.o)
  .rodata._Z11GetTypeName19json_primitive_type.str1.1
-                0x400d722d        0xf nblibs\libnetburner.a(json_lexer.o)
+                0x400d7369        0xf nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZN17ParsedJsonDataSet4EmitE19json_primitive_type.str1.1
-                0x400d723c       0x1b nblibs\libnetburner.a(json_lexer.o)
+                0x400d7378       0x1b nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZN17ParsedJsonDataSet16EmitNumberBufferEv.str1.1
-                0x400d7257       0x1d nblibs\libnetburner.a(json_lexer.o)
+                0x400d7393       0x1d nblibs\libnetburner.a(json_lexer.o)
  .rodata._Z10ShowPPListPKcP11pool_buffer.str1.1
-                0x400d7274       0x10 nblibs\libnetburner.a(json_lexer.o)
+                0x400d73b0       0x10 nblibs\libnetburner.a(json_lexer.o)
                                  0x17 (size before relaxing)
  .rodata._ZN17ParsedJsonDataSet26CheckForAndFixBrokenStringEv.str1.1
-                0x400d7284       0x49 nblibs\libnetburner.a(json_lexer.o)
+                0x400d73c0       0x49 nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZN17ParsedJsonDataSet11ProcessCharEh.part.4.str1.1
-                0x400d72cd      0x231 nblibs\libnetburner.a(json_lexer.o)
+                0x400d7409      0x231 nblibs\libnetburner.a(json_lexer.o)
                                 0x23f (size before relaxing)
  .rodata._ZN7JsonRef7GetNextEv.str1.1
-                0x400d74fe       0x1b nblibs\libnetburner.a(json_lexer.o)
+                0x400d763a       0x1b nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZNK7JsonRef13CurrentNumberEv.str1.1
-                0x400d7519        0x6 nblibs\libnetburner.a(json_lexer.o)
+                0x400d7655        0x6 nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZNK7JsonRef21PermissiveCurrentBoolEv.str1.1
-                0x400d751f        0xa nblibs\libnetburner.a(json_lexer.o)
+                0x400d765b        0xa nblibs\libnetburner.a(json_lexer.o)
                                  0x11 (size before relaxing)
  .rodata._Z8indentfniPFvPKciPvES1_.str1.1
-                0x400d7529       0x36 nblibs\libnetburner.a(json_lexer.o)
+                0x400d7665       0x36 nblibs\libnetburner.a(json_lexer.o)
  .rodata._ZN7JsonRef11printhelperEPFvPKciPvES2_b.str1.1
-                0x400d755f       0x18 nblibs\libnetburner.a(json_lexer.o)
+                0x400d769b       0x18 nblibs\libnetburner.a(json_lexer.o)
                                  0x48 (size before relaxing)
  .rodata._ZN7JsonRef8DiagDumpEPKc.str1.1
-                0x400d7577       0x8d nblibs\libnetburner.a(json_lexer.o)
+                0x400d76b3       0x8d nblibs\libnetburner.a(json_lexer.o)
                                  0x93 (size before relaxing)
  .rodata.str1.1
-                0x400d7604       0xed nblibs\libnetburner.a(json_lexer.o)
- *fill*         0x400d76f1        0x1 
+                0x400d7740       0xed nblibs\libnetburner.a(json_lexer.o)
+ *fill*         0x400d782d        0x1 
  .rodata.CSWTCH.186
-                0x400d76f2       0x44 nblibs\libnetburner.a(json_lexer.o)
- *fill*         0x400d7736        0x2 
+                0x400d782e       0x44 nblibs\libnetburner.a(json_lexer.o)
+ *fill*         0x400d7872        0x2 
  .rodata._ZTV17ParsedJsonDataSet
-                0x400d7738       0x2c nblibs\libnetburner.a(json_lexer.o)
-                0x400d7738                _ZTV17ParsedJsonDataSet
+                0x400d7874       0x2c nblibs\libnetburner.a(json_lexer.o)
+                0x400d7874                _ZTV17ParsedJsonDataSet
  .rodata._ZTV18JsonLexerFDAdapter
-                0x400d7764       0x4c nblibs\libnetburner.a(json_lexer.o)
-                0x400d7764                _ZTV18JsonLexerFDAdapter
+                0x400d78a0       0x4c nblibs\libnetburner.a(json_lexer.o)
+                0x400d78a0                _ZTV18JsonLexerFDAdapter
  .rodata._Z15CoreLongLongDecyPFiPvPKciES_R7pfstate.str1.1
-                0x400d77b0       0xed nblibs\libnetburner.a(nbiprintf.o)
+                0x400d78ec       0xed nblibs\libnetburner.a(nbiprintf.o)
                                   0x6 (size before relaxing)
  .rodata._Z19NB_internal_iprintfPFiPvPKciES_S1_S_.str1.1
-                0x400d77b0        0x7 nblibs\libnetburner.a(nbiprintf.o)
+                0x400d78ec        0x7 nblibs\libnetburner.a(nbiprintf.o)
                                   0xf (size before relaxing)
  .rodata.str1.1
-                0x400d77b7       0x15 nblibs\libnetburner.a(nbiprintf.o)
+                0x400d78f3       0x15 nblibs\libnetburner.a(nbiprintf.o)
                                  0x2a (size before relaxing)
  .rodata._Z13printfractionPFiPvPKciES_dR7pfstate.str1.1
-                0x400d77cc       0x15 nblibs\libnetburner.a(nbprintf.o)
+                0x400d7908       0x15 nblibs\libnetburner.a(nbprintf.o)
                                   0x2 (size before relaxing)
  .rodata._Z12OutputFFloatPFiPvPKciES_dR7pfstate.str1.1
-                0x400d77cc        0x2 nblibs\libnetburner.a(nbprintf.o)
+                0x400d7908        0x2 nblibs\libnetburner.a(nbprintf.o)
  .rodata._Z12OutputEFloatPFiPvPKciES_dR7pfstatec.str1.1
-                0x400d77cc        0x4 nblibs\libnetburner.a(nbprintf.o)
+                0x400d7908        0x4 nblibs\libnetburner.a(nbprintf.o)
  .rodata._Z14TheFloatPrintfcPFiPvPKciES_dR7pfstate.str1.1
-                0x400d77cc        0x2 nblibs\libnetburner.a(nbprintf.o)
+                0x400d7908        0x2 nblibs\libnetburner.a(nbprintf.o)
  .rodata._ZN16NBStorageManager12reservespaceEm.str1.1
-                0x400d77cc       0x12 nblibs\libnetburner.a(nbstring.o)
+                0x400d7908       0x12 nblibs\libnetburner.a(nbstring.o)
  .rodata._ZN15AppUpdateRecord8PutValueEh.str1.1
-                0x400d77de       0x15 nblibs\libnetburner.a(nbupdate.o)
+                0x400d791a       0x15 nblibs\libnetburner.a(nbupdate.o)
  .rodata._ZN15AppUpdateRecord12ParseOneCharEc.str1.1
-                0x400d77f3       0x37 nblibs\libnetburner.a(nbupdate.o)
+                0x400d792f       0x37 nblibs\libnetburner.a(nbupdate.o)
  .rodata._ZN14InterfaceBlock16GetInterfaceNameEv.str1.1
-                0x400d782a        0x8 nblibs\libnetburner.a(netinterface.o)
+                0x400d7966        0x8 nblibs\libnetburner.a(netinterface.o)
  .rodata._ZN14InterfaceBlockC2EPKcS1_.str1.1
-                0x400d782a      0x453 nblibs\libnetburner.a(netinterface.o)
+                0x400d7966      0x453 nblibs\libnetburner.a(netinterface.o)
                                 0x47e (size before relaxing)
  .rodata._ZN14InterfaceBlock19InterfaceLinkChangeEb.str1.1
-                0x400d7c7d       0x10 nblibs\libnetburner.a(netinterface.o)
- *fill*         0x400d7c7d        0x3 
+                0x400d7db9       0x10 nblibs\libnetburner.a(netinterface.o)
+ *fill*         0x400d7db9        0x3 
  .rodata._ZTV8I4Record
-                0x400d7c80       0x44 nblibs\libnetburner.a(netinterface.o)
-                0x400d7c80                _ZTV8I4Record
+                0x400d7dbc       0x44 nblibs\libnetburner.a(netinterface.o)
+                0x400d7dbc                _ZTV8I4Record
  .rodata._ZTV8I6Record
-                0x400d7cc4       0x44 nblibs\libnetburner.a(netinterface.o)
-                0x400d7cc4                _ZTV8I6Record
+                0x400d7e00       0x44 nblibs\libnetburner.a(netinterface.o)
+                0x400d7e00                _ZTV8I6Record
  .rodata._ZTV14InterfaceBlock
-                0x400d7d08       0x64 nblibs\libnetburner.a(netinterface.o)
-                0x400d7d08                _ZTV14InterfaceBlock
+                0x400d7e44       0x64 nblibs\libnetburner.a(netinterface.o)
+                0x400d7e44                _ZTV14InterfaceBlock
  .rodata._ZTV14TimeOutElement
-                0x400d7d6c        0xc nblibs\libnetburner.a(nettimer.o)
-                0x400d7d6c                _ZTV14TimeOutElement
+                0x400d7ea8        0xc nblibs\libnetburner.a(nettimer.o)
+                0x400d7ea8                _ZTV14TimeOutElement
  .rodata._ZTV14IntervalAction
-                0x400d7d78        0xc nblibs\libnetburner.a(nettimer.o)
-                0x400d7d78                _ZTV14IntervalAction
+                0x400d7eb4        0xc nblibs\libnetburner.a(nettimer.o)
+                0x400d7eb4                _ZTV14IntervalAction
  .rodata._ZTV7servlet
-                0x400d7d84       0x10 nblibs\libnetburner.a(servlets.o)
-                0x400d7d84                _ZTV7servlet
+                0x400d7ec0       0x10 nblibs\libnetburner.a(servlets.o)
+                0x400d7ec0                _ZTV7servlet
  .rodata._Z12TcpSendwSum4P13socket_struct7IPADDR4R16TcpCarrierPackethm.str1.1
-                0x400d7d94       0x16 nblibs\libnetburner.a(tcp.o)
+                0x400d7ed0       0x16 nblibs\libnetburner.a(tcp.o)
  .rodata._ZN13socket_struct18ShowSocketJsonInfoEi.str1.1
-                0x400d7daa      0x19b nblibs\libnetburner.a(tcp.o)
+                0x400d7ee6      0x19b nblibs\libnetburner.a(tcp.o)
  .rodata._Z15RenderTcpToJsoni.str1.1
-                0x400d7f45      0x19b nblibs\libnetburner.a(tcp.o)
+                0x400d8081      0x19b nblibs\libnetburner.a(tcp.o)
                                   0x4 (size before relaxing)
  .rodata._GLOBAL__sub_I_sockets.str1.1
-                0x400d7f45        0x4 nblibs\libnetburner.a(tcp.o)
- *fill*         0x400d7f49        0x3 
+                0x400d8081        0x4 nblibs\libnetburner.a(tcp.o)
+ *fill*         0x400d8085        0x3 
  .rodata._ZTV13socket_struct
-                0x400d7f4c        0xc nblibs\libnetburner.a(tcp.o)
-                0x400d7f4c                _ZTV13socket_struct
+                0x400d8088        0xc nblibs\libnetburner.a(tcp.o)
+                0x400d8088                _ZTV13socket_struct
  .rodata._ZTV11ShortSocket
-                0x400d7f58        0xc nblibs\libnetburner.a(tcp.o)
-                0x400d7f58                _ZTV11ShortSocket
+                0x400d8094        0xc nblibs\libnetburner.a(tcp.o)
+                0x400d8094                _ZTV11ShortSocket
  .rodata._ZTV7TcpInfo
-                0x400d7f64       0x40 nblibs\libnetburner.a(tcp.o)
-                0x400d7f64                _ZTV7TcpInfo
+                0x400d80a0       0x40 nblibs\libnetburner.a(tcp.o)
+                0x400d80a0                _ZTV7TcpInfo
  .rodata._ZL10TIME_INDEX
-                0x400d7fa4        0xd nblibs\libnetburner.a(tcp.o)
+                0x400d80e0        0xd nblibs\libnetburner.a(tcp.o)
  .rodata._Z15ProcessNBVLanIDP11pool_bufferP14InterfaceBlock.str1.1
-                0x400d7fb1       0x59 nblibs\libnetburner.a(udp.o)
+                0x400d80ed       0x59 nblibs\libnetburner.a(udp.o)
                                  0x5c (size before relaxing)
  .rodata._Z15ConfigVlanReplyR9UDPPacketi.str1.1
-                0x400d800a       0x2c nblibs\libnetburner.a(udp.o)
+                0x400d8146       0x2c nblibs\libnetburner.a(udp.o)
                                  0x2e (size before relaxing)
  .rodata._GLOBAL__sub_I__Z15UDP_Socket_readiPci.str1.1
-                0x400d8036        0x4 nblibs\libnetburner.a(udpsocket.o)
+                0x400d8172        0x4 nblibs\libnetburner.a(udpsocket.o)
  .rodata._Z9fdShowMaciPK6MACADR.str1.1
-                0x400d803a       0x1e nblibs\libnetburner.a(utils.o)
+                0x400d8176       0x1e nblibs\libnetburner.a(utils.o)
  .rodata._Z7ShowIP47IPADDR4.str1.1
-                0x400d8058        0xc nblibs\libnetburner.a(utils.o)
+                0x400d8194        0xc nblibs\libnetburner.a(utils.o)
  .rodata._ZNK7IPADDR613CompactformatEPc.str1.1
-                0x400d8064       0x32 nblibs\libnetburner.a(ipv6_addr.o)
+                0x400d81a0       0x32 nblibs\libnetburner.a(ipv6_addr.o)
                                  0x64 (size before relaxing)
  .rodata._ZNK7IPADDR65printEbb.str1.1
-                0x400d8096       0x30 nblibs\libnetburner.a(ipv6_addr.o)
+                0x400d81d2       0x30 nblibs\libnetburner.a(ipv6_addr.o)
  .rodata._ZN13IPv6InterfaceC2Ei.str1.1
-                0x400d80c6       0x5d nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d8202       0x5d nblibs\libnetburner.a(ipv6_ip.o)
  .rodata._ZN13IPv6Interface19ProcessND_N_SolicitER25IPv6FrameProcessingStruct.str1.1
-                0x400d8123        0x8 nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d825f        0x8 nblibs\libnetburner.a(ipv6_ip.o)
  .rodata._ZN13IPv6Interface7StartNDEv.str1.1
-                0x400d812b        0xf nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d8267        0xf nblibs\libnetburner.a(ipv6_ip.o)
                                  0x1a (size before relaxing)
- *fill*         0x400d813a        0x2 
+ *fill*         0x400d8276        0x2 
  .rodata._ZTV13IPv6Interface
-                0x400d813c        0xc nblibs\libnetburner.a(ipv6_ip.o)
-                0x400d813c                _ZTV13IPv6Interface
+                0x400d8278        0xc nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d8278                _ZTV13IPv6Interface
  .rodata._ZTV11IPV6_PREFIX
-                0x400d8148       0x1c nblibs\libnetburner.a(ipv6_ip.o)
-                0x400d8148                _ZTV11IPV6_PREFIX
+                0x400d8284       0x1c nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d8284                _ZTV11IPV6_PREFIX
  .rodata._ZTV9IPV6_DEST
-                0x400d8164       0x1c nblibs\libnetburner.a(ipv6_ip.o)
-                0x400d8164                _ZTV9IPV6_DEST
+                0x400d82a0       0x1c nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d82a0                _ZTV9IPV6_DEST
  .rodata._ZTV11IPV6_ROUTER
-                0x400d8180       0x1c nblibs\libnetburner.a(ipv6_ip.o)
-                0x400d8180                _ZTV11IPV6_ROUTER
+                0x400d82bc       0x1c nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d82bc                _ZTV11IPV6_ROUTER
  .rodata._ZTV13IPV6_NEIGHBOR
-                0x400d819c       0x1c nblibs\libnetburner.a(ipv6_ip.o)
-                0x400d819c                _ZTV13IPV6_NEIGHBOR
+                0x400d82d8       0x1c nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d82d8                _ZTV13IPV6_NEIGHBOR
  .rodata._ZTV10IPV6_DHCPD
-                0x400d81b8       0x1c nblibs\libnetburner.a(ipv6_ip.o)
-                0x400d81b8                _ZTV10IPV6_DHCPD
+                0x400d82f4       0x1c nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d82f4                _ZTV10IPV6_DHCPD
  .rodata._ZTV8IPV6_DNS
-                0x400d81d4       0x1c nblibs\libnetburner.a(ipv6_ip.o)
-                0x400d81d4                _ZTV8IPV6_DNS
+                0x400d8310       0x1c nblibs\libnetburner.a(ipv6_ip.o)
+                0x400d8310                _ZTV8IPV6_DNS
  .rodata._ZN12IPV6_ROOT_EL8ShowItemEv.str1.1
-                0x400d81f0        0x8 nblibs\libnetburner.a(ipv6_show.o)
+                0x400d832c        0x8 nblibs\libnetburner.a(ipv6_show.o)
                                   0xb (size before relaxing)
  .rodata._ZN11IPV6_PREFIX8ShowItemEv.str1.1
-                0x400d81f8       0x7f nblibs\libnetburner.a(ipv6_show.o)
+                0x400d8334       0x7f nblibs\libnetburner.a(ipv6_show.o)
  .rodata._ZN13IPV6_NEIGHBOR8ShowItemEv.str1.1
-                0x400d8277       0x77 nblibs\libnetburner.a(ipv6_show.o)
+                0x400d83b3       0x77 nblibs\libnetburner.a(ipv6_show.o)
                                  0x7a (size before relaxing)
  .rodata._ZN11IPV6_ROUTER8ShowItemEv.str1.1
-                0x400d82ee       0x23 nblibs\libnetburner.a(ipv6_show.o)
+                0x400d842a       0x23 nblibs\libnetburner.a(ipv6_show.o)
  .rodata._ZN9IPV6_DEST8ShowItemEv.str1.1
-                0x400d8311       0x2e nblibs\libnetburner.a(ipv6_show.o)
+                0x400d844d       0x2e nblibs\libnetburner.a(ipv6_show.o)
  .rodata._ZN8IPV6_DNS8ShowItemEv.str1.1
-                0x400d833f       0x31 nblibs\libnetburner.a(ipv6_show.o)
+                0x400d847b       0x31 nblibs\libnetburner.a(ipv6_show.o)
                                  0x3d (size before relaxing)
  .rodata.rtag_array
-                0x400d8370        0x7 nblibs\libnetburner.a(release_tagdata.o)
-                0x400d8370                rtag_array
- *fill*         0x400d8377        0x1 
+                0x400d84ac        0x7 nblibs\libnetburner.a(release_tagdata.o)
+                0x400d84ac                rtag_array
+ *fill*         0x400d84b3        0x1 
  .rodata.rtag_len
-                0x400d8378        0x4 nblibs\libnetburner.a(release_tagdata.o)
-                0x400d8378                rtag_len
+                0x400d84b4        0x4 nblibs\libnetburner.a(release_tagdata.o)
+                0x400d84b4                rtag_len
  .rodata.UI_html_data
-                0x400d837c      0x882 nblibs\libnetburner.a(UI_html.o)
-                0x400d837c                UI_html_data
+                0x400d84b8      0x882 nblibs\libnetburner.a(UI_html.o)
+                0x400d84b8                UI_html_data
  .rodata.UI_html_size
-                0x400d8bfe        0x4 nblibs\libnetburner.a(UI_html.o)
-                0x400d8bfe                UI_html_size
+                0x400d8d3a        0x4 nblibs\libnetburner.a(UI_html.o)
+                0x400d8d3a                UI_html_size
  .rodata.ROOT_html_data
-                0x400d8c02     0x772b nblibs\libnetburner.a(ROOT_html.o)
-                0x400d8c02                ROOT_html_data
- *fill*         0x400e032d        0x1 
+                0x400d8d3e     0x772b nblibs\libnetburner.a(ROOT_html.o)
+                0x400d8d3e                ROOT_html_data
+ *fill*         0x400e0469        0x1 
  .rodata.ROOT_html_size
-                0x400e032e        0x4 nblibs\libnetburner.a(ROOT_html.o)
-                0x400e032e                ROOT_html_size
+                0x400e046a        0x4 nblibs\libnetburner.a(ROOT_html.o)
+                0x400e046a                ROOT_html_size
  .rodata.RAW_html_data
-                0x400e0332      0x291 nblibs\libnetburner.a(RAW_html.o)
-                0x400e0332                RAW_html_data
- *fill*         0x400e05c3        0x1 
+                0x400e046e      0x291 nblibs\libnetburner.a(RAW_html.o)
+                0x400e046e                RAW_html_data
+ *fill*         0x400e06ff        0x1 
  .rodata.RAW_html_size
-                0x400e05c4        0x4 nblibs\libnetburner.a(RAW_html.o)
-                0x400e05c4                RAW_html_size
+                0x400e0700        0x4 nblibs\libnetburner.a(RAW_html.o)
+                0x400e0700                RAW_html_size
  .rodata.LOGO_gif_data
-                0x400e05c8      0xc31 nblibs\libnetburner.a(LOGO_gif.o)
-                0x400e05c8                LOGO_gif_data
- *fill*         0x400e11f9        0x1 
+                0x400e0704      0xc31 nblibs\libnetburner.a(LOGO_gif.o)
+                0x400e0704                LOGO_gif_data
+ *fill*         0x400e1335        0x1 
  .rodata.LOGO_gif_size
-                0x400e11fa        0x4 nblibs\libnetburner.a(LOGO_gif.o)
-                0x400e11fa                LOGO_gif_size
+                0x400e1336        0x4 nblibs\libnetburner.a(LOGO_gif.o)
+                0x400e1336                LOGO_gif_size
  .rodata.FlashMinAligmentInBytes
-                0x400e11fe        0x4 nblibs\libnetburner.a(flash.o)
-                0x400e11fe                FlashMinAligmentInBytes
+                0x400e133a        0x4 nblibs\libnetburner.a(flash.o)
+                0x400e133a                FlashMinAligmentInBytes
  .rodata._Z13CompareConfigR12EthernetVarsPh.str1.1
-                0x400e1202        0x7 nblibs\libnetburner.a(hal.o)
+                0x400e133e        0x7 nblibs\libnetburner.a(hal.o)
  .rodata.plat_def_quiet
-                0x400e1202        0x4 nblibs\libnetburner.a(hal.o)
-                0x400e1202                plat_def_quiet
+                0x400e133e        0x4 nblibs\libnetburner.a(hal.o)
+                0x400e133e                plat_def_quiet
  .rodata.plat_def_delay
-                0x400e1206        0x4 nblibs\libnetburner.a(hal.o)
-                0x400e1206                plat_def_delay
+                0x400e1342        0x4 nblibs\libnetburner.a(hal.o)
+                0x400e1342                plat_def_delay
  .rodata.plat_def_com
-                0x400e120a        0x4 nblibs\libnetburner.a(hal.o)
-                0x400e120a                plat_def_com
+                0x400e1346        0x4 nblibs\libnetburner.a(hal.o)
+                0x400e1346                plat_def_com
  .rodata.plat_def_baud
-                0x400e120e        0x4 nblibs\libnetburner.a(hal.o)
-                0x400e120e                plat_def_baud
+                0x400e134a        0x4 nblibs\libnetburner.a(hal.o)
+                0x400e134a                plat_def_baud
  .rodata.PlatformName
-                0x400e1212        0x9 nblibs\libnetburner.a(hal.o)
-                0x400e1212                PlatformName
+                0x400e134e        0x9 nblibs\libnetburner.a(hal.o)
+                0x400e134e                PlatformName
  .rodata._ZN12EthernetVars18InitializeEthernetEb.str1.1
-                0x400e121b        0x5 nblibs\libnetburner.a(ethernet.o)
+                0x400e1357        0x5 nblibs\libnetburner.a(ethernet.o)
                                   0xc (size before relaxing)
  .rodata._GLOBAL__sub_I_port1state.str1.1
-                0x400e1220       0x20 nblibs\libnetburner.a(ethernet.o)
+                0x400e135c       0x20 nblibs\libnetburner.a(ethernet.o)
  .rodata._ZTV12EthernetVars
-                0x400e1240       0x68 nblibs\libnetburner.a(ethernet.o)
-                0x400e1240                _ZTV12EthernetVars
+                0x400e137c       0x68 nblibs\libnetburner.a(ethernet.o)
+                0x400e137c                _ZTV12EthernetVars
  .rodata._GLOBAL__sub_I_Uarts.str1.1
-                0x400e12a8       0x20 nblibs\libnetburner.a(serial.o)
+                0x400e13e4       0x20 nblibs\libnetburner.a(serial.o)
                                   0x7 (size before relaxing)
  .rodata.CSWTCH.106
-                0x400e12a8        0x3 nblibs\libnetburner.a(serial.o)
- *fill*         0x400e12ab        0x1 
+                0x400e13e4        0x3 nblibs\libnetburner.a(serial.o)
+ *fill*         0x400e13e7        0x1 
  .rodata._ZTV10SerialInfo
-                0x400e12ac       0x40 nblibs\libnetburner.a(serial.o)
-                0x400e12ac                _ZTV10SerialInfo
+                0x400e13e8       0x40 nblibs\libnetburner.a(serial.o)
+                0x400e13e8                _ZTV10SerialInfo
  .rodata._ZL15SerialVectorMap
-                0x400e12ec       0x28 nblibs\libnetburner.a(serial.o)
+                0x400e1428       0x28 nblibs\libnetburner.a(serial.o)
  .rodata._ZL12SerialSimMap
-                0x400e1314       0x28 nblibs\libnetburner.a(serial.o)
+                0x400e1450       0x28 nblibs\libnetburner.a(serial.o)
  .rodata.bAutomatic2ndEther
-                0x400e133c        0x1 nblibs\libnetburner.a(weak_autoenet_var.o)
-                0x400e133c                bAutomatic2ndEther
+                0x400e1478        0x1 nblibs\libnetburner.a(weak_autoenet_var.o)
+                0x400e1478                bAutomatic2ndEther
  .rodata._Z19RenderOneTaskToJsonPV6OS_TCBi.str1.1
-                0x400e133d       0xa5 nblibs\libnetburner.a(RenderOneTask.o)
+                0x400e1479       0xa5 nblibs\libnetburner.a(RenderOneTask.o)
                                  0xb4 (size before relaxing)
  .rodata.str1.1
-                0x400e13e2       0x2c nblibs\libnetburner.a(RenderOneTask.o)
+                0x400e151e       0x2c nblibs\libnetburner.a(RenderOneTask.o)
  .rodata.CSWTCH.14
-                0x400e140e       0x84 nblibs\libnetburner.a(RenderOneTask.o)
+                0x400e154a       0x84 nblibs\libnetburner.a(RenderOneTask.o)
  .rodata._Z16OSCreateIdleTaskv.str1.1
-                0x400e1492        0x5 nblibs\libnetburner.a(nbrtosmain.o)
+                0x400e15ce        0x5 nblibs\libnetburner.a(nbrtosmain.o)
  .rodata._Z18Local_ShowTaskNamePV6OS_TCB.str1.1
-                0x400e1497       0x24 nblibs\libnetburner.a(smarttrap.o)
+                0x400e15d3       0x24 nblibs\libnetburner.a(smarttrap.o)
  .rodata._Z17Local_OutTCBStateP6OS_TCBmm.str1.1
-                0x400e14bb       0x6c nblibs\libnetburner.a(smarttrap.o)
+                0x400e15f7       0x6c nblibs\libnetburner.a(smarttrap.o)
                                  0x79 (size before relaxing)
  .rodata._Z17Smart_Trap_Holderv.str1.1
-                0x400e1527      0x553 nblibs\libnetburner.a(smarttrap.o)
+                0x400e1663      0x553 nblibs\libnetburner.a(smarttrap.o)
                                 0x557 (size before relaxing)
  .rodata._Z18BufferDumpTCBStateP6OS_TCB.str1.1
-                0x400e1a7a       0x6d nblibs\libnetburner.a(taskmon.o)
+                0x400e1bb6       0x6d nblibs\libnetburner.a(taskmon.o)
                                  0x96 (size before relaxing)
  .rodata._Z17ProcessTaskPacketR9UDPPacketi.str1.1
-                0x400e1ae7        0x6 nblibs\libnetburner.a(taskmon.o)
+                0x400e1c23        0x6 nblibs\libnetburner.a(taskmon.o)
  .rodata._ZN10SocksProxy12SocksConnectEP13socket_structtmRK7IPADDR6i.str1.1
-                0x400e1aed       0x20 nblibs\libnetburner.a(Socks.o)
+                0x400e1c29       0x20 nblibs\libnetburner.a(Socks.o)
  .rodata._ZN10SocksProxy15AuthWithUsrNmPwEi.str1.1
-                0x400e1b0d        0xb nblibs\libnetburner.a(Socks.o)
+                0x400e1c49        0xb nblibs\libnetburner.a(Socks.o)
  .rodata._ZN10SocksProxy14SendAuthMethodEi.str1.1
-                0x400e1b18        0xb nblibs\libnetburner.a(Socks.o)
+                0x400e1c54        0xb nblibs\libnetburner.a(Socks.o)
                                  0x1b (size before relaxing)
  .rodata._ZN10SocksProxy23SendAuthAndProcessReplyEiRK7IPADDR6i.str1.1
-                0x400e1b18       0x2e nblibs\libnetburner.a(Socks.o)
+                0x400e1c54       0x2e nblibs\libnetburner.a(Socks.o)
  .rodata._Z13InitializeArpv.str1.1
-                0x400e1b46        0x4 nblibs\libnetburner.a(arp.o)
+                0x400e1c82        0x4 nblibs\libnetburner.a(arp.o)
  .rodata._GLOBAL__sub_I_EncodeString.str1.1
-                0x400e1b4a        0x4 nblibs\libnetburner.a(base64.o)
- *fill*         0x400e1b4e        0x2 
+                0x400e1c86        0x4 nblibs\libnetburner.a(base64.o)
+ *fill*         0x400e1c8a        0x2 
  .rodata._ZTV9b64FDinfo
-                0x400e1b50       0x40 nblibs\libnetburner.a(base64.o)
-                0x400e1b50                _ZTV9b64FDinfo
+                0x400e1c8c       0x40 nblibs\libnetburner.a(base64.o)
+                0x400e1c8c                _ZTV9b64FDinfo
  .rodata.str1.1
-                0x400e1b90       0x82 nblibs\libnetburner.a(base64.o)
+                0x400e1ccc       0x82 nblibs\libnetburner.a(base64.o)
  .rodata._ZN16config_localname17CommitTestedValueEm.str1.1
-                0x400e1c12        0x7 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d4e        0x7 nblibs\libnetburner.a(config_netobj.o)
  .rodata._ZN11CUR_IPADDR412FdPrintValueEib.str1.1
-                0x400e1c19        0x6 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d55        0x6 nblibs\libnetburner.a(config_netobj.o)
  .rodata._ZN14Dynamic_IPADDR12GetTypeValueER8NBString.str1.1
-                0x400e1c19        0x6 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d55        0x6 nblibs\libnetburner.a(config_netobj.o)
  .rodata._ZN11CUR_IPADDR412GetTypeValueER8NBString.str1.1
-                0x400e1c1f        0x7 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d5b        0x7 nblibs\libnetburner.a(config_netobj.o)
  .rodata._ZN14Dynamic_IPADDR14ExtendedSchemaEiib.str1.1
-                0x400e1c1f        0xc nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d5b        0xc nblibs\libnetburner.a(config_netobj.o)
  .rodata._ZN11CUR_IPADDR414ExtendedSchemaEiib.str1.1
-                0x400e1c1f        0x5 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d5b        0x5 nblibs\libnetburner.a(config_netobj.o)
  .rodata._ZN8I6Record18ReportGetTextValueER8NBStringi.part.2.str1.1
-                0x400e1c1f        0x5 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d5b        0x5 nblibs\libnetburner.a(config_netobj.o)
  .rodata._ZN14Dynamic_IPADDR12FdPrintValueEib.str1.1
-                0x400e1c1f        0x3 nblibs\libnetburner.a(config_netobj.o)
- *fill*         0x400e1c1f        0x1 
+                0x400e1d5b        0x3 nblibs\libnetburner.a(config_netobj.o)
+ *fill*         0x400e1d5b        0x1 
  .rodata._ZTV16config_localname
-                0x400e1c20       0x48 nblibs\libnetburner.a(config_netobj.o)
-                0x400e1c20                _ZTV16config_localname
+                0x400e1d5c       0x48 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1d5c                _ZTV16config_localname
  .rodata._ZTV11CUR_IPADDR4
-                0x400e1c68       0x48 nblibs\libnetburner.a(config_netobj.o)
-                0x400e1c68                _ZTV11CUR_IPADDR4
+                0x400e1da4       0x48 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1da4                _ZTV11CUR_IPADDR4
  .rodata._ZTV14Dynamic_IPADDR
-                0x400e1cb0       0x48 nblibs\libnetburner.a(config_netobj.o)
-                0x400e1cb0                _ZTV14Dynamic_IPADDR
+                0x400e1dec       0x48 nblibs\libnetburner.a(config_netobj.o)
+                0x400e1dec                _ZTV14Dynamic_IPADDR
  .rodata.cppmain.str1.1
-                0x400e1cf8        0x5 nblibs\libnetburner.a(cppmain.o)
+                0x400e1e34        0x5 nblibs\libnetburner.a(cppmain.o)
  .rodata._ZN10DiagVarMon12ServeContentEi.str1.1
-                0x400e1cfd       0x16 nblibs\libnetburner.a(diagnostic_core.o)
+                0x400e1e39       0x16 nblibs\libnetburner.a(diagnostic_core.o)
                                  0x1f (size before relaxing)
  .rodata._ZN13DiagItemClass15ServeSubContentEiR8NBString.str1.1
-                0x400e1d13       0x11 nblibs\libnetburner.a(diagnostic_core.o)
+                0x400e1e4f       0x11 nblibs\libnetburner.a(diagnostic_core.o)
                                  0x16 (size before relaxing)
  .rodata._ZN13DiagItemClass10ServerRootEiPKc.str1.1
-                0x400e1d24        0x6 nblibs\libnetburner.a(diagnostic_core.o)
+                0x400e1e60        0x6 nblibs\libnetburner.a(diagnostic_core.o)
                                  0x1e (size before relaxing)
- *fill*         0x400e1d2a        0x2 
+ *fill*         0x400e1e66        0x2 
  .rodata._ZTV13DiagItemClass
-                0x400e1d2c        0xc nblibs\libnetburner.a(diagnostic_core.o)
-                0x400e1d2c                _ZTV13DiagItemClass
+                0x400e1e68        0xc nblibs\libnetburner.a(diagnostic_core.o)
+                0x400e1e68                _ZTV13DiagItemClass
  .rodata._ZTV10DiagVarMon
-                0x400e1d38        0xc nblibs\libnetburner.a(diagnostic_core.o)
-                0x400e1d38                _ZTV10DiagVarMon
+                0x400e1e74        0xc nblibs\libnetburner.a(diagnostic_core.o)
+                0x400e1e74                _ZTV10DiagVarMon
  .rodata._ZN16discover_servlet19ProcessSelectResultER6fd_setS1_S1_.str1.1
-                0x400e1d44       0xb3 nblibs\libnetburner.a(discoveryservlet.o)
+                0x400e1e80       0xb3 nblibs\libnetburner.a(discoveryservlet.o)
                                  0xbc (size before relaxing)
- *fill*         0x400e1df7        0x1 
+ *fill*         0x400e1f33        0x1 
  .rodata._ZTV16discover_servlet
-                0x400e1df8       0x10 nblibs\libnetburner.a(discoveryservlet.o)
-                0x400e1df8                _ZTV16discover_servlet
+                0x400e1f34       0x10 nblibs\libnetburner.a(discoveryservlet.o)
+                0x400e1f34                _ZTV16discover_servlet
  .rodata._Z7RawSendPKcttt7IPADDR6iRt.str1.1
-                0x400e1e08        0x7 nblibs\libnetburner.a(dns.o)
+                0x400e1f44        0x7 nblibs\libnetburner.a(dns.o)
  .rodata._Z10SendHeaderiPKcmb.str1.1
-                0x400e1e08       0xc7 nblibs\libnetburner.a(htmldecomp.o)
+                0x400e1f44       0xc7 nblibs\libnetburner.a(htmldecomp.o)
                                  0xc8 (size before relaxing)
  .rodata._Z17SendEmailResponseiPKcS0_.str1.1
-                0x400e1ecf       0xbb nblibs\libnetburner.a(htmldecomp.o)
+                0x400e200b       0xbb nblibs\libnetburner.a(htmldecomp.o)
                                  0xbe (size before relaxing)
  .rodata._Z12DnsNameMatchR14InterfaceBlockRPh.str1.1
-                0x400e1f8a        0x7 nblibs\libnetburner.a(mDNS.o)
- *fill*         0x400e1f8a        0x2 
+                0x400e20c6        0x7 nblibs\libnetburner.a(mDNS.o)
+ *fill*         0x400e20c6        0x2 
  .rodata._ZTV12mDNS_servlet
-                0x400e1f8c       0x10 nblibs\libnetburner.a(mDNS.o)
-                0x400e1f8c                _ZTV12mDNS_servlet
+                0x400e20c8       0x10 nblibs\libnetburner.a(mDNS.o)
+                0x400e20c8                _ZTV12mDNS_servlet
  .rodata._Z22RegisterMulticastFifo47IPADDR4tP7OS_FIFOi.str1.1
-                0x400e1f9c        0xb nblibs\libnetburner.a(multicast.o)
- *fill*         0x400e1fa7        0x1 
+                0x400e20d8        0xb nblibs\libnetburner.a(multicast.o)
+ *fill*         0x400e20e3        0x1 
  .rodata._ZL4RCON
-                0x400e1fa8       0x28 nblibs\libnetburner.a(nbaes.o)
+                0x400e20e4       0x28 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3RT3
-                0x400e1fd0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e210c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3RT2
-                0x400e23d0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e250c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3RT1
-                0x400e27d0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e290c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3RT0
-                0x400e2bd0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e2d0c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3FT3
-                0x400e2fd0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e310c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3FT2
-                0x400e33d0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e350c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3FT1
-                0x400e37d0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e390c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3FT0
-                0x400e3bd0      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x400e3d0c      0x400 nblibs\libnetburner.a(nbaes.o)
  .rodata._ZL3FSb
-                0x400e3fd0      0x100 nblibs\libnetburner.a(nbaes.o)
+                0x400e410c      0x100 nblibs\libnetburner.a(nbaes.o)
  .rodata._GLOBAL__sub_I__ZN2NB2V66DHCPv69pAddOROCBE.str1.1
-                0x400e40d0       0x14 nblibs\libnetburner.a(ipv6_dhcp.o)
+                0x400e420c       0x14 nblibs\libnetburner.a(ipv6_dhcp.o)
  .rodata._ZN13IPv6Interface12ReadyMLDBaseER25IPv6FrameProcessingStructRK7IPADDR6.str1.1
-                0x400e40e4        0x9 nblibs\libnetburner.a(ipv6_extensions.o)
+                0x400e4220        0x9 nblibs\libnetburner.a(ipv6_extensions.o)
  .rodata._ZN13IPv6Interface19LinkLocalIsNowValidEv.str1.1
-                0x400e40ed       0x22 nblibs\libnetburner.a(ipv6_extensions.o)
- *fill*         0x400e40ed        0x1 
+                0x400e4229       0x22 nblibs\libnetburner.a(ipv6_extensions.o)
+ *fill*         0x400e4229        0x1 
  .rodata._ZL9fcstab_32
-                0x400e40ee      0x400 nblibs\libnetburner.a(emulticast.o)
+                0x400e422a      0x400 nblibs\libnetburner.a(emulticast.o)
  .rodata._ZL3OID
-                0x400e44ee        0xa nblibs\libnetburner.a(md5c.o)
+                0x400e462a        0xa nblibs\libnetburner.a(md5c.o)
  .rodata._ZTV20BlockMemoryAllocator
-                0x400e44f8       0x1c nblibs\libnetburner.a(memoryAllocator.o)
-                0x400e44f8                _ZTV20BlockMemoryAllocator
+                0x400e4634       0x1c nblibs\libnetburner.a(memoryAllocator.o)
+                0x400e4634                _ZTV20BlockMemoryAllocator
  .rodata.__cxa_pure_virtual.str1.1
-                0x400e4514       0x1c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(pure.o)
+                0x400e4650       0x1c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(pure.o)
  .rodata._ZTSN9__gnu_cxx20recursive_init_errorE
-                0x400e4530       0x23 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(guard_error.o)
-                0x400e4530                _ZTSN9__gnu_cxx20recursive_init_errorE
- *fill*         0x400e4553        0x1 
+                0x400e466c       0x23 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(guard_error.o)
+                0x400e466c                _ZTSN9__gnu_cxx20recursive_init_errorE
+ *fill*         0x400e468f        0x1 
  .rodata._ZTIN9__gnu_cxx20recursive_init_errorE
-                0x400e4554        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(guard_error.o)
-                0x400e4554                _ZTIN9__gnu_cxx20recursive_init_errorE
+                0x400e4690        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(guard_error.o)
+                0x400e4690                _ZTIN9__gnu_cxx20recursive_init_errorE
  .rodata._ZTVN9__gnu_cxx20recursive_init_errorE
-                0x400e4560       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(guard_error.o)
-                0x400e4560                _ZTVN9__gnu_cxx20recursive_init_errorE
+                0x400e469c       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(guard_error.o)
+                0x400e469c                _ZTVN9__gnu_cxx20recursive_init_errorE
  .rodata._ZNKSt9exception4whatEv.str1.1
-                0x400e4574        0xf c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e46b0        0xf c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
  .rodata._ZNKSt13bad_exception4whatEv.str1.1
-                0x400e4583       0x13 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e46bf       0x13 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
  .rodata._ZTSSt9exception
-                0x400e4596        0xd c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e4596                _ZTSSt9exception
- *fill*         0x400e45a3        0x1 
+                0x400e46d2        0xd c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e46d2                _ZTSSt9exception
+ *fill*         0x400e46df        0x1 
  .rodata._ZTISt9exception
-                0x400e45a4        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e45a4                _ZTISt9exception
+                0x400e46e0        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e46e0                _ZTISt9exception
  .rodata._ZTSSt13bad_exception
-                0x400e45ac       0x12 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e45ac                _ZTSSt13bad_exception
+                0x400e46e8       0x12 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e46e8                _ZTSSt13bad_exception
  .rodata._ZTISt13bad_exception
-                0x400e45be        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e45be                _ZTISt13bad_exception
+                0x400e46fa        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e46fa                _ZTISt13bad_exception
  .rodata._ZTSN10__cxxabiv115__forced_unwindE
-                0x400e45ca       0x20 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e45ca                _ZTSN10__cxxabiv115__forced_unwindE
+                0x400e4706       0x20 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e4706                _ZTSN10__cxxabiv115__forced_unwindE
  .rodata._ZTIN10__cxxabiv115__forced_unwindE
-                0x400e45ea        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e45ea                _ZTIN10__cxxabiv115__forced_unwindE
+                0x400e4726        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e4726                _ZTIN10__cxxabiv115__forced_unwindE
  .rodata._ZTSN10__cxxabiv119__foreign_exceptionE
-                0x400e45f2       0x24 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e45f2                _ZTSN10__cxxabiv119__foreign_exceptionE
+                0x400e472e       0x24 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e472e                _ZTSN10__cxxabiv119__foreign_exceptionE
  .rodata._ZTIN10__cxxabiv119__foreign_exceptionE
-                0x400e4616        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e4616                _ZTIN10__cxxabiv119__foreign_exceptionE
- *fill*         0x400e461e        0x2 
+                0x400e4752        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e4752                _ZTIN10__cxxabiv119__foreign_exceptionE
+ *fill*         0x400e475a        0x2 
  .rodata._ZTVSt13bad_exception
-                0x400e4620       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
-                0x400e4620                _ZTVSt13bad_exception
+                0x400e475c       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_exception.o)
+                0x400e475c                _ZTVSt13bad_exception
  .rodata._ZN9__gnu_cxx27__verbose_terminate_handlerEv.str1.1
-                0x400e4634       0x8c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(vterminate.o)
+                0x400e4770       0x8c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(vterminate.o)
  .rodata._ZTSN10__cxxabiv117__class_type_infoE
-                0x400e46c0       0x22 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(class_type_info.o)
-                0x400e46c0                _ZTSN10__cxxabiv117__class_type_infoE
+                0x400e47fc       0x22 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(class_type_info.o)
+                0x400e47fc                _ZTSN10__cxxabiv117__class_type_infoE
  .rodata._ZTIN10__cxxabiv117__class_type_infoE
-                0x400e46e2        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(class_type_info.o)
-                0x400e46e2                _ZTIN10__cxxabiv117__class_type_infoE
- *fill*         0x400e46ee        0x2 
+                0x400e481e        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(class_type_info.o)
+                0x400e481e                _ZTIN10__cxxabiv117__class_type_infoE
+ *fill*         0x400e482a        0x2 
  .rodata._ZTVN10__cxxabiv117__class_type_infoE
-                0x400e46f0       0x2c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(class_type_info.o)
-                0x400e46f0                _ZTVN10__cxxabiv117__class_type_infoE
+                0x400e482c       0x2c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(class_type_info.o)
+                0x400e482c                _ZTVN10__cxxabiv117__class_type_infoE
  .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
-                0x400e471c       0x25 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(si_class_type_info.o)
-                0x400e471c                _ZTSN10__cxxabiv120__si_class_type_infoE
- *fill*         0x400e4741        0x1 
+                0x400e4858       0x25 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(si_class_type_info.o)
+                0x400e4858                _ZTSN10__cxxabiv120__si_class_type_infoE
+ *fill*         0x400e487d        0x1 
  .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
-                0x400e4742        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(si_class_type_info.o)
-                0x400e4742                _ZTIN10__cxxabiv120__si_class_type_infoE
- *fill*         0x400e474e        0x2 
+                0x400e487e        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(si_class_type_info.o)
+                0x400e487e                _ZTIN10__cxxabiv120__si_class_type_infoE
+ *fill*         0x400e488a        0x2 
  .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
-                0x400e4750       0x2c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(si_class_type_info.o)
-                0x400e4750                _ZTVN10__cxxabiv120__si_class_type_infoE
+                0x400e488c       0x2c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(si_class_type_info.o)
+                0x400e488c                _ZTVN10__cxxabiv120__si_class_type_infoE
  .rodata.str1.1
-                0x400e477c      0x652 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(cp-demangle.o)
+                0x400e48b8      0x652 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(cp-demangle.o)
                                 0x765 (size before relaxing)
  .rodata._ZTSSt9type_info
-                0x400e4dce        0xd c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(tinfo.o)
-                0x400e4dce                _ZTSSt9type_info
- *fill*         0x400e4ddb        0x1 
+                0x400e4f0a        0xd c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(tinfo.o)
+                0x400e4f0a                _ZTSSt9type_info
+ *fill*         0x400e4f17        0x1 
  .rodata._ZTISt9type_info
-                0x400e4ddc        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(tinfo.o)
-                0x400e4ddc                _ZTISt9type_info
+                0x400e4f18        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(tinfo.o)
+                0x400e4f18                _ZTISt9type_info
  .rodata._setlocale_r.str1.1
-                0x400e4de4        0x6 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-locale.o)
+                0x400e4f20        0x6 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-locale.o)
                                   0x9 (size before relaxing)
  .rodata.str1.1
-                0x400e4dea        0x2 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-locale.o)
+                0x400e4f26        0x2 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-locale.o)
  .rodata._scanf_float.str1.1
-                0x400e4dea        0x5 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-vfscanf_float.o)
+                0x400e4f26        0x5 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-vfscanf_float.o)
  .rodata._strtod_l.str1.1
-                0x400e4def        0x9 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
+                0x400e4f2b        0x9 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
                                   0xc (size before relaxing)
  .rodata.fpinan.3494
-                0x400e4df8       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
+                0x400e4f34       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
  .rodata.fpi.3458
-                0x400e4e0c       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
+                0x400e4f48       0x14 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
  .rodata.tinytens
-                0x400e4e20       0x28 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
+                0x400e4f5c       0x28 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-strtod.o)
  .rodata._ctype_
-                0x400e4e48      0x101 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-ctype_.o)
-                0x400e4e48                _ctype_
- *fill*         0x400e4f49        0x1 
+                0x400e4f84      0x101 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-ctype_.o)
+                0x400e4f84                _ctype_
+ *fill*         0x400e5085        0x1 
  .rodata.p05.3378
-                0x400e4f4a        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-mprec.o)
+                0x400e5086        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-mprec.o)
  .rodata.__mprec_bigtens
-                0x400e4f56       0x28 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-mprec.o)
-                0x400e4f56                __mprec_bigtens
+                0x400e5092       0x28 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-mprec.o)
+                0x400e5092                __mprec_bigtens
  .rodata.__mprec_tens
-                0x400e4f7e       0xc8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-mprec.o)
-                0x400e4f7e                __mprec_tens
+                0x400e50ba       0xc8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-mprec.o)
+                0x400e50ba                __mprec_tens
  .rodata.__ssvfscanf_r.str1.1
-                0x400e5046        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-svfscanf.o)
+                0x400e5182        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-svfscanf.o)
  .rodata._scanf_i.str1.1
-                0x400e504a       0x18 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-vfscanf_i.o)
+                0x400e5186       0x18 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-vfscanf_i.o)
                                  0x1b (size before relaxing)
-                0x400e5062                _erodata = .
+                0x400e519e                _erodata = .
  *(.gnu.linkonce.*)
  *(.gcc_except_table)
-                0x400e5064                . = ALIGN (0x4)
- *fill*         0x400e5062        0x2 
-                0x400e5064                __INIT_SECTION__ = .
-                0x400e5064        0x4 LONG 0x4e560000
+                0x400e51a0                . = ALIGN (0x4)
+ *fill*         0x400e519e        0x2 
+                0x400e51a0                __INIT_SECTION__ = .
+                0x400e51a0        0x4 LONG 0x4e560000
  *(.init)
- .init          0x400e5068        0x6 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
- .init          0x400e506e        0x6 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtend.o
-                0x400e5074        0x2 SHORT 0x4e5e
-                0x400e5076        0x2 SHORT 0x4e75
-                0x400e5078                . = ALIGN (0x4)
-                0x400e5078                __FINI_SECTION__ = .
-                0x400e5078        0x4 LONG 0x4e560000
+ .init          0x400e51a4        0x6 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
+ .init          0x400e51aa        0x6 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtend.o
+                0x400e51b0        0x2 SHORT 0x4e5e
+                0x400e51b2        0x2 SHORT 0x4e75
+                0x400e51b4                . = ALIGN (0x4)
+                0x400e51b4                __FINI_SECTION__ = .
+                0x400e51b4        0x4 LONG 0x4e560000
  *(.fini)
-                0x400e507c        0x2 SHORT 0x4e5e
-                0x400e507e        0x2 SHORT 0x4e75
+                0x400e51b8        0x2 SHORT 0x4e5e
+                0x400e51ba        0x2 SHORT 0x4e75
  *(.lit)
-                0x400e5080                . = ALIGN (0x10)
-                0x400e5080                _etext = .
-                0x400e5080                etext = .
+                0x400e51c0                . = ALIGN (0x10)
+ *fill*         0x400e51bc        0x4 
+                0x400e51c0                _etext = .
+                0x400e51c0                etext = .
 
-.data           0x400e5080       0x20
-                0x400e5080                copy_start = .
+.data           0x400e51c0       0x20
+                0x400e51c0                copy_start = .
  *(.shdata)
  *(.data)
- .data          0x400e5080        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
-                0x400e5080                __dso_handle
- .data          0x400e5084       0x1c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455\libgcc.a(_floatex.o)
-                0x400e5084                _fpCCR
-                0x400e50a0                . = ALIGN (0x10)
-                0x400e50a0                _edata = .
-                0x400e50a0                copy_end = .
+ .data          0x400e51c0        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
+                0x400e51c0                __dso_handle
+ .data          0x400e51c4       0x1c c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455\libgcc.a(_floatex.o)
+                0x400e51c4                _fpCCR
+                0x400e51e0                . = ALIGN (0x10)
+                0x400e51e0                _edata = .
+                0x400e51e0                copy_end = .
 
 .tm_clone_table
-                0x400e50a0        0x0
+                0x400e51e0        0x0
  .tm_clone_table
-                0x400e50a0        0x0 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
+                0x400e51e0        0x0 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
  .tm_clone_table
-                0x400e50a0        0x0 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtend.o
+                0x400e51e0        0x0 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtend.o
 
 .data._ZL19gReaStatusRequestId
-                0x400e50a0        0x4
+                0x400e51e0        0x4
  .data._ZL19gReaStatusRequestId
-                0x400e50a0        0x4 ./src/main.o
+                0x400e51e0        0x4 ./src/main.o
 
 .data._ZL13gReaPiSession
-                0x400e50a4      0x2cc
+                0x400e51e4      0x2cc
  .data._ZL13gReaPiSession
-                0x400e50a4      0x2cc ./src/main.o
+                0x400e51e4      0x2cc ./src/main.o
 
 .data._ZL9gMappings
-                0x400e5370     0xcd00
+                0x400e54b0     0xcd00
  .data._ZL9gMappings
-                0x400e5370     0xcd00 ./src/main.o
+                0x400e54b0     0xcd00 ./src/main.o
 
-.data.AppName   0x400f2070        0x4
- .data.AppName  0x400f2070        0x4 ./src/main.o
-                0x400f2070                AppName
+.data.AppName   0x400f21b0        0x4
+ .data.AppName  0x400f21b0        0x4 ./src/main.o
+                0x400f21b0                AppName
 
 .data.html_table
-                0x400f2074      0x100
+                0x400f21b4      0x100
  .data.html_table
-                0x400f2074      0x100 htmldata.o
-                0x400f2074                html_table
+                0x400f21b4      0x100 htmldata.o
+                0x400f21b4                html_table
 
 .data.MIME_table
-                0x400f2174       0x10
+                0x400f22b4       0x10
  .data.MIME_table
-                0x400f2174       0x10 htmldata.o
-                0x400f2174                MIME_table
+                0x400f22b4       0x10 htmldata.o
+                0x400f22b4                MIME_table
 
 .data.default_page
-                0x400f2184        0x4
+                0x400f22c4        0x4
  .data.default_page
-                0x400f2184        0x4 htmldata.o
-                0x400f2184                default_page
+                0x400f22c4        0x4 htmldata.o
+                0x400f22c4                default_page
 
-BUFFER_POOL     0x400f2190    0x68000
- BUFFER_POOL    0x400f2190    0x68000 nblibs\libnetburner.a(buffers.o)
-                0x400f2190                static_pool_buffers
+BUFFER_POOL     0x400f22d0    0x68000
+ BUFFER_POOL    0x400f22d0    0x68000 nblibs\libnetburner.a(buffers.o)
+                0x400f22d0                static_pool_buffers
 
 .data.basic_pattern
-                0x4015a190        0x4
+                0x4015a2d0        0x4
  .data.basic_pattern
-                0x4015a190        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a190                basic_pattern
+                0x4015a2d0        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2d0                basic_pattern
 
 .data.auth_pattern
-                0x4015a194        0x4
+                0x4015a2d4        0x4
  .data.auth_pattern
-                0x4015a194        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a194                auth_pattern
+                0x4015a2d4        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2d4                auth_pattern
 
 .data.cl_pattern
-                0x4015a198        0x4
+                0x4015a2d8        0x4
  .data.cl_pattern
-                0x4015a198        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a198                cl_pattern
+                0x4015a2d8        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2d8                cl_pattern
 
 .data.RefusedUpdate
-                0x4015a19c        0x4
+                0x4015a2dc        0x4
  .data.RefusedUpdate
-                0x4015a19c        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a19c                RefusedUpdate
+                0x4015a2dc        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2dc                RefusedUpdate
 
 .data.Authenticate
-                0x4015a1a0        0x4
+                0x4015a2e0        0x4
  .data.Authenticate
-                0x4015a1a0        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1a0                Authenticate
+                0x4015a2e0        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2e0                Authenticate
 
-.data.NotFound  0x4015a1a4        0x4
+.data.NotFound  0x4015a2e4        0x4
  .data.NotFound
-                0x4015a1a4        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1a4                NotFound
+                0x4015a2e4        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2e4                NotFound
 
 .data.AuthfuncFailed
-                0x4015a1a8        0x4
+                0x4015a2e8        0x4
  .data.AuthfuncFailed
-                0x4015a1a8        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1a8                AuthfuncFailed
+                0x4015a2e8        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2e8                AuthfuncFailed
 
 .data.WrongPlatformResponse
-                0x4015a1ac        0x4
+                0x4015a2ec        0x4
  .data.WrongPlatformResponse
-                0x4015a1ac        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1ac                WrongPlatformResponse
+                0x4015a2ec        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2ec                WrongPlatformResponse
 
 .data.TooLargeProgramResponse
-                0x4015a1b0        0x4
+                0x4015a2f0        0x4
  .data.TooLargeProgramResponse
-                0x4015a1b0        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1b0                TooLargeProgramResponse
+                0x4015a2f0        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2f0                TooLargeProgramResponse
 
 .data.BadProgramResponse
-                0x4015a1b4        0x4
+                0x4015a2f4        0x4
  .data.BadProgramResponse
-                0x4015a1b4        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1b4                BadProgramResponse
+                0x4015a2f4        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2f4                BadProgramResponse
 
 .data.GoodProgramResponse
-                0x4015a1b8        0x4
+                0x4015a2f8        0x4
  .data.GoodProgramResponse
-                0x4015a1b8        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1b8                GoodProgramResponse
+                0x4015a2f8        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2f8                GoodProgramResponse
 
 .data.OkResponse
-                0x4015a1bc        0x4
+                0x4015a2fc        0x4
  .data.OkResponse
-                0x4015a1bc        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1bc                OkResponse
+                0x4015a2fc        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a2fc                OkResponse
 
-.data.Redirect  0x4015a1c0        0x4
+.data.Redirect  0x4015a300        0x4
  .data.Redirect
-                0x4015a1c0        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1c0                Redirect
+                0x4015a300        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a300                Redirect
 
 .data.FILLINTAG
-                0x4015a1c4        0x4
+                0x4015a304        0x4
  .data.FILLINTAG
-                0x4015a1c4        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4015a1c4                FILLINTAG
+                0x4015a304        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4015a304                FILLINTAG
 
 .data.RootChoices
-                0x4015a1c8       0x20
+                0x4015a308       0x20
  .data.RootChoices
-                0x4015a1c8       0x20 nblibs\libnetburner.a(config_server_serial.o)
-                0x4015a1c8                RootChoices
+                0x4015a308       0x20 nblibs\libnetburner.a(config_server_serial.o)
+                0x4015a308                RootChoices
 
-.data.k_zeros   0x4015a1e8        0x4
- .data.k_zeros  0x4015a1e8        0x4 nblibs\libnetburner.a(nbiprintf.o)
-                0x4015a1e8                k_zeros
+.data.k_zeros   0x4015a328        0x4
+ .data.k_zeros  0x4015a328        0x4 nblibs\libnetburner.a(nbiprintf.o)
+                0x4015a328                k_zeros
 
-.data.k_spaces  0x4015a1ec        0x4
+.data.k_spaces  0x4015a32c        0x4
  .data.k_spaces
-                0x4015a1ec        0x4 nblibs\libnetburner.a(nbiprintf.o)
-                0x4015a1ec                k_spaces
+                0x4015a32c        0x4 nblibs\libnetburner.a(nbiprintf.o)
+                0x4015a32c                k_spaces
 
 .data._pTcpFdInfo
-                0x4015a1f0        0x4
+                0x4015a330        0x4
  .data._pTcpFdInfo
-                0x4015a1f0        0x4 nblibs\libnetburner.a(tcp.o)
-                0x4015a1f0                _pTcpFdInfo
+                0x4015a330        0x4 nblibs\libnetburner.a(tcp.o)
+                0x4015a330                _pTcpFdInfo
 
-.data.wait      0x4015a1f4        0x2
- .data.wait     0x4015a1f4        0x2 nblibs\libnetburner.a(ethernet.o)
-                0x4015a1f4                wait
+.data.wait      0x4015a334        0x2
+ .data.wait     0x4015a334        0x2 nblibs\libnetburner.a(ethernet.o)
+                0x4015a334                wait
 
 .data._pSerialFdInfo
-                0x4015a1f6        0x4
+                0x4015a336        0x4
  .data._pSerialFdInfo
-                0x4015a1f6        0x4 nblibs\libnetburner.a(serial.o)
-                0x4015a1f6                _pSerialFdInfo
+                0x4015a336        0x4 nblibs\libnetburner.a(serial.o)
+                0x4015a336                _pSerialFdInfo
 
 .data.EncodeString
-                0x4015a1fa        0x4
+                0x4015a33a        0x4
  .data.EncodeString
-                0x4015a1fa        0x4 nblibs\libnetburner.a(base64.o)
-                0x4015a1fa                EncodeString
+                0x4015a33a        0x4 nblibs\libnetburner.a(base64.o)
+                0x4015a33a                EncodeString
 
 .data.SSL_clrsockoption
-                0x4015a1fe        0x4
+                0x4015a33e        0x4
  .data.SSL_clrsockoption
-                0x4015a1fe        0x4 nblibs\libnetburner.a(crypto_stubs.o)
-                0x4015a1fe                SSL_clrsockoption
+                0x4015a33e        0x4 nblibs\libnetburner.a(crypto_stubs.o)
+                0x4015a33e                SSL_clrsockoption
 
 .data.SSL_setsockoption
-                0x4015a202        0x4
+                0x4015a342        0x4
  .data.SSL_setsockoption
-                0x4015a202        0x4 nblibs\libnetburner.a(crypto_stubs.o)
-                0x4015a202                SSL_setsockoption
+                0x4015a342        0x4 nblibs\libnetburner.a(crypto_stubs.o)
+                0x4015a342                SSL_setsockoption
 
 .data.SSL_GetRawSocket
-                0x4015a206        0x4
+                0x4015a346        0x4
  .data.SSL_GetRawSocket
-                0x4015a206        0x4 nblibs\libnetburner.a(crypto_stubs.o)
-                0x4015a206                SSL_GetRawSocket
+                0x4015a346        0x4 nblibs\libnetburner.a(crypto_stubs.o)
+                0x4015a346                SSL_GetRawSocket
 
-.data.IsSSLfd   0x4015a20a        0x4
- .data.IsSSLfd  0x4015a20a        0x4 nblibs\libnetburner.a(crypto_stubs.o)
-                0x4015a20a                IsSSLfd
+.data.IsSSLfd   0x4015a34a        0x4
+ .data.IsSSLfd  0x4015a34a        0x4 nblibs\libnetburner.a(crypto_stubs.o)
+                0x4015a34a                IsSSLfd
 
 .data._ZN7MD5_CTX10_s__vtableE
-                0x4015a20e       0x30
+                0x4015a34e       0x30
  .data._ZN7MD5_CTX10_s__vtableE
-                0x4015a20e       0x30 nblibs\libnetburner.a(md5c.o)
-                0x4015a20e                _ZN7MD5_CTX10_s__vtableE
+                0x4015a34e       0x30 nblibs\libnetburner.a(md5c.o)
+                0x4015a34e                _ZN7MD5_CTX10_s__vtableE
 
 .data._ZL7PADDING
-                0x4015a23e       0x40
+                0x4015a37e       0x40
  .data._ZL7PADDING
-                0x4015a23e       0x40 nblibs\libnetburner.a(md5c.o)
+                0x4015a37e       0x40 nblibs\libnetburner.a(md5c.o)
 
 .data._ZN10__cxxabiv120__unexpected_handlerE
-                0x4015a27e        0x4
+                0x4015a3be        0x4
  .data._ZN10__cxxabiv120__unexpected_handlerE
-                0x4015a27e        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_unex_handler.o)
-                0x4015a27e                _ZN10__cxxabiv120__unexpected_handlerE
+                0x4015a3be        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_unex_handler.o)
+                0x4015a3be                _ZN10__cxxabiv120__unexpected_handlerE
 
 .data._ZN10__cxxabiv119__terminate_handlerE
-                0x4015a282        0x4
+                0x4015a3c2        0x4
  .data._ZN10__cxxabiv119__terminate_handlerE
-                0x4015a282        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_term_handler.o)
-                0x4015a282                _ZN10__cxxabiv119__terminate_handlerE
+                0x4015a3c2        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_term_handler.o)
+                0x4015a3c2                _ZN10__cxxabiv119__terminate_handlerE
 
 .data._impure_ptr
-                0x4015a286        0x4
+                0x4015a3c6        0x4
  .data._impure_ptr
-                0x4015a286        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-impure.o)
-                0x4015a286                _impure_ptr
+                0x4015a3c6        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-impure.o)
+                0x4015a3c6                _impure_ptr
 
 .data.impure_data
-                0x4015a28a      0x28e
+                0x4015a3ca      0x28e
  .data.impure_data
-                0x4015a28a      0x28e c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-impure.o)
+                0x4015a3ca      0x28e c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-impure.o)
 
 .data.__global_locale
-                0x4015a518      0x168
+                0x4015a658      0x168
  .data.__global_locale
-                0x4015a518      0x168 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-locale.o)
-                0x4015a518                __global_locale
+                0x4015a658      0x168 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-locale.o)
+                0x4015a658                __global_locale
 
-.bss            0x4015a680    0x45324
-                0x4015a680                . = ALIGN (0x4)
-                0x4015a680                __bss_start = .
+.bss            0x4015a7c0    0x45324
+                0x4015a7c0                . = ALIGN (0x4)
+                0x4015a7c0                __bss_start = .
  *(.shbss)
  *(.bss)
- .bss           0x4015a680       0x1e c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
- *fill*         0x4015a69e        0x2 
- .bss           0x4015a6a0       0x1a c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455\libgcc.a(unwind-dw2.o)
- *fill*         0x4015a6ba        0x2 
- .bss           0x4015a6bc        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455\libgcc.a(unwind-dw2-fde.o)
+ .bss           0x4015a7c0       0x1e c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455/crtbegin.o
+ *fill*         0x4015a7de        0x2 
+ .bss           0x4015a7e0       0x1a c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455\libgcc.a(unwind-dw2.o)
+ *fill*         0x4015a7fa        0x2 
+ .bss           0x4015a7fc        0xc c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/m54455\libgcc.a(unwind-dw2-fde.o)
  *(.bss.*)
  .bss.gPlcTagsBrowseHandler
-                0x4015a6c8       0x1c ./src/main.o
-                0x4015a6c8                gPlcTagsBrowseHandler
+                0x4015a808       0x1c ./src/main.o
+                0x4015a808                gPlcTagsBrowseHandler
  .bss.gPlcTagsRemoveHandler
-                0x4015a6e4       0x1c ./src/main.o
-                0x4015a6e4                gPlcTagsRemoveHandler
+                0x4015a824       0x1c ./src/main.o
+                0x4015a824                gPlcTagsRemoveHandler
  .bss.gPlcTagsExpandHandler
-                0x4015a700       0x1c ./src/main.o
-                0x4015a700                gPlcTagsExpandHandler
+                0x4015a840       0x1c ./src/main.o
+                0x4015a840                gPlcTagsExpandHandler
  .bss.gPlcTagsImportClearHandler
-                0x4015a71c       0x1c ./src/main.o
-                0x4015a71c                gPlcTagsImportClearHandler
+                0x4015a85c       0x1c ./src/main.o
+                0x4015a85c                gPlcTagsImportClearHandler
  .bss.gPlcTagsImportCommitHandler
-                0x4015a738       0x1c ./src/main.o
-                0x4015a738                gPlcTagsImportCommitHandler
+                0x4015a878       0x1c ./src/main.o
+                0x4015a878                gPlcTagsImportCommitHandler
  .bss.gPlcTagsImportAddNoSaveHandler
-                0x4015a754       0x1c ./src/main.o
-                0x4015a754                gPlcTagsImportAddNoSaveHandler
+                0x4015a894       0x1c ./src/main.o
+                0x4015a894                gPlcTagsImportAddNoSaveHandler
  .bss.gPlcTagsClearHandler
-                0x4015a770       0x1c ./src/main.o
-                0x4015a770                gPlcTagsClearHandler
+                0x4015a8b0       0x1c ./src/main.o
+                0x4015a8b0                gPlcTagsClearHandler
  .bss.gPlcTagsCommitHandler
-                0x4015a78c       0x1c ./src/main.o
-                0x4015a78c                gPlcTagsCommitHandler
+                0x4015a8cc       0x1c ./src/main.o
+                0x4015a8cc                gPlcTagsCommitHandler
  .bss.gPlcTagsAddNoSaveHandler
-                0x4015a7a8       0x1c ./src/main.o
-                0x4015a7a8                gPlcTagsAddNoSaveHandler
+                0x4015a8e8       0x1c ./src/main.o
+                0x4015a8e8                gPlcTagsAddNoSaveHandler
  .bss.gPlcTagsAddHandler
-                0x4015a7c4       0x1c ./src/main.o
-                0x4015a7c4                gPlcTagsAddHandler
+                0x4015a904       0x1c ./src/main.o
+                0x4015a904                gPlcTagsAddHandler
  .bss.gPlcTagsListHandler
-                0x4015a7e0       0x1c ./src/main.o
-                0x4015a7e0                gPlcTagsListHandler
+                0x4015a920       0x1c ./src/main.o
+                0x4015a920                gPlcTagsListHandler
  .bss.gMappingsRuntimeHandler
-                0x4015a7fc       0x1c ./src/main.o
-                0x4015a7fc                gMappingsRuntimeHandler
+                0x4015a93c       0x1c ./src/main.o
+                0x4015a93c                gMappingsRuntimeHandler
  .bss.gMappingsClearHandler
-                0x4015a818       0x1c ./src/main.o
-                0x4015a818                gMappingsClearHandler
+                0x4015a958       0x1c ./src/main.o
+                0x4015a958                gMappingsClearHandler
  .bss.gMappingsDeleteHandler
-                0x4015a834       0x1c ./src/main.o
-                0x4015a834                gMappingsDeleteHandler
+                0x4015a974       0x1c ./src/main.o
+                0x4015a974                gMappingsDeleteHandler
  .bss.gMappingsSaveHandler
-                0x4015a850       0x1c ./src/main.o
-                0x4015a850                gMappingsSaveHandler
+                0x4015a990       0x1c ./src/main.o
+                0x4015a990                gMappingsSaveHandler
  .bss.gMappingsListHandler
-                0x4015a86c       0x1c ./src/main.o
-                0x4015a86c                gMappingsListHandler
+                0x4015a9ac       0x1c ./src/main.o
+                0x4015a9ac                gMappingsListHandler
  .bss.gReajetSendHandler
-                0x4015a888       0x1c ./src/main.o
-                0x4015a888                gReajetSendHandler
+                0x4015a9c8       0x1c ./src/main.o
+                0x4015a9c8                gReajetSendHandler
  .bss.gPlcReadHandler
-                0x4015a8a4       0x1c ./src/main.o
-                0x4015a8a4                gPlcReadHandler
+                0x4015a9e4       0x1c ./src/main.o
+                0x4015a9e4                gPlcReadHandler
  .bss.gReajetManualStatusHandler
-                0x4015a8c0       0x1c ./src/main.o
-                0x4015a8c0                gReajetManualStatusHandler
+                0x4015aa00       0x1c ./src/main.o
+                0x4015aa00                gReajetManualStatusHandler
  .bss.gReajetStatusHandler
-                0x4015a8dc       0x1c ./src/main.o
-                0x4015a8dc                gReajetStatusHandler
+                0x4015aa1c       0x1c ./src/main.o
+                0x4015aa1c                gReajetStatusHandler
  .bss.gReajetClearHandler
-                0x4015a8f8       0x1c ./src/main.o
-                0x4015a8f8                gReajetClearHandler
+                0x4015aa38       0x1c ./src/main.o
+                0x4015aa38                gReajetClearHandler
  .bss.gReajetConfigSaveHandler
-                0x4015a914       0x1c ./src/main.o
-                0x4015a914                gReajetConfigSaveHandler
+                0x4015aa54       0x1c ./src/main.o
+                0x4015aa54                gReajetConfigSaveHandler
  .bss.gReajetConfigHandler
-                0x4015a930       0x1c ./src/main.o
-                0x4015a930                gReajetConfigHandler
+                0x4015aa70       0x1c ./src/main.o
+                0x4015aa70                gReajetConfigHandler
  .bss.gNetworkConfigHandler
-                0x4015a94c       0x1c ./src/main.o
-                0x4015a94c                gNetworkConfigHandler
+                0x4015aa8c       0x1c ./src/main.o
+                0x4015aa8c                gNetworkConfigHandler
  .bss.gNetworkConfigSaveHandler
-                0x4015a968       0x1c ./src/main.o
-                0x4015a968                gNetworkConfigSaveHandler
+                0x4015aaa8       0x1c ./src/main.o
+                0x4015aaa8                gNetworkConfigSaveHandler
  .bss.gPlcClearHandler
-                0x4015a984       0x1c ./src/main.o
-                0x4015a984                gPlcClearHandler
+                0x4015aac4       0x1c ./src/main.o
+                0x4015aac4                gPlcClearHandler
  .bss.gPlcSelectedHandler
-                0x4015a9a0       0x1c ./src/main.o
-                0x4015a9a0                gPlcSelectedHandler
+                0x4015aae0       0x1c ./src/main.o
+                0x4015aae0                gPlcSelectedHandler
  .bss.gPlcSaveHandler
-                0x4015a9bc       0x1c ./src/main.o
-                0x4015a9bc                gPlcSaveHandler
+                0x4015aafc       0x1c ./src/main.o
+                0x4015aafc                gPlcSaveHandler
  .bss.gPlcScanHandler
-                0x4015a9d8       0x1c ./src/main.o
-                0x4015a9d8                gPlcScanHandler
+                0x4015ab18       0x1c ./src/main.o
+                0x4015ab18                gPlcScanHandler
  .bss._ZL17gManualReaPiProbe
-                0x4015a9f4     0x588c ./src/main.o
+                0x4015ab34     0x588c ./src/main.o
  .bss._ZZL18ReaPiRecvFramedXmliPcmmE5rxBuf
-                0x40160280      0xa00 ./src/main.o
+                0x401603c0      0xa00 ./src/main.o
  .bss._ZGVZL12ReaPlcTxCritvE4crit
-                0x40160c80        0x8 ./src/main.o
+                0x40160dc0        0x8 ./src/main.o
  .bss._ZZL12ReaPlcTxCritvE4crit
-                0x40160c88       0x10 ./src/main.o
+                0x40160dc8       0x10 ./src/main.o
  .bss._ZL13gReaPlcTxBusy
-                0x40160c98        0x1 ./src/main.o
+                0x40160dd8        0x1 ./src/main.o
  .bss._ZL21gManualReaProbeActive
-                0x40160c99        0x1 ./src/main.o
+                0x40160dd9        0x1 ./src/main.o
  .bss._ZL15gReaPiLastRxRaw
-                0x40160c9a      0x200 ./src/main.o
+                0x40160dda      0x200 ./src/main.o
  .bss._ZZL18ReaPiSendFramedXmliPKcE8frameBuf
-                0x40160e9a      0x840 ./src/main.o
+                0x40160fda      0x840 ./src/main.o
  .bss._ZL16gReajetConnState
-                0x401616da       0x6c ./src/main.o
+                0x4016181a       0x6c ./src/main.o
  .bss._ZL13gPlcConnState
-                0x40161746       0x6a ./src/main.o
+                0x40161886       0x6a ./src/main.o
  .bss._ZL13gReaPiVersion
-                0x401617b0       0x54 ./src/main.o
+                0x401618f0       0x54 ./src/main.o
  .bss._ZL17gStatusLastPollMs
-                0x40161804        0x4 ./src/main.o
+                0x40161944        0x4 ./src/main.o
  .bss._ZL14gReaLiveStatus
-                0x40161808      0x10a ./src/main.o
+                0x40161948      0x10a ./src/main.o
  .bss._ZL21gRuntimeStoppedByUser
-                0x40161912        0x1 ./src/main.o
+                0x40161a52        0x1 ./src/main.o
  .bss._ZL23gRuntimeLastTxErrorText
-                0x40161913       0x60 ./src/main.o
- *fill*         0x40161973        0x1 
+                0x40161a53       0x60 ./src/main.o
+ *fill*         0x40161ab3        0x1 
  .bss._ZL23gRuntimeLastTxErrorCode
-                0x40161974        0x4 ./src/main.o
+                0x40161ab4        0x4 ./src/main.o
  .bss._ZL25gRuntimeLastTxResponseAck
-                0x40161978        0x1 ./src/main.o
+                0x40161ab8        0x1 ./src/main.o
  .bss._ZL29gRuntimeLastTxResponseDecoded
-                0x40161979      0x200 ./src/main.o
+                0x40161ab9      0x200 ./src/main.o
  .bss._ZL22gRuntimeLastTxResponse
-                0x40161b79       0x60 ./src/main.o
+                0x40161cb9       0x60 ./src/main.o
  .bss._ZL30gRuntimeLastTxJobStateVerified
-                0x40161bd9       0x60 ./src/main.o
+                0x40161d19       0x60 ./src/main.o
  .bss._ZL17gRuntimeLastTxCmd
-                0x40161c39        0x8 ./src/main.o
+                0x40161d79        0x8 ./src/main.o
  .bss._ZL19gRuntimeLastTxAscii
-                0x40161c41      0x3e8 ./src/main.o
+                0x40161d81      0x3e8 ./src/main.o
  .bss._ZL24gRuntimeLastTxAsciiStart
-                0x40162029      0x3e8 ./src/main.o
+                0x40162169      0x3e8 ./src/main.o
  .bss._ZL23gRuntimeLastTxAsciiText
-                0x40162411      0x3e8 ./src/main.o
+                0x40162551      0x3e8 ./src/main.o
  .bss._ZL22gRuntimeLastTxAsciiJob
-                0x401627f9      0x3e8 ./src/main.o
+                0x40162939      0x3e8 ./src/main.o
  .bss._ZL23gRuntimeLastTxAsciiStop
-                0x40162be1      0x3e8 ./src/main.o
+                0x40162d21      0x3e8 ./src/main.o
  .bss._ZL18gRuntimeLastTxText
-                0x40162fc9      0x200 ./src/main.o
+                0x40163109      0x200 ./src/main.o
  .bss._ZL17gRuntimeLastTxJob
-                0x401631c9      0x200 ./src/main.o
- *fill*         0x401633c9        0x1 
+                0x40163309      0x200 ./src/main.o
+ *fill*         0x40163509        0x1 
  .bss._ZL23gRuntimeLastTxMappingId
-                0x401633ca        0x4 ./src/main.o
+                0x4016350a        0x4 ./src/main.o
  .bss._ZL14gRuntimeCycles
-                0x401633ce        0x4 ./src/main.o
+                0x4016350e        0x4 ./src/main.o
  .bss._ZL13gMappingCount
-                0x401633d2        0x4 ./src/main.o
+                0x40163512        0x4 ./src/main.o
  .bss._ZL23gImportedBrowseTagCount
-                0x401633d6        0x4 ./src/main.o
+                0x40163516        0x4 ./src/main.o
  .bss._ZL19gImportedBrowseTags
-                0x401633da     0xc000 ./src/main.o
+                0x4016351a     0xc000 ./src/main.o
  .bss._ZL16gBrowsedTagCount
-                0x4016f3da        0x4 ./src/main.o
+                0x4016f51a        0x4 ./src/main.o
  .bss._ZL12gBrowsedTags
-                0x4016f3de     0xf000 ./src/main.o
+                0x4016f51e     0xf000 ./src/main.o
  .bss._ZL12gPlcTagCount
-                0x4017e3de        0x4 ./src/main.o
+                0x4017e51e        0x4 ./src/main.o
  .bss._ZL8gPlcTags
-                0x4017e3e2     0x3000 ./src/main.o
+                0x4017e522     0x3000 ./src/main.o
  .bss._ZL13gMappingsBlob
-                0x401813e2       0x54 ./src/main.o
+                0x40181522       0x54 ./src/main.o
  .bss._ZL17gStatusReaPiOkTag
-                0x40181436       0x54 ./src/main.o
+                0x40181576       0x54 ./src/main.o
  .bss._ZL25gStatusPrintSpeedErrorTag
-                0x4018148a       0x54 ./src/main.o
+                0x401815ca       0x54 ./src/main.o
  .bss._ZL27gStatusJobStartedStoppedTag
-                0x401814de       0x54 ./src/main.o
+                0x4018161e       0x54 ./src/main.o
  .bss._ZL15gStatusTrig4Tag
-                0x40181532       0x54 ./src/main.o
+                0x40181672       0x54 ./src/main.o
  .bss._ZL15gStatusTrig3Tag
-                0x40181586       0x54 ./src/main.o
+                0x401816c6       0x54 ./src/main.o
  .bss._ZL15gStatusTrig2Tag
-                0x401815da       0x54 ./src/main.o
+                0x4018171a       0x54 ./src/main.o
  .bss._ZL15gStatusTrig1Tag
-                0x4018162e       0x54 ./src/main.o
+                0x4018176e       0x54 ./src/main.o
  .bss._ZL21gStatusClockSpeed2Tag
-                0x40181682       0x54 ./src/main.o
+                0x401817c2       0x54 ./src/main.o
  .bss._ZL20gStatusClockSpeedTag
-                0x401816d6       0x54 ./src/main.o
+                0x40181816       0x54 ./src/main.o
  .bss._ZL16gStatusPollOkTag
-                0x4018172a       0x54 ./src/main.o
+                0x4018186a       0x54 ./src/main.o
  .bss._ZL18gStatusJobStateTag
-                0x4018177e       0x54 ./src/main.o
+                0x401818be       0x54 ./src/main.o
  .bss._ZL23gStatusPrinterActiveTag
-                0x401817d2       0x54 ./src/main.o
+                0x40181912       0x54 ./src/main.o
  .bss._ZL21gStatusJobReleasedTag
-                0x40181826       0x54 ./src/main.o
+                0x40181966       0x54 ./src/main.o
  .bss._ZL21gStatusJobAssignedTag
-                0x4018187a       0x54 ./src/main.o
+                0x401819ba       0x54 ./src/main.o
  .bss._ZL18gReaPiReconnectSec
-                0x401818ce       0x2c ./src/main.o
+                0x40181a0e       0x2c ./src/main.o
  .bss._ZL10gReaPiPort
-                0x401818fa       0x2c ./src/main.o
+                0x40181a3a       0x2c ./src/main.o
  .bss._ZL13gReaPiEnabled
-                0x40181926       0x26 ./src/main.o
+                0x40181a66       0x26 ./src/main.o
  .bss._ZL13gStatusPollMs
-                0x4018194c       0x2c ./src/main.o
+                0x40181a8c       0x2c ./src/main.o
  .bss._ZL14gMappingPollMs
-                0x40181978       0x2c ./src/main.o
+                0x40181ab8       0x2c ./src/main.o
  .bss._ZL17gReajetTargetPort
-                0x401819a4       0x2c ./src/main.o
+                0x40181ae4       0x2c ./src/main.o
  .bss._ZL19gReajetTargetIpText
-                0x401819d0       0x54 ./src/main.o
+                0x40181b10       0x54 ./src/main.o
  .bss._ZL24gImportedBrowsePathsBlob
-                0x40181a24       0x54 ./src/main.o
+                0x40181b64       0x54 ./src/main.o
  .bss._ZL16gPlcTagPathsBlob
-                0x40181a78       0x54 ./src/main.o
+                0x40181bb8       0x54 ./src/main.o
  .bss._ZL20gPlcTargetIsMicro800
-                0x40181acc       0x26 ./src/main.o
+                0x40181c0c       0x26 ./src/main.o
  .bss._ZL16gPlcTargetSerial
-                0x40181af2       0x2c ./src/main.o
+                0x40181c32       0x2c ./src/main.o
  .bss._ZL21gPlcTargetProductCode
-                0x40181b1e       0x2c ./src/main.o
+                0x40181c5e       0x2c ./src/main.o
  .bss._ZL18gPlcTargetVendorId
-                0x40181b4a       0x2c ./src/main.o
+                0x40181c8a       0x2c ./src/main.o
  .bss._ZL14gPlcTargetName
-                0x40181b76       0x54 ./src/main.o
+                0x40181cb6       0x54 ./src/main.o
  .bss._ZL12gPlcTargetIp
-                0x40181bca       0x2c ./src/main.o
+                0x40181d0a       0x2c ./src/main.o
  .bss._ZL11gGatewayCfg
-                0x40181bf6       0x28 ./src/main.o
+                0x40181d36       0x28 ./src/main.o
  .bss._ZL14gLastScanCount
-                0x40181c1e        0x4 ./src/main.o
+                0x40181d5e        0x4 ./src/main.o
  .bss._ZL16gLastScanDevices
-                0x40181c22      0x340 ./src/main.o
- .bss.CH4       0x40181f62       0x1c nblibs\libnetburner.a(HttpConfigMirror.o)
-                0x40181f62                CH4
- .bss.CH3       0x40181f7e       0x1c nblibs\libnetburner.a(HttpConfigMirror.o)
-                0x40181f7e                CH3
- .bss.CH2       0x40181f9a       0x1c nblibs\libnetburner.a(HttpConfigMirror.o)
-                0x40181f9a                CH2
- .bss.CH1       0x40181fb6       0x18 nblibs\libnetburner.a(HttpConfigMirror.o)
-                0x40181fb6                CH1
+                0x40181d62      0x340 ./src/main.o
+ .bss.CH4       0x401820a2       0x1c nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x401820a2                CH4
+ .bss.CH3       0x401820be       0x1c nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x401820be                CH3
+ .bss.CH2       0x401820da       0x1c nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x401820da                CH2
+ .bss.CH1       0x401820f6       0x18 nblibs\libnetburner.a(HttpConfigMirror.o)
+                0x401820f6                CH1
  .bss._ZL5pHead
-                0x40181fce        0x4 nblibs\libnetburner.a(autoip.o)
- .bss.LastHead  0x40181fd2        0x4 nblibs\libnetburner.a(buffers.o)
-                0x40181fd2                LastHead
- .bss._ZL4pObj  0x40181fd6       0x80 nblibs\libnetburner.a(config_notify.o)
+                0x4018210e        0x4 nblibs\libnetburner.a(autoip.o)
+ .bss.LastHead  0x40182112        0x4 nblibs\libnetburner.a(buffers.o)
+                0x40182112                LastHead
+ .bss._ZL4pObj  0x40182116       0x80 nblibs\libnetburner.a(config_notify.o)
  .bss.ConfigSaveCrit
-                0x40182056       0x10 nblibs\libnetburner.a(config_obj.o)
-                0x40182056                ConfigSaveCrit
+                0x40182196       0x10 nblibs\libnetburner.a(config_obj.o)
+                0x40182196                ConfigSaveCrit
  .bss._ZN11config_leaf11pDetachListE
-                0x40182066        0x4 nblibs\libnetburner.a(config_obj.o)
-                0x40182066                _ZN11config_leaf11pDetachListE
+                0x401821a6        0x4 nblibs\libnetburner.a(config_obj.o)
+                0x401821a6                _ZN11config_leaf11pDetachListE
  .bss._ZN11config_leaf9pRootListE
-                0x4018206a        0x4 nblibs\libnetburner.a(config_obj.o)
-                0x4018206a                _ZN11config_leaf9pRootListE
+                0x401821aa        0x4 nblibs\libnetburner.a(config_obj.o)
+                0x401821aa                _ZN11config_leaf9pRootListE
  .bss._ZN10config_obj8pObjListE
-                0x4018206e        0x4 nblibs\libnetburner.a(config_obj.o)
-                0x4018206e                _ZN10config_obj8pObjListE
- .bss.appdata   0x40182072       0x28 nblibs\libnetburner.a(config_obj.o)
-                0x40182072                appdata
- .bss.netif     0x4018209a       0x28 nblibs\libnetburner.a(config_obj.o)
-                0x4018209a                netif
- .bss.sys       0x401820c2       0x78 nblibs\libnetburner.a(config_obj.o)
-                0x401820c2                sys
+                0x401821ae        0x4 nblibs\libnetburner.a(config_obj.o)
+                0x401821ae                _ZN10config_obj8pObjListE
+ .bss.appdata   0x401821b2       0x28 nblibs\libnetburner.a(config_obj.o)
+                0x401821b2                appdata
+ .bss.netif     0x401821da       0x28 nblibs\libnetburner.a(config_obj.o)
+                0x401821da                netif
+ .bss.sys       0x40182202       0x78 nblibs\libnetburner.a(config_obj.o)
+                0x40182202                sys
  .bss.config_cur_version
-                0x4018213a       0x2e nblibs\libnetburner.a(config_obj.o)
-                0x4018213a                config_cur_version
- .bss.rebooter  0x40182168       0x26 nblibs\libnetburner.a(config_obj.o)
-                0x40182168                rebooter
- .bss.root      0x4018218e       0x28 nblibs\libnetburner.a(config_obj.o)
-                0x4018218e                root
- .bss.detached  0x401821b6       0x28 nblibs\libnetburner.a(config_obj.o)
-                0x401821b6                detached
+                0x4018227a       0x2e nblibs\libnetburner.a(config_obj.o)
+                0x4018227a                config_cur_version
+ .bss.rebooter  0x401822a8       0x26 nblibs\libnetburner.a(config_obj.o)
+                0x401822a8                rebooter
+ .bss.root      0x401822ce       0x28 nblibs\libnetburner.a(config_obj.o)
+                0x401822ce                root
+ .bss.detached  0x401822f6       0x28 nblibs\libnetburner.a(config_obj.o)
+                0x401822f6                detached
  .bss._ZL6wsvlet
-                0x401821de       0x14 nblibs\libnetburner.a(config_server.o)
- *fill*         0x401821f2        0x2 
+                0x4018231e       0x14 nblibs\libnetburner.a(config_server.o)
+ *fill*         0x40182332        0x2 
  .bss._ZZZ17StartConfigServeriENKUlvE_clEvE25func_ConfigServerTask_Stk
-                0x401821f4     0x3000 nblibs\libnetburner.a(config_server.o)
+                0x40182334     0x3000 nblibs\libnetburner.a(config_server.o)
  .bss.ConfigServerServletList
-                0x401851f4       0x24 nblibs\libnetburner.a(config_server.o)
-                0x401851f4                ConfigServerServletList
+                0x40185334       0x24 nblibs\libnetburner.a(config_server.o)
+                0x40185334                ConfigServerServletList
  .bss.DiscoverPP
-                0x40185218        0x4 nblibs\libnetburner.a(config_server.o)
-                0x40185218                DiscoverPP
+                0x40185358        0x4 nblibs\libnetburner.a(config_server.o)
+                0x40185358                DiscoverPP
  .bss.pConfigErrorStr
-                0x4018521c        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4018521c                pConfigErrorStr
+                0x4018535c        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4018535c                pConfigErrorStr
  .bss._ZL7rblocks
-                0x40185220      0x630 nblibs\libnetburner.a(config_server.o)
+                0x40185360      0x630 nblibs\libnetburner.a(config_server.o)
  .bss._ZZ24WriteNextDiscoveryResultP11pool_bufferiE9lastFound
-                0x40185850        0x6 nblibs\libnetburner.a(config_server.o)
+                0x40185990        0x6 nblibs\libnetburner.a(config_server.o)
  .bss.pConsoleValid
-                0x40185856        0x4 nblibs\libnetburner.a(config_server.o)
-                0x40185856                pConsoleValid
+                0x40185996        0x4 nblibs\libnetburner.a(config_server.o)
+                0x40185996                pConsoleValid
  .bss.pDiagServer
-                0x4018585a        0x4 nblibs\libnetburner.a(config_server.o)
-                0x4018585a                pDiagServer
+                0x4018599a        0x4 nblibs\libnetburner.a(config_server.o)
+                0x4018599a                pDiagServer
  .bss.pSerialConfigModalProcess
-                0x4018585e        0x4 nblibs\libnetburner.a(config_server_serial.o)
-                0x4018585e                pSerialConfigModalProcess
+                0x4018599e        0x4 nblibs\libnetburner.a(config_server_serial.o)
+                0x4018599e                pSerialConfigModalProcess
  .bss._ZL6ssv_nr
-                0x40185862        0x4 nblibs\libnetburner.a(config_server_serial.o)
+                0x401859a2        0x4 nblibs\libnetburner.a(config_server_serial.o)
  .bss._ZL6ssvlet
-                0x40185866       0xc6 nblibs\libnetburner.a(config_server_serial.o)
+                0x401859a6       0xc6 nblibs\libnetburner.a(config_server_serial.o)
  .bss.monitor_config
-                0x4018592c      0x29e nblibs\libnetburner.a(config_server_serial.o)
-                0x4018592c                monitor_config
+                0x40185a6c      0x29e nblibs\libnetburner.a(config_server_serial.o)
+                0x40185a6c                monitor_config
  .bss.bDoneWaiting4Abort
-                0x40185bca        0x1 nblibs\libnetburner.a(config_server_serial.o)
-                0x40185bca                bDoneWaiting4Abort
- *fill*         0x40185bcb        0x1 
+                0x40185d0a        0x1 nblibs\libnetburner.a(config_server_serial.o)
+                0x40185d0a                bDoneWaiting4Abort
+ *fill*         0x40185d0b        0x1 
  .bss.pExtendedCommands
-                0x40185bcc        0x4 nblibs\libnetburner.a(config_server_serial.o)
-                0x40185bcc                pExtendedCommands
+                0x40185d0c        0x4 nblibs\libnetburner.a(config_server_serial.o)
+                0x40185d0c                pExtendedCommands
  .bss.pPlatformCommands
-                0x40185bd0        0x4 nblibs\libnetburner.a(config_server_serial.o)
-                0x40185bd0                pPlatformCommands
+                0x40185d10        0x4 nblibs\libnetburner.a(config_server_serial.o)
+                0x40185d10                pPlatformCommands
  .bss._ZL5pHead
-                0x40185bd4        0x4 nblibs\libnetburner.a(dhcpc.o)
+                0x40185d14        0x4 nblibs\libnetburner.a(dhcpc.o)
  .bss._ZZN11DHCPMessage12SetRandomXidERK6MACADRE6old_rv
-                0x40185bd8        0x4 nblibs\libnetburner.a(dhcpc.o)
+                0x40185d18        0x4 nblibs\libnetburner.a(dhcpc.o)
  .bss.ParseDhcpOptions
-                0x40185bdc        0x4 nblibs\libnetburner.a(dhcpc.o)
-                0x40185bdc                ParseDhcpOptions
+                0x40185d1c        0x4 nblibs\libnetburner.a(dhcpc.o)
+                0x40185d1c                ParseDhcpOptions
  .bss.AddDhcpOptionsFunc
-                0x40185be0        0x4 nblibs\libnetburner.a(dhcpc.o)
-                0x40185be0                AddDhcpOptionsFunc
- .bss.dtcp      0x40185be4       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185be4                dtcp
- .bss.dcs       0x40185bfc       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185bfc                dcs
- .bss.dtt       0x40185c14       0x22 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185c14                dtt
- .bss.dup       0x40185c36       0x22 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185c36                dup
- .bss.dpm       0x40185c58       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185c58                dpm
- .bss.drt       0x40185c70       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185c70                drt
- .bss.dtl       0x40185c88       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185c88                dtl
- .bss.dfm       0x40185ca0       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185ca0                dfm
- .bss.dlt       0x40185cb8       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185cb8                dlt
- .bss.dextra    0x40185cd0       0x1c nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185cd0                dextra
- .bss.dactive   0x40185cec       0x1c nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185cec                dactive
- .bss.dbc       0x40185d08       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185d08                dbc
- .bss.dmi       0x40185d20       0x18 nblibs\libnetburner.a(diagnostics_set.o)
-                0x40185d20                dmi
+                0x40185d20        0x4 nblibs\libnetburner.a(dhcpc.o)
+                0x40185d20                AddDhcpOptionsFunc
+ .bss.dtcp      0x40185d24       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185d24                dtcp
+ .bss.dcs       0x40185d3c       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185d3c                dcs
+ .bss.dtt       0x40185d54       0x22 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185d54                dtt
+ .bss.dup       0x40185d76       0x22 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185d76                dup
+ .bss.dpm       0x40185d98       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185d98                dpm
+ .bss.drt       0x40185db0       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185db0                drt
+ .bss.dtl       0x40185dc8       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185dc8                dtl
+ .bss.dfm       0x40185de0       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185de0                dfm
+ .bss.dlt       0x40185df8       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185df8                dlt
+ .bss.dextra    0x40185e10       0x1c nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185e10                dextra
+ .bss.dactive   0x40185e2c       0x1c nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185e2c                dactive
+ .bss.dbc       0x40185e48       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185e48                dbc
+ .bss.dmi       0x40185e60       0x18 nblibs\libnetburner.a(diagnostics_set.o)
+                0x40185e60                dmi
  .bss.unknowninfo
-                0x40185d38        0x8 nblibs\libnetburner.a(extraio.o)
-                0x40185d38                unknowninfo
+                0x40185e78        0x8 nblibs\libnetburner.a(extraio.o)
+                0x40185e78                unknowninfo
  .bss.ExtraSourceCrit
-                0x40185d40       0x10 nblibs\libnetburner.a(extraio.o)
-                0x40185d40                ExtraSourceCrit
+                0x40185e80       0x10 nblibs\libnetburner.a(extraio.o)
+                0x40185e80                ExtraSourceCrit
  .bss._ZL12ExpandFdFunc
-                0x40185d50       0x18 nblibs\libnetburner.a(extraio.o)
+                0x40185e90       0x18 nblibs\libnetburner.a(extraio.o)
  .bss._ZL5bInit
-                0x40185d68        0x1 nblibs\libnetburner.a(extraio.o)
- *fill*         0x40185d69        0x1 
+                0x40185ea8        0x1 nblibs\libnetburner.a(extraio.o)
+ *fill*         0x40185ea9        0x1 
  .bss._ZL9last_free
-                0x40185d6a        0x4 nblibs\libnetburner.a(extraio.o)
+                0x40185eaa        0x4 nblibs\libnetburner.a(extraio.o)
  .bss._ZL10PeekDataEx
-                0x40185d6e       0x7a nblibs\libnetburner.a(extraio.o)
+                0x40185eae       0x7a nblibs\libnetburner.a(extraio.o)
  .bss._ZL7bPeekEx
-                0x40185de8       0x7a nblibs\libnetburner.a(extraio.o)
+                0x40185f28       0x7a nblibs\libnetburner.a(extraio.o)
  .bss._ZL10pExtraData
-                0x40185e62      0x1e8 nblibs\libnetburner.a(extraio.o)
+                0x40185fa2      0x1e8 nblibs\libnetburner.a(extraio.o)
  .bss._ZL5pList
-                0x4018604a      0x1e8 nblibs\libnetburner.a(extraio.o)
+                0x4018618a      0x1e8 nblibs\libnetburner.a(extraio.o)
  .bss.fd_adap_expand
-                0x40186232       0x18 nblibs\libnetburner.a(fd_adapter.o)
-                0x40186232                fd_adap_expand
- .bss.fdaInfo   0x4018624a        0x8 nblibs\libnetburner.a(fd_adapter.o)
-                0x4018624a                fdaInfo
+                0x40186372       0x18 nblibs\libnetburner.a(fd_adapter.o)
+                0x40186372                fd_adap_expand
+ .bss.fdaInfo   0x4018638a        0x8 nblibs\libnetburner.a(fd_adapter.o)
+                0x4018638a                fdaInfo
  .bss._ZL9STDIOInfo
-                0x40186252        0x8 nblibs\libnetburner.a(fileio.o)
+                0x40186392        0x8 nblibs\libnetburner.a(fileio.o)
  .bss.cfgRecReader
-                0x4018625a       0x16 nblibs\libnetburner.a(find_config.o)
-                0x4018625a                cfgRecReader
+                0x4018639a       0x16 nblibs\libnetburner.a(find_config.o)
+                0x4018639a                cfgRecReader
  .bss._ZL14HttpListenList
-                0x40186270        0xc nblibs\libnetburner.a(http.o)
+                0x401863b0        0xc nblibs\libnetburner.a(http.o)
  .bss.bHttpStarted
-                0x4018627c        0x1 nblibs\libnetburner.a(http.o)
-                0x4018627c                bHttpStarted
- *fill*         0x4018627d        0x1 
+                0x401863bc        0x1 nblibs\libnetburner.a(http.o)
+                0x401863bc                bHttpStarted
+ *fill*         0x401863bd        0x1 
  .bss.SSLReadWithTimeout_CB
-                0x4018627e        0x4 nblibs\libnetburner.a(http.o)
-                0x4018627e                SSLReadWithTimeout_CB
+                0x401863be        0x4 nblibs\libnetburner.a(http.o)
+                0x401863be                SSLReadWithTimeout_CB
  .bss.SSLSocketsAvail_CB
-                0x40186282        0x4 nblibs\libnetburner.a(http.o)
-                0x40186282                SSLSocketsAvail_CB
+                0x401863c2        0x4 nblibs\libnetburner.a(http.o)
+                0x401863c2                SSLSocketsAvail_CB
  .bss.SSL_accept_CB
-                0x40186286        0x4 nblibs\libnetburner.a(http.o)
-                0x40186286                SSL_accept_CB
+                0x401863c6        0x4 nblibs\libnetburner.a(http.o)
+                0x401863c6                SSL_accept_CB
  .bss.HTTP_Socket_FileRec
-                0x4018628a       0x78 nblibs\libnetburner.a(http.o)
-                0x4018628a                HTTP_Socket_FileRec
- .bss.frh       0x40186302       0x18 nblibs\libnetburner.a(httpinternal.o)
-                0x40186302                frh
+                0x401863ca       0x78 nblibs\libnetburner.a(http.o)
+                0x401863ca                HTTP_Socket_FileRec
+ .bss.frh       0x40186442       0x18 nblibs\libnetburner.a(httpinternal.o)
+                0x40186442                frh
  .bss._ZL6pAfter
-                0x4018631a        0x4 nblibs\libnetburner.a(httpinternal.o)
+                0x4018645a        0x4 nblibs\libnetburner.a(httpinternal.o)
  .bss._ZL7pBefore
-                0x4018631e        0x4 nblibs\libnetburner.a(httpinternal.o)
+                0x4018645e        0x4 nblibs\libnetburner.a(httpinternal.o)
  .bss._ZL17pTheActiveRequest
-                0x40186322        0x4 nblibs\libnetburner.a(httpinternal.o)
+                0x40186462        0x4 nblibs\libnetburner.a(httpinternal.o)
  .bss.http_rxBuffer
-                0x40186326     0x2712 nblibs\libnetburner.a(httpinternal.o)
-                0x40186326                http_rxBuffer
+                0x40186466     0x2712 nblibs\libnetburner.a(httpinternal.o)
+                0x40186466                http_rxBuffer
  .bss.TheErrorHandler
-                0x40188a38        0x4 nblibs\libnetburner.a(httpinternal.o)
-                0x40188a38                TheErrorHandler
+                0x40188b78        0x4 nblibs\libnetburner.a(httpinternal.o)
+                0x40188b78                TheErrorHandler
  .bss.pHttpRealm
-                0x40188a3c        0x4 nblibs\libnetburner.a(httpinternal.o)
-                0x40188a3c                pHttpRealm
+                0x40188b7c        0x4 nblibs\libnetburner.a(httpinternal.o)
+                0x40188b7c                pHttpRealm
  .bss._ZL12CallBackData
-                0x40188a40      0x400 nblibs\libnetburner.a(iosys.o)
+                0x40188b80      0x400 nblibs\libnetburner.a(iosys.o)
  .bss._ZL9CallBacks
-                0x40188e40      0x400 nblibs\libnetburner.a(iosys.o)
+                0x40188f80      0x400 nblibs\libnetburner.a(iosys.o)
  .bss._ZZ16GetEphemeralPortvE13ephemeralport
-                0x40189240        0x2 nblibs\libnetburner.a(ip.o)
- .bss.ip_errs   0x40189242        0xa nblibs\libnetburner.a(ip.o)
-                0x40189242                ip_errs
+                0x40189380        0x2 nblibs\libnetburner.a(ip.o)
+ .bss.ip_errs   0x40189382        0xa nblibs\libnetburner.a(ip.o)
+                0x40189382                ip_errs
  .bss._ZL11npos_number
-                0x4018924c        0x4 nblibs\libnetburner.a(json_lexer.o)
+                0x4018938c        0x4 nblibs\libnetburner.a(json_lexer.o)
  .bss._ZL12NumberBuffer
-                0x40189250       0x50 nblibs\libnetburner.a(json_lexer.o)
+                0x40189390       0x50 nblibs\libnetburner.a(json_lexer.o)
  .bss._ZL17TheGlobalDelayObj
-                0x401892a0        0x8 nblibs\libnetburner.a(nbrtos.o)
+                0x401893e0        0x8 nblibs\libnetburner.a(nbrtos.o)
  .bss.OSTaskJoinList
-                0x401892a8        0x8 nblibs\libnetburner.a(nbrtos.o)
-                0x401892a8                OSTaskJoinList
+                0x401893e8        0x8 nblibs\libnetburner.a(nbrtos.o)
+                0x401893e8                OSTaskJoinList
  .bss.pAppAuthFunc
-                0x401892b0        0x4 nblibs\libnetburner.a(nbupdate.o)
-                0x401892b0                pAppAuthFunc
+                0x401893f0        0x4 nblibs\libnetburner.a(nbupdate.o)
+                0x401893f0                pAppAuthFunc
  .bss._ZL7pblocks
-                0x401892b4       0x14 nblibs\libnetburner.a(netinterface.o)
+                0x401893f4       0x14 nblibs\libnetburner.a(netinterface.o)
  .bss.ENET_ZERO
-                0x401892c8        0x6 nblibs\libnetburner.a(netinterface.o)
-                0x401892c8                ENET_ZERO
+                0x40189408        0x6 nblibs\libnetburner.a(netinterface.o)
+                0x40189408                ENET_ZERO
  .bss.ENET_BCAST
-                0x401892ce        0x6 nblibs\libnetburner.a(netinterface.o)
-                0x401892ce                ENET_BCAST
+                0x4018940e        0x6 nblibs\libnetburner.a(netinterface.o)
+                0x4018940e                ENET_BCAST
  .bss.pPacketfunc
-                0x401892d4        0x4 nblibs\libnetburner.a(netinterface.o)
-                0x401892d4                pPacketfunc
- .bss.pArpFunc  0x401892d8        0x4 nblibs\libnetburner.a(netinterface.o)
-                0x401892d8                pArpFunc
+                0x40189414        0x4 nblibs\libnetburner.a(netinterface.o)
+                0x40189414                pPacketfunc
+ .bss.pArpFunc  0x40189418        0x4 nblibs\libnetburner.a(netinterface.o)
+                0x40189418                pArpFunc
  .bss.PrimaryNetTimerTask
-                0x401892dc        0x1 nblibs\libnetburner.a(netrx.o)
-                0x401892dc                PrimaryNetTimerTask
- *fill*         0x401892dd        0x1 
+                0x4018941c        0x1 nblibs\libnetburner.a(netrx.o)
+                0x4018941c                PrimaryNetTimerTask
+ *fill*         0x4018941d        0x1 
  .bss.NetTimeOutManager
-                0x401892de       0x24 nblibs\libnetburner.a(netrx.o)
-                0x401892de                NetTimeOutManager
- .bss.pIp6Func  0x40189302        0x4 nblibs\libnetburner.a(netrx.o)
-                0x40189302                pIp6Func
+                0x4018941e       0x24 nblibs\libnetburner.a(netrx.o)
+                0x4018941e                NetTimeOutManager
+ .bss.pIp6Func  0x40189442        0x4 nblibs\libnetburner.a(netrx.o)
+                0x40189442                pIp6Func
  .bss._ZL12spread_value
-                0x40189306        0x4 nblibs\libnetburner.a(nettimer.o)
+                0x40189446        0x4 nblibs\libnetburner.a(nettimer.o)
  .bss.bTimerShouldRun
-                0x4018930a        0x1 nblibs\libnetburner.a(nettimer.o)
-                0x4018930a                bTimerShouldRun
+                0x4018944a        0x1 nblibs\libnetburner.a(nettimer.o)
+                0x4018944a                bTimerShouldRun
  .bss._ZZ13GetReleaseTagvE11lrtag_array
-                0x4018930b       0x28 nblibs\libnetburner.a(release_tag.o)
- *fill*         0x40189333        0x1 
+                0x4018944b       0x28 nblibs\libnetburner.a(release_tag.o)
+ *fill*         0x40189473        0x1 
  .bss.TcpInfoObj
-                0x40189334        0x8 nblibs\libnetburner.a(tcp.o)
-                0x40189334                TcpInfoObj
+                0x40189474        0x8 nblibs\libnetburner.a(tcp.o)
+                0x40189474                TcpInfoObj
  .bss.LastShortFree
-                0x4018933c        0x2 nblibs\libnetburner.a(tcp.o)
-                0x4018933c                LastShortFree
+                0x4018947c        0x2 nblibs\libnetburner.a(tcp.o)
+                0x4018947c                LastShortFree
  .bss.ShortSockets
-                0x4018933e     0x1a90 nblibs\libnetburner.a(tcp.o)
-                0x4018933e                ShortSockets
+                0x4018947e     0x1a90 nblibs\libnetburner.a(tcp.o)
+                0x4018947e                ShortSockets
  .bss.semiactive_list
-                0x4018adce       0x4a nblibs\libnetburner.a(tcp.o)
-                0x4018adce                semiactive_list
+                0x4018af0e       0x4a nblibs\libnetburner.a(tcp.o)
+                0x4018af0e                semiactive_list
  .bss.active_list
-                0x4018ae18        0x1 nblibs\libnetburner.a(tcp.o)
-                0x4018ae18                active_list
- *fill*         0x4018ae19        0x1 
+                0x4018af58        0x1 nblibs\libnetburner.a(tcp.o)
+                0x4018af58                active_list
+ *fill*         0x4018af59        0x1 
  .bss.listen_list_head
-                0x4018ae1a        0x4 nblibs\libnetburner.a(tcp.o)
-                0x4018ae1a                listen_list_head
+                0x4018af5a        0x4 nblibs\libnetburner.a(tcp.o)
+                0x4018af5a                listen_list_head
  .bss.user_closed_list_head
-                0x4018ae1e        0x4 nblibs\libnetburner.a(tcp.o)
-                0x4018ae1e                user_closed_list_head
+                0x4018af5e        0x4 nblibs\libnetburner.a(tcp.o)
+                0x4018af5e                user_closed_list_head
  .bss.free_list_head
-                0x4018ae22        0x4 nblibs\libnetburner.a(tcp.o)
-                0x4018ae22                free_list_head
- .bss.m_slist   0x4018ae26       0x94 nblibs\libnetburner.a(tcp.o)
-                0x4018ae26                m_slist
+                0x4018af62        0x4 nblibs\libnetburner.a(tcp.o)
+                0x4018af62                free_list_head
+ .bss.m_slist   0x4018af66       0x94 nblibs\libnetburner.a(tcp.o)
+                0x4018af66                m_slist
  .bss._ZZN13socket_struct11GetFirstSeqEvE2ww
-                0x4018aeba        0x2 nblibs\libnetburner.a(tcp.o)
- .bss.sockets   0x4018aebc     0x8c00 nblibs\libnetburner.a(tcp.o)
-                0x4018aebc                sockets
- .bss.UdpFuncs  0x40193abc       0x18 nblibs\libnetburner.a(udpsocket.o)
-                0x40193abc                UdpFuncs
+                0x4018affa        0x2 nblibs\libnetburner.a(tcp.o)
+ .bss.sockets   0x4018affc     0x8c00 nblibs\libnetburner.a(tcp.o)
+                0x4018affc                sockets
+ .bss.UdpFuncs  0x40193bfc       0x18 nblibs\libnetburner.a(udpsocket.o)
+                0x40193bfc                UdpFuncs
  .bss._ZL7UDPInfo
-                0x40193ad4        0x8 nblibs\libnetburner.a(udpsocket.o)
+                0x40193c14        0x8 nblibs\libnetburner.a(udpsocket.o)
  .bss.frames_rx_fragment
-                0x40193adc        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193adc                frames_rx_fragment
- .bss.enet_isr  0x40193ae0        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193ae0                enet_isr
+                0x40193c1c        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c1c                frames_rx_fragment
+ .bss.enet_isr  0x40193c20        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c20                enet_isr
  .bss.ip_last_err
-                0x40193ae4        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193ae4                ip_last_err
+                0x40193c24        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c24                ip_last_err
  .bss.enet_last_errhw
-                0x40193ae8        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193ae8                enet_last_errhw
+                0x40193c28        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c28                enet_last_errhw
  .bss.frames_tcp_errors
-                0x40193aec        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193aec                frames_tcp_errors
+                0x40193c2c        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c2c                frames_tcp_errors
  .bss.frames_udp_errors
-                0x40193af0        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193af0                frames_udp_errors
+                0x40193c30        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c30                frames_udp_errors
  .bss.frames_ip_discard
-                0x40193af4        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193af4                frames_ip_discard
+                0x40193c34        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c34                frames_ip_discard
  .bss.frames_ip_errors
-                0x40193af8        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193af8                frames_ip_errors
+                0x40193c38        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c38                frames_ip_errors
  .bss.frames_rx_icmp
-                0x40193afc        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193afc                frames_rx_icmp
+                0x40193c3c        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c3c                frames_rx_icmp
  .bss.frames_tx_icmp
-                0x40193b00        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b00                frames_tx_icmp
+                0x40193c40        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c40                frames_tx_icmp
  .bss.frames_rx_tcp
-                0x40193b04        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b04                frames_rx_tcp
+                0x40193c44        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c44                frames_rx_tcp
  .bss.frames_tx_tcp
-                0x40193b08        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b08                frames_tx_tcp
+                0x40193c48        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c48                frames_tx_tcp
  .bss.frames_rx_udp
-                0x40193b0c        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b0c                frames_rx_udp
+                0x40193c4c        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c4c                frames_rx_udp
  .bss.frames_tx_udp
-                0x40193b10        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b10                frames_tx_udp
+                0x40193c50        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c50                frames_tx_udp
  .bss.frames_tx_arp
-                0x40193b14        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b14                frames_tx_arp
+                0x40193c54        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c54                frames_tx_arp
  .bss.frames_rx_arp
-                0x40193b18        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b18                frames_rx_arp
+                0x40193c58        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c58                frames_rx_arp
  .bss.frames_rx_discard
-                0x40193b1c        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b1c                frames_rx_discard
+                0x40193c5c        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c5c                frames_rx_discard
  .bss.frames_rx_err
-                0x40193b20        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b20                frames_rx_err
+                0x40193c60        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c60                frames_rx_err
  .bss.frames_tx_err
-                0x40193b24        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b24                frames_tx_err
+                0x40193c64        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c64                frames_tx_err
  .bss.frames_rx
-                0x40193b28        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b28                frames_rx
+                0x40193c68        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c68                frames_rx
  .bss.frames_tx
-                0x40193b2c        0x4 nblibs\libnetburner.a(utils.o)
-                0x40193b2c                frames_tx
+                0x40193c6c        0x4 nblibs\libnetburner.a(utils.o)
+                0x40193c6c                frames_tx
  .bss._ZN13IPv6Interface7gifListE
-                0x40193b30        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b30                _ZN13IPv6Interface7gifListE
+                0x40193c70        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c70                _ZN13IPv6Interface7gifListE
  .bss._ZN13IPv6Interface18NetBurnerMultiCastE
-                0x40193b34       0x10 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b34                _ZN13IPv6Interface18NetBurnerMultiCastE
+                0x40193c74       0x10 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c74                _ZN13IPv6Interface18NetBurnerMultiCastE
  .bss._ZZL24TransmitBufferwFragmentsR25IPv6FrameProcessingStructiE7frag_id
-                0x40193b44        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c84        0x4 nblibs\libnetburner.a(ipv6_ip.o)
  .bss.IPV6_Ticks
-                0x40193b48        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b48                IPV6_Ticks
+                0x40193c88        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c88                IPV6_Ticks
  .bss.IPV6_Frame_RX_Frag
-                0x40193b4c        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b4c                IPV6_Frame_RX_Frag
+                0x40193c8c        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c8c                IPV6_Frame_RX_Frag
  .bss.IPV6_Frame_RX_Discard
-                0x40193b50        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b50                IPV6_Frame_RX_Discard
+                0x40193c90        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c90                IPV6_Frame_RX_Discard
  .bss.IPV6_Frame_RX_TCP
-                0x40193b54        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b54                IPV6_Frame_RX_TCP
+                0x40193c94        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c94                IPV6_Frame_RX_TCP
  .bss.IPV6_Frame_RX_UDP
-                0x40193b58        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b58                IPV6_Frame_RX_UDP
+                0x40193c98        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c98                IPV6_Frame_RX_UDP
  .bss.IPV6_Frame_RX_ICMP
-                0x40193b5c        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b5c                IPV6_Frame_RX_ICMP
+                0x40193c9c        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193c9c                IPV6_Frame_RX_ICMP
  .bss.IPV6_Frame_TX_Frag
-                0x40193b60        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b60                IPV6_Frame_TX_Frag
+                0x40193ca0        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193ca0                IPV6_Frame_TX_Frag
  .bss.IPV6_Frame_TX
-                0x40193b64        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b64                IPV6_Frame_TX
+                0x40193ca4        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193ca4                IPV6_Frame_TX
  .bss.IPV6_Frame_RX
-                0x40193b68        0x4 nblibs\libnetburner.a(ipv6_ip.o)
-                0x40193b68                IPV6_Frame_RX
+                0x40193ca8        0x4 nblibs\libnetburner.a(ipv6_ip.o)
+                0x40193ca8                IPV6_Frame_RX
  .bss.RegisteredV6MultiGroups
-                0x40193b6c        0x2 nblibs\libnetburner.a(ipv6_multicast.o)
-                0x40193b6c                RegisteredV6MultiGroups
+                0x40193cac        0x2 nblibs\libnetburner.a(ipv6_multicast.o)
+                0x40193cac                RegisteredV6MultiGroups
  .bss._ZL13_e_cert_store
-                0x40193b6e        0x4 nblibs\libnetburner.a(hal.o)
+                0x40193cae        0x4 nblibs\libnetburner.a(hal.o)
  .bss._ZL13_s_cert_store
-                0x40193b72        0x4 nblibs\libnetburner.a(hal.o)
+                0x40193cb2        0x4 nblibs\libnetburner.a(hal.o)
  .bss._ZL16cert_copy_buffer
-                0x40193b76     0x2000 nblibs\libnetburner.a(hal.o)
+                0x40193cb6     0x2000 nblibs\libnetburner.a(hal.o)
  .bss._ZL11copy_buffer
-                0x40195b76      0x400 nblibs\libnetburner.a(hal.o)
- .bss.errno     0x40195f76        0x4 nblibs\libnetburner.a(hal.o)
-                0x40195f76                errno
- .bss.heap_ptr  0x40195f7a        0x4 nblibs\libnetburner.a(hal.o)
-                0x40195f7a                heap_ptr
+                0x40195cb6      0x400 nblibs\libnetburner.a(hal.o)
+ .bss.errno     0x401960b6        0x4 nblibs\libnetburner.a(hal.o)
+                0x401960b6                errno
+ .bss.heap_ptr  0x401960ba        0x4 nblibs\libnetburner.a(hal.o)
+                0x401960ba                heap_ptr
  .bss.HalTickMaxCount
-                0x40195f7e        0x4 nblibs\libnetburner.a(hal.o)
-                0x40195f7e                HalTickMaxCount
+                0x401960be        0x4 nblibs\libnetburner.a(hal.o)
+                0x401960be                HalTickMaxCount
  .bss.XTAL_CLOCK
-                0x40195f82        0x4 nblibs\libnetburner.a(hal.o)
-                0x40195f82                XTAL_CLOCK
+                0x401960c2        0x4 nblibs\libnetburner.a(hal.o)
+                0x401960c2                XTAL_CLOCK
  .bss.CPU_CLOCK
-                0x40195f86        0x4 nblibs\libnetburner.a(hal.o)
-                0x40195f86                CPU_CLOCK
+                0x401960c6        0x4 nblibs\libnetburner.a(hal.o)
+                0x401960c6                CPU_CLOCK
  .bss.DoEtherSwitch
-                0x40195f8a       0x26 nblibs\libnetburner.a(ethernet.o)
-                0x40195f8a                DoEtherSwitch
+                0x401960ca       0x26 nblibs\libnetburner.a(ethernet.o)
+                0x401960ca                DoEtherSwitch
  .bss._ZL9int_depth
-                0x40195fb0        0x4 nblibs\libnetburner.a(ethernet.o)
- .bss.trcr      0x40195fb4        0x4 nblibs\libnetburner.a(ethernet.o)
-                0x40195fb4                trcr
+                0x401960f0        0x4 nblibs\libnetburner.a(ethernet.o)
+ .bss.trcr      0x401960f4        0x4 nblibs\libnetburner.a(ethernet.o)
+                0x401960f4                trcr
  .bss._ZL10bFirstInit
-                0x40195fb8        0x1 nblibs\libnetburner.a(ethernet.o)
- *fill*         0x40195fb9        0x1 
+                0x401960f8        0x1 nblibs\libnetburner.a(ethernet.o)
+ *fill*         0x401960f9        0x1 
  .bss.port1state
-                0x40195fba        0x4 nblibs\libnetburner.a(ethernet.o)
-                0x40195fba                port1state
+                0x401960fa        0x4 nblibs\libnetburner.a(ethernet.o)
+                0x401960fa                port1state
  .bss.shadowPorts
-                0x40195fbe     0x2048 nblibs\libnetburner.a(etherswitch.o)
-                0x40195fbe                shadowPorts
+                0x401960fe     0x2048 nblibs\libnetburner.a(etherswitch.o)
+                0x401960fe                shadowPorts
  .bss.lastTableMaintIdx
-                0x40198006        0x4 nblibs\libnetburner.a(etherswitch.o)
-                0x40198006                lastTableMaintIdx
- .bss.RevMac    0x4019800a        0x8 nblibs\libnetburner.a(etherswitch.o)
-                0x4019800a                RevMac
+                0x40198146        0x4 nblibs\libnetburner.a(etherswitch.o)
+                0x40198146                lastTableMaintIdx
+ .bss.RevMac    0x4019814a        0x8 nblibs\libnetburner.a(etherswitch.o)
+                0x4019814a                RevMac
  .bss.p1Uart2Rxd
-                0x40198012        0x4 nblibs\libnetburner.a(serial.o)
-                0x40198012                p1Uart2Rxd
+                0x40198152        0x4 nblibs\libnetburner.a(serial.o)
+                0x40198152                p1Uart2Rxd
  .bss.serisrtxcx
-                0x40198016        0x4 nblibs\libnetburner.a(serial.o)
-                0x40198016                serisrtxcx
+                0x40198156        0x4 nblibs\libnetburner.a(serial.o)
+                0x40198156                serisrtxcx
  .bss.serisrtxc
-                0x4019801a        0x4 nblibs\libnetburner.a(serial.o)
-                0x4019801a                serisrtxc
+                0x4019815a        0x4 nblibs\libnetburner.a(serial.o)
+                0x4019815a                serisrtxc
  .bss.LastGCChan
-                0x4019801e        0x4 nblibs\libnetburner.a(serial.o)
-                0x4019801e                LastGCChan
+                0x4019815e        0x4 nblibs\libnetburner.a(serial.o)
+                0x4019815e                LastGCChan
  .bss.LastIsrChan
-                0x40198022        0x4 nblibs\libnetburner.a(serial.o)
-                0x40198022                LastIsrChan
+                0x40198162        0x4 nblibs\libnetburner.a(serial.o)
+                0x40198162                LastIsrChan
  .bss.serisrtcnt
-                0x40198026        0x4 nblibs\libnetburner.a(serial.o)
-                0x40198026                serisrtcnt
+                0x40198166        0x4 nblibs\libnetburner.a(serial.o)
+                0x40198166                serisrtcnt
  .bss.serisrrcnt
-                0x4019802a        0x4 nblibs\libnetburner.a(serial.o)
-                0x4019802a                serisrrcnt
+                0x4019816a        0x4 nblibs\libnetburner.a(serial.o)
+                0x4019816a                serisrrcnt
  .bss.serisrcnt
-                0x4019802e        0x4 nblibs\libnetburner.a(serial.o)
-                0x4019802e                serisrcnt
+                0x4019816e        0x4 nblibs\libnetburner.a(serial.o)
+                0x4019816e                serisrcnt
  .bss.Serial_Ioexp
-                0x40198032       0x18 nblibs\libnetburner.a(serial.o)
-                0x40198032                Serial_Ioexp
+                0x40198172       0x18 nblibs\libnetburner.a(serial.o)
+                0x40198172                Serial_Ioexp
  .bss.SerialInfoObj
-                0x4019804a        0x8 nblibs\libnetburner.a(serial.o)
-                0x4019804a                SerialInfoObj
+                0x4019818a        0x8 nblibs\libnetburner.a(serial.o)
+                0x4019818a                SerialInfoObj
  .bss._ZL9bMapsDone
-                0x40198052        0x1 nblibs\libnetburner.a(serial.o)
- *fill*         0x40198053        0x1 
- .bss.UartData  0x40198054      0x3ac nblibs\libnetburner.a(serial.o)
-                0x40198054                UartData
- .bss.Uarts     0x40198400       0x28 nblibs\libnetburner.a(serial.o)
-                0x40198400                Uarts
+                0x40198192        0x1 nblibs\libnetburner.a(serial.o)
+ *fill*         0x40198193        0x1 
+ .bss.UartData  0x40198194      0x3ac nblibs\libnetburner.a(serial.o)
+                0x40198194                UartData
+ .bss.Uarts     0x40198540       0x28 nblibs\libnetburner.a(serial.o)
+                0x40198540                Uarts
  .bss._ZL13Serial_FD_Map
-                0x40198428       0x28 nblibs\libnetburner.a(serial.o)
+                0x40198568       0x28 nblibs\libnetburner.a(serial.o)
  .bss._ZL12ReverseFDMap
-                0x40198450      0x100 nblibs\libnetburner.a(serial.o)
+                0x40198590      0x100 nblibs\libnetburner.a(serial.o)
  .bss.WDEBUGSTRUCTP
-                0x40198550        0x4 nblibs\libnetburner.a(debugtrap.o)
-                0x40198550                WDEBUGSTRUCTP
- *fill*         0x40198554        0xc 
+                0x40198690        0x4 nblibs\libnetburner.a(debugtrap.o)
+                0x40198690                WDEBUGSTRUCTP
+ *fill*         0x40198694        0xc 
  .bss.WDEBUGSTRUCT
-                0x40198560        0x8 nblibs\libnetburner.a(debugtrap.o)
-                0x40198560                WDEBUGSTRUCT
+                0x401986a0        0x8 nblibs\libnetburner.a(debugtrap.o)
+                0x401986a0                WDEBUGSTRUCT
  .bss._ZL20HasRtosSetUpHappened
-                0x40198568        0x4 nblibs\libnetburner.a(nbrtosmain.o)
+                0x401986a8        0x4 nblibs\libnetburner.a(nbrtosmain.o)
  .bss.OSIdleTaskStk
-                0x4019856c     0x2000 nblibs\libnetburner.a(nbrtosmain.o)
-                0x4019856c                OSIdleTaskStk
+                0x401986ac     0x2000 nblibs\libnetburner.a(nbrtosmain.o)
+                0x401986ac                OSIdleTaskStk
  .bss._ZL15already_in_trap
-                0x4019a56c        0x1 nblibs\libnetburner.a(smarttrap.o)
- *fill*         0x4019a56d        0x1 
+                0x4019a6ac        0x1 nblibs\libnetburner.a(smarttrap.o)
+ *fill*         0x4019a6ad        0x1 
  .bss.SwapInTCB
-                0x4019a56e        0x4 nblibs\libnetburner.a(smarttrap.o)
-                0x4019a56e                SwapInTCB
- .bss.SwapInA7  0x4019a572        0x4 nblibs\libnetburner.a(smarttrap.o)
-                0x4019a572                SwapInA7
+                0x4019a6ae        0x4 nblibs\libnetburner.a(smarttrap.o)
+                0x4019a6ae                SwapInTCB
+ .bss.SwapInA7  0x4019a6b2        0x4 nblibs\libnetburner.a(smarttrap.o)
+                0x4019a6b2                SwapInA7
  .bss.SwapOutTCB
-                0x4019a576        0x4 nblibs\libnetburner.a(smarttrap.o)
-                0x4019a576                SwapOutTCB
+                0x4019a6b6        0x4 nblibs\libnetburner.a(smarttrap.o)
+                0x4019a6b6                SwapOutTCB
  .bss.SwapOutA7
-                0x4019a57a        0x4 nblibs\libnetburner.a(smarttrap.o)
-                0x4019a57a                SwapOutA7
- .bss.used_a7   0x4019a57e        0x4 nblibs\libnetburner.a(smarttrap.o)
+                0x4019a6ba        0x4 nblibs\libnetburner.a(smarttrap.o)
+                0x4019a6ba                SwapOutA7
+ .bss.used_a7   0x4019a6be        0x4 nblibs\libnetburner.a(smarttrap.o)
  .bss.smart_trap_stack
-                0x4019a582      0x400 nblibs\libnetburner.a(smarttrap.o)
+                0x4019a6c2      0x400 nblibs\libnetburner.a(smarttrap.o)
  .bss.smart_trap_a7
-                0x4019a982        0x4 nblibs\libnetburner.a(smarttrap.o)
+                0x4019aac2        0x4 nblibs\libnetburner.a(smarttrap.o)
  .bss._ZL6cpdump
-                0x4019a986        0x4 nblibs\libnetburner.a(taskmon.o)
+                0x4019aac6        0x4 nblibs\libnetburner.a(taskmon.o)
  .bss._ZL11dump_buffer
-                0x4019a98a     0x1000 nblibs\libnetburner.a(taskmon.o)
+                0x4019aaca     0x1000 nblibs\libnetburner.a(taskmon.o)
  .bss.gSocksProxy
-                0x4019b98a        0x4 nblibs\libnetburner.a(Socks.o)
-                0x4019b98a                gSocksProxy
+                0x4019baca        0x4 nblibs\libnetburner.a(Socks.o)
+                0x4019baca                gSocksProxy
  .bss._ZZ6AgeArpvE6Oldest
-                0x4019b98e        0x4 nblibs\libnetburner.a(arp.o)
+                0x4019bace        0x4 nblibs\libnetburner.a(arp.o)
  .bss._ZL13ArpTimeAction
-                0x4019b992       0x1c nblibs\libnetburner.a(arp.o)
+                0x4019bad2       0x1c nblibs\libnetburner.a(arp.o)
  .bss._ZL8pLastArp
-                0x4019b9ae        0x4 nblibs\libnetburner.a(arp.o)
+                0x4019baee        0x4 nblibs\libnetburner.a(arp.o)
  .bss._ZL7ArpFree
-                0x4019b9b2        0x2 nblibs\libnetburner.a(arp.o)
+                0x4019baf2        0x2 nblibs\libnetburner.a(arp.o)
  .bss._ZL7ArpHead
-                0x4019b9b4        0x2 nblibs\libnetburner.a(arp.o)
+                0x4019baf4        0x2 nblibs\libnetburner.a(arp.o)
  .bss._ZL7ArpTail
-                0x4019b9b6        0x2 nblibs\libnetburner.a(arp.o)
+                0x4019baf6        0x2 nblibs\libnetburner.a(arp.o)
  .bss._ZL7basearp
-                0x4019b9b8     0x1e00 nblibs\libnetburner.a(arp.o)
+                0x4019baf8     0x1e00 nblibs\libnetburner.a(arp.o)
  .bss.wArpLifetime
-                0x4019d7b8        0x2 nblibs\libnetburner.a(arp.o)
-                0x4019d7b8                wArpLifetime
+                0x4019d8f8        0x2 nblibs\libnetburner.a(arp.o)
+                0x4019d8f8                wArpLifetime
  .bss.ARP_critical_section
-                0x4019d7ba       0x10 nblibs\libnetburner.a(arp.o)
-                0x4019d7ba                ARP_critical_section
- .bss.b64io     0x4019d7ca       0x18 nblibs\libnetburner.a(base64.o)
-                0x4019d7ca                b64io
+                0x4019d8fa       0x10 nblibs\libnetburner.a(arp.o)
+                0x4019d8fa                ARP_critical_section
+ .bss.b64io     0x4019d90a       0x18 nblibs\libnetburner.a(base64.o)
+                0x4019d90a                b64io
  .bss._ZL7b64info
-                0x4019d7e2        0x8 nblibs\libnetburner.a(base64.o)
+                0x4019d922        0x8 nblibs\libnetburner.a(base64.o)
  .bss._ZN13NBRtosInitObj13bAlreadInitedE
-                0x4019d7ea        0x1 nblibs\libnetburner.a(cppmain.o)
-                0x4019d7ea                _ZN13NBRtosInitObj13bAlreadInitedE
- *fill*         0x4019d7eb        0x1 
+                0x4019d92a        0x1 nblibs\libnetburner.a(cppmain.o)
+                0x4019d92a                _ZN13NBRtosInitObj13bAlreadInitedE
+ *fill*         0x4019d92b        0x1 
  .bss._ZN13NBRtosInitObj5pHeadE
-                0x4019d7ec        0x4 nblibs\libnetburner.a(cppmain.o)
-                0x4019d7ec                _ZN13NBRtosInitObj5pHeadE
+                0x4019d92c        0x4 nblibs\libnetburner.a(cppmain.o)
+                0x4019d92c                _ZN13NBRtosInitObj5pHeadE
  .bss.DeviceI2cSem
-                0x4019d7f0       0x10 nblibs\libnetburner.a(device.o)
-                0x4019d7f0                DeviceI2cSem
+                0x4019d930       0x10 nblibs\libnetburner.a(device.o)
+                0x4019d930                DeviceI2cSem
  .bss.DeviceQspiSem
-                0x4019d800       0x10 nblibs\libnetburner.a(device.o)
-                0x4019d800                DeviceQspiSem
+                0x4019d940       0x10 nblibs\libnetburner.a(device.o)
+                0x4019d940                DeviceQspiSem
  .bss._ZL9pDiagHead
-                0x4019d810        0x4 nblibs\libnetburner.a(diagnostic_core.o)
+                0x4019d950        0x4 nblibs\libnetburner.a(diagnostic_core.o)
  .bss._ZZN16discover_servlet19ProcessSelectResultER6fd_setS1_S1_E3ctx
-                0x4019d814      0x204 nblibs\libnetburner.a(discoveryservlet.o)
+                0x4019d954      0x204 nblibs\libnetburner.a(discoveryservlet.o)
  .bss._ZZN16discover_servlet19ProcessSelectResultER6fd_setS1_S1_E9encbuffer
-                0x4019da18      0x200 nblibs\libnetburner.a(discoveryservlet.o)
+                0x4019db58      0x200 nblibs\libnetburner.a(discoveryservlet.o)
  .bss._ZZN16discover_servlet19ProcessSelectResultER6fd_setS1_S1_E9outbuffer
-                0x4019dc18      0x300 nblibs\libnetburner.a(discoveryservlet.o)
+                0x4019dd58      0x300 nblibs\libnetburner.a(discoveryservlet.o)
  .bss._ZL8DnsCache
-                0x4019df18      0x2e0 nblibs\libnetburner.a(dns.o)
+                0x4019e058      0x2e0 nblibs\libnetburner.a(dns.o)
  .bss._ZL12DnsCacheCrit
-                0x4019e1f8       0x10 nblibs\libnetburner.a(dns.o)
+                0x4019e338       0x10 nblibs\libnetburner.a(dns.o)
  .bss._ZL9DNS_count
-                0x4019e208        0x2 nblibs\libnetburner.a(dns.o)
+                0x4019e348        0x2 nblibs\libnetburner.a(dns.o)
  .bss.mDNSServer
-                0x4019e20a       0x10 nblibs\libnetburner.a(mDNS.o)
-                0x4019e20a                mDNSServer
+                0x4019e34a       0x10 nblibs\libnetburner.a(mDNS.o)
+                0x4019e34a                mDNSServer
  .bss._ZL19MultiCastTimeAction
-                0x4019e21a       0x1c nblibs\libnetburner.a(multicast.o)
+                0x4019e35a       0x1c nblibs\libnetburner.a(multicast.o)
  .bss.MulticastRegistrationCrit
-                0x4019e236       0x10 nblibs\libnetburner.a(multicast.o)
-                0x4019e236                MulticastRegistrationCrit
+                0x4019e376       0x10 nblibs\libnetburner.a(multicast.o)
+                0x4019e376                MulticastRegistrationCrit
  .bss._ZL12nSawV1Router
-                0x4019e246        0x4 nblibs\libnetburner.a(multicast.o)
+                0x4019e386        0x4 nblibs\libnetburner.a(multicast.o)
  .bss.nPendingResponse
-                0x4019e24a        0x4 nblibs\libnetburner.a(multicast.o)
-                0x4019e24a                nPendingResponse
+                0x4019e38a        0x4 nblibs\libnetburner.a(multicast.o)
+                0x4019e38a                nPendingResponse
  .bss.MaxMultiUsed
-                0x4019e24e        0x2 nblibs\libnetburner.a(multicast.o)
-                0x4019e24e                MaxMultiUsed
- .bss.mrecs     0x4019e250      0x380 nblibs\libnetburner.a(multicast.o)
-                0x4019e250                mrecs
+                0x4019e38e        0x2 nblibs\libnetburner.a(multicast.o)
+                0x4019e38e                MaxMultiUsed
+ .bss.mrecs     0x4019e390      0x380 nblibs\libnetburner.a(multicast.o)
+                0x4019e390                mrecs
  .bss._ZZ11aes_set_keyP11aes_contextPKhiE7kt_init
-                0x4019e5d0        0x4 nblibs\libnetburner.a(nbaes.o)
+                0x4019e710        0x4 nblibs\libnetburner.a(nbaes.o)
  .bss._ZZ11aes_set_keyP11aes_contextPKhiE7ft_init
-                0x4019e5d4        0x4 nblibs\libnetburner.a(nbaes.o)
- .bss._ZL3KT3   0x4019e5d8      0x400 nblibs\libnetburner.a(nbaes.o)
- .bss._ZL3KT2   0x4019e9d8      0x400 nblibs\libnetburner.a(nbaes.o)
- .bss._ZL3KT1   0x4019edd8      0x400 nblibs\libnetburner.a(nbaes.o)
- .bss._ZL3KT0   0x4019f1d8      0x400 nblibs\libnetburner.a(nbaes.o)
+                0x4019e714        0x4 nblibs\libnetburner.a(nbaes.o)
+ .bss._ZL3KT3   0x4019e718      0x400 nblibs\libnetburner.a(nbaes.o)
+ .bss._ZL3KT2   0x4019eb18      0x400 nblibs\libnetburner.a(nbaes.o)
+ .bss._ZL3KT1   0x4019ef18      0x400 nblibs\libnetburner.a(nbaes.o)
+ .bss._ZL3KT0   0x4019f318      0x400 nblibs\libnetburner.a(nbaes.o)
  .bss.rnd_collect
-                0x4019f5d8      0x200 nblibs\libnetburner.a(system.o)
-                0x4019f5d8                rnd_collect
- .bss.rnd_cnt   0x4019f7d8        0x4 nblibs\libnetburner.a(system.o)
-                0x4019f7d8                rnd_cnt
+                0x4019f718      0x200 nblibs\libnetburner.a(system.o)
+                0x4019f718                rnd_collect
+ .bss.rnd_cnt   0x4019f918        0x4 nblibs\libnetburner.a(system.o)
+                0x4019f918                rnd_cnt
  .bss.watchdog_service_function
-                0x4019f7dc        0x4 nblibs\libnetburner.a(watchdog.o)
-                0x4019f7dc                watchdog_service_function
+                0x4019f91c        0x4 nblibs\libnetburner.a(watchdog.o)
+                0x4019f91c                watchdog_service_function
  .bss._ZN2NB2V66DHCPv613DHCPv6Message11ALL_SERVERSE
-                0x4019f7e0       0x10 nblibs\libnetburner.a(ipv6_dhcp.o)
-                0x4019f7e0                _ZN2NB2V66DHCPv613DHCPv6Message11ALL_SERVERSE
+                0x4019f920       0x10 nblibs\libnetburner.a(ipv6_dhcp.o)
+                0x4019f920                _ZN2NB2V66DHCPv613DHCPv6Message11ALL_SERVERSE
  .bss._ZN2NB2V66DHCPv613DHCPv6Message21ALL_RELAY_AND_SERVERSE
-                0x4019f7f0       0x10 nblibs\libnetburner.a(ipv6_dhcp.o)
-                0x4019f7f0                _ZN2NB2V66DHCPv613DHCPv6Message21ALL_RELAY_AND_SERVERSE
+                0x4019f930       0x10 nblibs\libnetburner.a(ipv6_dhcp.o)
+                0x4019f930                _ZN2NB2V66DHCPv613DHCPv6Message21ALL_RELAY_AND_SERVERSE
  .bss._ZN2NB2V66DHCPv68pReplyCBE
-                0x4019f800        0x4 nblibs\libnetburner.a(ipv6_dhcp.o)
-                0x4019f800                _ZN2NB2V66DHCPv68pReplyCBE
+                0x4019f940        0x4 nblibs\libnetburner.a(ipv6_dhcp.o)
+                0x4019f940                _ZN2NB2V66DHCPv68pReplyCBE
  .bss._ZN2NB2V66DHCPv616pRequestOptionCBE
-                0x4019f804        0x4 nblibs\libnetburner.a(ipv6_dhcp.o)
-                0x4019f804                _ZN2NB2V66DHCPv616pRequestOptionCBE
+                0x4019f944        0x4 nblibs\libnetburner.a(ipv6_dhcp.o)
+                0x4019f944                _ZN2NB2V66DHCPv616pRequestOptionCBE
  .bss._ZN2NB2V66DHCPv69pAddOROCBE
-                0x4019f808        0x4 nblibs\libnetburner.a(ipv6_dhcp.o)
-                0x4019f808                _ZN2NB2V66DHCPv69pAddOROCBE
+                0x4019f948        0x4 nblibs\libnetburner.a(ipv6_dhcp.o)
+                0x4019f948                _ZN2NB2V66DHCPv69pAddOROCBE
  .bss._ZL15multicast_count
-                0x4019f80c      0x100 nblibs\libnetburner.a(emulticast.o)
- .bss.md5_used  0x4019f90c        0x1 nblibs\libnetburner.a(nbrandom.o)
-                0x4019f90c                md5_used
- .bss.md5_rand  0x4019f90d       0x10 nblibs\libnetburner.a(nbrandom.o)
-                0x4019f90d                md5_rand
- .bss.read_cnt  0x4019f91d        0x1 nblibs\libnetburner.a(nbrandom.o)
-                0x4019f91d                read_cnt
+                0x4019f94c      0x100 nblibs\libnetburner.a(emulticast.o)
+ .bss.md5_used  0x4019fa4c        0x1 nblibs\libnetburner.a(nbrandom.o)
+                0x4019fa4c                md5_used
+ .bss.md5_rand  0x4019fa4d       0x10 nblibs\libnetburner.a(nbrandom.o)
+                0x4019fa4d                md5_rand
+ .bss.read_cnt  0x4019fa5d        0x1 nblibs\libnetburner.a(nbrandom.o)
+                0x4019fa5d                read_cnt
  .bss.g_wolfMemoryAllocator
-                0x4019f91e       0x3c nblibs\libnetburner.a(NBMalloc.o)
-                0x4019f91e                g_wolfMemoryAllocator
+                0x4019fa5e       0x3c nblibs\libnetburner.a(NBMalloc.o)
+                0x4019fa5e                g_wolfMemoryAllocator
  .bss._ZN12_GLOBAL__N_114emergency_poolE
-                0x4019f95a       0x10 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_alloc.o)
+                0x4019fa9a       0x10 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_alloc.o)
  .bss._ZL10eh_globals
-                0x4019f96a        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_globals.o)
+                0x4019faaa        0x8 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(eh_globals.o)
  .bss._ZZN9__gnu_cxx27__verbose_terminate_handlerEvE11terminating
-                0x4019f972        0x1 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(vterminate.o)
- *fill*         0x4019f973        0x1 
+                0x4019fab2        0x1 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libstdc++.a(vterminate.o)
+ *fill*         0x4019fab3        0x1 
  .bss.__malloc_current_mallinfo
-                0x4019f974       0x28 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-mallinfor.o)
-                0x4019f974                __malloc_current_mallinfo
+                0x4019fab4       0x28 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-mallinfor.o)
+                0x4019fab4                __malloc_current_mallinfo
  .bss.__malloc_sbrk_start
-                0x4019f99c        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-mallocr.o)
-                0x4019f99c                __malloc_sbrk_start
+                0x4019fadc        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-mallocr.o)
+                0x4019fadc                __malloc_sbrk_start
  .bss.__malloc_free_list
-                0x4019f9a0        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-mallocr.o)
-                0x4019f9a0                __malloc_free_list
+                0x4019fae0        0x4 c:/nburn/gcc/bin/../lib/gcc/m68k-unknown-elf/8.1.0/../../../../m68k-unknown-elf/lib/m54455\libc.a(lib_a-nano-mallocr.o)
+                0x4019fae0                __malloc_free_list
  *(COMMON)
-                0x4019f9a8                _end = ALIGN (0x8)
-                0x4019f9a8                __end = _end
+                0x4019fae8                _end = ALIGN (0x8)
+                0x4019fae8                __end = _end
 
 .stab
  *(.stab)
