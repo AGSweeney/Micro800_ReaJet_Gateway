@@ -28,11 +28,11 @@ S19FILE :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-. \
 src/core \
 src/enip \
 src/http \
 src \
 src/mapping \
 src/reajet \
+. \
 
