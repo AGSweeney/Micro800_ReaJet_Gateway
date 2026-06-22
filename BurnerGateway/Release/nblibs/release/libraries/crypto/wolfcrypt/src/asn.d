@@ -1,18 +1,22 @@
 nblibs/release/libraries/crypto/wolfcrypt/src/asn.o: \
  C:/nburn/libraries/crypto/wolfcrypt/src/asn.c \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/libwolfssl_sources.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/types.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/settings.h \
- C:/nburn/libraries/include/crypto/platform/MOD5441X/user_settings.h \
+ C:/nburn/libraries/include/crypto/platform/NANO54415/user_settings.h \
  C:/nburn/nbrtos/include/predef.h \
  C:/nburn/nbrtos/include/predef-overload.h \
  C:/nburn/nbrtos/include/endian.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/cpu.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/visibility.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/error-crypt.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/types.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/wc_port.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/oid_sum.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/memory.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/error-crypt.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/logging.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/rsa.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/wolfmath.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/sp_int.h \
@@ -23,8 +27,9 @@ nblibs/release/libraries/crypto/wolfcrypt/src/asn.o: \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/random.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/dh.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ecc.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ed25519.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn_public.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/dsa.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/coding.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/md2.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/hmac.h \
@@ -34,11 +39,8 @@ nblibs/release/libraries/crypto/wolfcrypt/src/asn.o: \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/rc2.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/wc_encrypt.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/chacha.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/logging.h \
  C:/nburn/libraries/include/crypto/wolfcrypt/src/misc.c \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/misc.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ecc.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ed25519.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/curve25519.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/fe_operations.h \
  C:/nburn/libraries/include/crypto/wolfssl/internal.h \
@@ -46,7 +48,6 @@ nblibs/release/libraries/crypto/wolfcrypt/src/asn.o: \
  C:/nburn/libraries/include/crypto/wolfssl/version.h \
  C:/nburn/libraries/include/crypto/wolfssl/error-ssl.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/pkcs12.h \
- C:/nburn/libraries/include/crypto/wolfssl/openssl/compat_types.h \
  C:/nburn/libraries/include/crypto/wolfssl/callbacks.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfio.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/poly1305.h \
@@ -54,9 +55,13 @@ nblibs/release/libraries/crypto/wolfcrypt/src/asn.o: \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/chacha20_poly1305.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/hpke.h
 
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/libwolfssl_sources.h:
+
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/types.h:
+
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/settings.h:
 
-C:/nburn/libraries/include/crypto/platform/MOD5441X/user_settings.h:
+C:/nburn/libraries/include/crypto/platform/NANO54415/user_settings.h:
 
 C:/nburn/nbrtos/include/predef.h:
 
@@ -68,17 +73,21 @@ C:/nburn/arch/coldfire/cpu/MCF5441X/include/cpu.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/visibility.h:
 
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/error-crypt.h:
-
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/types.h:
-
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/wc_port.h:
 
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
 
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
+
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/oid_sum.h:
+
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/memory.h:
+
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/error-crypt.h:
+
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/logging.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/rsa.h:
 
@@ -100,9 +109,11 @@ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/dh.h:
 
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn_public.h:
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ecc.h:
 
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/dsa.h:
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ed25519.h:
+
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn_public.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/coding.h:
 
@@ -122,15 +133,9 @@ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/wc_encrypt.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/chacha.h:
 
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/logging.h:
-
 C:/nburn/libraries/include/crypto/wolfcrypt/src/misc.c:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/misc.h:
-
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ecc.h:
-
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ed25519.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/curve25519.h:
 
@@ -145,8 +150,6 @@ C:/nburn/libraries/include/crypto/wolfssl/version.h:
 C:/nburn/libraries/include/crypto/wolfssl/error-ssl.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/pkcs12.h:
-
-C:/nburn/libraries/include/crypto/wolfssl/openssl/compat_types.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/callbacks.h:
 

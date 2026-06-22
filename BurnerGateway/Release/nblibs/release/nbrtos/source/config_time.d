@@ -5,6 +5,7 @@ nblibs/release/nbrtos/source/config_time.o: \
  C:/nburn/nbrtos/include/constants.h C:/nburn/nbrtos/include/predef.h \
  C:/nburn/nbrtos/include/predef-overload.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/arch/coldfire/include/basictypes.h \
  C:/nburn/nbrtos/include/nbrtos.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h \
@@ -14,7 +15,7 @@ nblibs/release/nbrtos/source/config_time.o: \
  C:/nburn/nbrtos/include/nbprintfinternal.h \
  C:/nburn/nbrtos/include/fd_adapter.h C:/nburn/nbrtos/include/iosys.h \
  C:/nburn/nbrtos/include/utils.h \
- C:/nburn/platform/MOD5441X/include/plat_cfg_types.h \
+ C:/nburn/platform/NANO54415/include/plat_cfg_types.h \
  C:/nburn/nbrtos/include/httppost.h C:/nburn/nbrtos/include/http.h \
  C:/nburn/nbrtos/include/json_lexer.h \
  C:/nburn/nbrtos/include/webclient/web_buffers.h
@@ -32,6 +33,8 @@ C:/nburn/nbrtos/include/predef.h:
 C:/nburn/nbrtos/include/predef-overload.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/arch/coldfire/include/basictypes.h:
 
@@ -55,7 +58,7 @@ C:/nburn/nbrtos/include/iosys.h:
 
 C:/nburn/nbrtos/include/utils.h:
 
-C:/nburn/platform/MOD5441X/include/plat_cfg_types.h:
+C:/nburn/platform/NANO54415/include/plat_cfg_types.h:
 
 C:/nburn/nbrtos/include/httppost.h:
 

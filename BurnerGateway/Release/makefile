@@ -75,13 +75,13 @@ main-build: BurnerGateway.bin
 BurnerGateway.bin: $(S19FILE) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: NB Compcode'
-	compcode $(S19FILE) "BurnerGateway.bin" 0xC0040000 0xC1FC0000 -PMOD5441X -B -R -M BurnerGateway.map
+	compcode $(S19FILE) "BurnerGateway.bin" 0x04000 0x800000 -PNANO54415 -B -R -M BurnerGateway.map
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 BurnerGateway.elf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: GNU C/C++ Linker'
-	m68k-unknown-elf-g++ $(OBJS) $(USER_OBJS) $(LIBS) -Wl,-Map="BurnerGateway.map" -Wl,--start-group -lnetburner  -lstdc++ -Wl,--end-group -LC:/nburn/platform/MOD5441X/original/lib -Lnblibs -Wl,-n -TC:/nburn/platform/MOD5441X/lib/MOD5441X.ld -Wl,-RC:/nburn/platform/MOD5441X/lib/sys.ld -Wl,--cref -Wl,--gc-sections -mcpu=54415 -o"BurnerGateway.elf"
+	m68k-unknown-elf-g++ $(OBJS) $(USER_OBJS) $(LIBS) -Wl,-Map="BurnerGateway.map" -Wl,--start-group -lnetburner  -lstdc++ -Wl,--end-group -LC:/nburn/platform/NANO54415/original/lib -Lnblibs -Wl,-n -TC:/nburn/platform/NANO54415/lib/NANO54415.ld -Wl,-RC:/nburn/platform/NANO54415/lib/sys.ld -Wl,--cref -Wl,--gc-sections -mcpu=54415 -o"BurnerGateway.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 
@@ -95,7 +95,7 @@ BurnerGateway.s19: $(ELF) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 
 default.bin: $(ELF) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: NB Flashpack'
-	flashpack -output-target bin -cflag S:0 -cflag S:1 -P MOD5441X -C -cflag S:3 -S -O "default.bin" $(ELF)
+	flashpack -output-target bin -cflag S:0 -cflag S:1 -P NANO54415 -C -cflag S:3 -S -O "default.bin" $(ELF)
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -3,6 +3,7 @@ nblibs/release/nbrtos/source/buffers.o: \
  C:/nburn/nbrtos/include/predef-overload.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/arch/coldfire/include/basictypes.h \
  C:/nburn/nbrtos/include/buffers.h C:/nburn/nbrtos/include/nbrtos.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h C:/nburn/nbrtos/include/ip.h \
@@ -20,6 +21,8 @@ C:/nburn/nbrtos/include/predef-overload.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/arch/coldfire/include/basictypes.h:
 

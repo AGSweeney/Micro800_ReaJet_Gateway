@@ -16,6 +16,7 @@ nblibs/release/libraries/wifi/source/wilc/microchip/driver/nmbus.o: \
  C:/nburn/nbrtos/include/utils.h C:/nburn/nbrtos/include/buffers.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/nbrtos/include/nbrtos.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h \
  C:/nburn/libraries/include/wifi/wilc/microchip/bus_wrapper/nm_bus_wrapper.h \
@@ -56,6 +57,8 @@ C:/nburn/nbrtos/include/buffers.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/nbrtos/include/nbrtos.h:
 

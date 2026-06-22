@@ -5,13 +5,14 @@ nblibs/release/arch/coldfire/source/HiResTimer.o: \
  C:/nburn/nbrtos/include/predef-overload.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/arch/coldfire/include/basictypes.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/sim.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/sim5441x.h \
  C:/nburn/arch/coldfire/include/cfinter.h \
- C:/nburn/platform/MOD5441X/include/pins.h \
- C:/nburn/platform/MOD5441X/include/pinconstant.h \
+ C:/nburn/platform/NANO54415/include/pins.h \
+ C:/nburn/platform/NANO54415/include/pinconstant.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/cpu_pins.h
 
 C:/nburn/arch/coldfire/cpu/MCF5441X/include/HiResTimer.h:
@@ -26,6 +27,8 @@ C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
 
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
+
 C:/nburn/arch/coldfire/include/basictypes.h:
 
 C:/nburn/arch/coldfire/include/nbrtoscpu.h:
@@ -36,8 +39,8 @@ C:/nburn/arch/coldfire/cpu/MCF5441X/include/sim5441x.h:
 
 C:/nburn/arch/coldfire/include/cfinter.h:
 
-C:/nburn/platform/MOD5441X/include/pins.h:
+C:/nburn/platform/NANO54415/include/pins.h:
 
-C:/nburn/platform/MOD5441X/include/pinconstant.h:
+C:/nburn/platform/NANO54415/include/pinconstant.h:
 
 C:/nburn/arch/coldfire/cpu/MCF5441X/include/cpu_pins.h:

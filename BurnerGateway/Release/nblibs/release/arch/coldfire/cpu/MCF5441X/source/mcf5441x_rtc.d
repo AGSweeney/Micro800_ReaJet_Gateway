@@ -4,6 +4,7 @@ nblibs/release/arch/coldfire/cpu/MCF5441X/source/mcf5441x_rtc.o: \
  C:/nburn/nbrtos/include/predef-overload.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/arch/coldfire/include/basictypes.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/sim.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/sim5441x.h \
@@ -22,7 +23,7 @@ nblibs/release/arch/coldfire/cpu/MCF5441X/source/mcf5441x_rtc.o: \
  C:/nburn/nbrtos/include/nbstring.h C:/nburn/nbrtos/include/fd_adapter.h \
  C:/nburn/nbrtos/include/nettimer.h C:/nburn/nbrtos/include/utils.h \
  C:/nburn/nbrtos/include/config_obj.h \
- C:/nburn/platform/MOD5441X/include/plat_cfg_types.h
+ C:/nburn/platform/NANO54415/include/plat_cfg_types.h
 
 C:/nburn/nbrtos/include/predef.h:
 
@@ -31,6 +32,8 @@ C:/nburn/nbrtos/include/predef-overload.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/arch/coldfire/include/basictypes.h:
 
@@ -80,4 +83,4 @@ C:/nburn/nbrtos/include/utils.h:
 
 C:/nburn/nbrtos/include/config_obj.h:
 
-C:/nburn/platform/MOD5441X/include/plat_cfg_types.h:
+C:/nburn/platform/NANO54415/include/plat_cfg_types.h:

@@ -2,7 +2,7 @@ nblibs/release/libraries/ssh/src/ssh_internal.o: \
  C:/nburn/libraries/ssh/src/ssh_internal.c \
  C:/nburn/libraries/include/ssh/wolfssh/ssh.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/settings.h \
- C:/nburn/libraries/include/crypto/platform/MOD5441X/user_settings.h \
+ C:/nburn/libraries/include/crypto/platform/NANO54415/user_settings.h \
  C:/nburn/nbrtos/include/predef.h \
  C:/nburn/nbrtos/include/predef-overload.h \
  C:/nburn/nbrtos/include/endian.h \
@@ -12,6 +12,8 @@ nblibs/release/libraries/ssh/src/ssh_internal.o: \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/wc_port.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/oid_sum.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/memory.h \
  C:/nburn/libraries/include/ssh/wolfssh/settings.h \
  C:/nburn/libraries/include/ssh/wolfssh/visibility.h \
@@ -36,9 +38,8 @@ nblibs/release/libraries/ssh/src/ssh_internal.o: \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/fe_operations.h \
  C:/nburn/libraries/include/crypto/wolfssl/version.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn_public.h \
- C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/dsa.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ed25519.h \
+ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn_public.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/hmac.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/signature.h \
  C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/kdf.h \
@@ -49,7 +50,7 @@ C:/nburn/libraries/include/ssh/wolfssh/ssh.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/settings.h:
 
-C:/nburn/libraries/include/crypto/platform/MOD5441X/user_settings.h:
+C:/nburn/libraries/include/crypto/platform/NANO54415/user_settings.h:
 
 C:/nburn/nbrtos/include/predef.h:
 
@@ -68,6 +69,10 @@ C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/wc_port.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
+
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/oid_sum.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/memory.h:
 
@@ -117,11 +122,9 @@ C:/nburn/libraries/include/crypto/wolfssl/version.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn.h:
 
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn_public.h:
-
-C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/dsa.h:
-
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/ed25519.h:
+
+C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/asn_public.h:
 
 C:/nburn/libraries/include/crypto/wolfssl/wolfcrypt/hmac.h:
 

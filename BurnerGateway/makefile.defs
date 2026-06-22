@@ -6,6 +6,18 @@ LOCAL_OVERLOAD_DIR = ../overload
 NBALL = nball
 NBCLEAN = nbclean
 
+# Supported NetBurner platforms (set PLATFORM in NBEclipse project properties).
+SUPPORTED_PLATFORMS = MOD5441X NANO54415
+
+# compcode flash map for AutoUpdate (*_APP.s19) and .bin packaging.
+# Matches NNDK platform/$(PLATFORM)/make/platform.properties (RAWCOMPCODEFLAGS).
+ifeq ($(PLATFORM),MOD5441X)
+	COMPCODEFLAGS = 0xC0040000 0xC1FC0000
+endif
+ifeq ($(PLATFORM),NANO54415)
+	COMPCODEFLAGS = 0x04000 0x800000
+endif
+
 nbfind = $(foreach x,$(wildcard $1*),$(call nbfind,$x/,$2)$(filter $(subst *,%,$2),$x))
 COMPHTML_SRCS := $(call nbfind,$(HTMLDIR)/,*.htm *.html *.HTM *.HTML *.Htm *.Html *.js *.Js *.JS *.css *.CSS *.Css *.jpg *.jpeg *.gif *.png)
 ifneq ($(COMPHTML_SRCS),)

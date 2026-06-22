@@ -8,6 +8,7 @@ nblibs/release/nbrtos/source/servlets/ntpservlet.o: \
  C:/nburn/nbrtos/include/nbprintfinternal.h \
  C:/nburn/nbrtos/include/nbrtos.h C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h \
  C:/nburn/nbrtos/include/buffers.h C:/nburn/nbrtos/include/udp.h \
  C:/nburn/nbrtos/include/ip.h C:/nburn/nbrtos/include/nbtime.h \
@@ -17,7 +18,7 @@ nblibs/release/nbrtos/source/servlets/ntpservlet.o: \
  C:/nburn/nbrtos/include/nbstring.h C:/nburn/nbrtos/include/system.h \
  C:/nburn/nbrtos/include/fd_adapter.h C:/nburn/nbrtos/include/nettimer.h \
  C:/nburn/nbrtos/include/utils.h C:/nburn/nbrtos/include/config_obj.h \
- C:/nburn/platform/MOD5441X/include/plat_cfg_types.h \
+ C:/nburn/platform/NANO54415/include/plat_cfg_types.h \
  C:/nburn/nbrtos/include/startnet.h C:/nburn/nbrtos/include/http.h \
  C:/nburn/nbrtos/include/taskmon.h \
  C:/nburn/nbrtos/include/config_server.h
@@ -41,6 +42,8 @@ C:/nburn/nbrtos/include/nbrtos.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/arch/coldfire/include/nbrtoscpu.h:
 
@@ -72,7 +75,7 @@ C:/nburn/nbrtos/include/utils.h:
 
 C:/nburn/nbrtos/include/config_obj.h:
 
-C:/nburn/platform/MOD5441X/include/plat_cfg_types.h:
+C:/nburn/platform/NANO54415/include/plat_cfg_types.h:
 
 C:/nburn/nbrtos/include/startnet.h:
 

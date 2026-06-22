@@ -5,6 +5,7 @@ nblibs/release/arch/coldfire/source/RenderOneTask.o: \
  C:/nburn/arch/coldfire/include/basictypes.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/nbrtos/include/includes.h C:/nburn/nbrtos/include/nbrtos.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h \
  C:/nburn/nbrtos/include/utils.h C:/nburn/nbrtos/include/nettypes.h \
@@ -21,6 +22,8 @@ C:/nburn/arch/coldfire/include/basictypes.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/nbrtos/include/includes.h:
 

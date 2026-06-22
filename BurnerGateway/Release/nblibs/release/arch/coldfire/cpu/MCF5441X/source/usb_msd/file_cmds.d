@@ -4,6 +4,7 @@ nblibs/release/arch/coldfire/cpu/MCF5441X/source/usb_msd/file_cmds.o: \
  C:/nburn/nbrtos/include/predef-overload.h \
  C:/nburn/nbrtos/include/nbrtos.h C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/arch/coldfire/include/basictypes.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/usb_msd/usb_compiler.h \
@@ -60,6 +61,8 @@ C:/nburn/nbrtos/include/nbrtos.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/arch/coldfire/include/basictypes.h:
 

@@ -5,6 +5,7 @@ nblibs/release/nbrtos/source/ipv6/ipv6_show.o: \
  C:/nburn/nbrtos/include/ipv6/dhcpv6_internal.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/nbrtos/include/nettypes.h \
  C:/nburn/arch/coldfire/include/basictypes.h \
  C:/nburn/nbrtos/include/ipv6/ipv6_addr.h \
@@ -31,6 +32,8 @@ C:/nburn/nbrtos/include/ipv6/dhcpv6_internal.h:
 C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
+
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/nbrtos/include/nettypes.h:
 

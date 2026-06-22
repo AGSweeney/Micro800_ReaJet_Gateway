@@ -10,8 +10,10 @@ nblibs/release/nbrtos/source/diagnostics_platform_default.o: \
  C:/nburn/nbrtos/include/fd_adapter.h C:/nburn/nbrtos/include/iosys.h \
  C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
- C:/nburn/nbrtos/include/buffers.h C:/nburn/nbrtos/include/nbrtos.h \
- C:/nburn/arch/coldfire/include/nbrtoscpu.h
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
+ C:/nburn/nbrtos/include/nbrtos.h \
+ C:/nburn/arch/coldfire/include/nbrtoscpu.h \
+ C:/nburn/nbrtos/include/buffers.h
 
 C:/nburn/nbrtos/include/diagnostics.h:
 
@@ -39,8 +41,10 @@ C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
 
-C:/nburn/nbrtos/include/buffers.h:
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
 
 C:/nburn/nbrtos/include/nbrtos.h:
 
 C:/nburn/arch/coldfire/include/nbrtoscpu.h:
+
+C:/nburn/nbrtos/include/buffers.h:

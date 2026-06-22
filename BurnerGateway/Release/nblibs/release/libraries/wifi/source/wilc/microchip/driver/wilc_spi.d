@@ -9,6 +9,7 @@ nblibs/release/libraries/wifi/source/wilc/microchip/driver/wilc_spi.o: \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/dspi.h \
  C:/nburn/nbrtos/include/nbrtos.h C:/nburn/nbrtos/include/constants.h \
  C:/nburn/nbrtos/include/constants-overload.h \
+ C:/nburn/nbrtos/include/constants-overload-undefs.h \
  C:/nburn/arch/coldfire/include/nbrtoscpu.h \
  C:/nburn/arch/coldfire/cpu/MCF5441X/include/sim5441x.h \
  C:/nburn/libraries/include/wifi/wilc/nbWifiWilcConfig.h \
@@ -19,7 +20,7 @@ nblibs/release/libraries/wifi/source/wilc/microchip/driver/wilc_spi.o: \
  C:/nburn/nbrtos/include/config_obj.h C:/nburn/nbrtos/include/nbstring.h \
  C:/nburn/nbrtos/include/system.h C:/nburn/nbrtos/include/fd_adapter.h \
  C:/nburn/nbrtos/include/iosys.h C:/nburn/nbrtos/include/utils.h \
- C:/nburn/platform/MOD5441X/include/plat_cfg_types.h \
+ C:/nburn/platform/NANO54415/include/plat_cfg_types.h \
  C:/nburn/nbrtos/include/netinterface.h C:/nburn/nbrtos/include/autoip.h \
  C:/nburn/nbrtos/include/nettimer.h C:/nburn/nbrtos/include/udp.h \
  C:/nburn/nbrtos/include/ip.h C:/nburn/nbrtos/include/config_netobj.h \
@@ -61,6 +62,8 @@ C:/nburn/nbrtos/include/constants.h:
 
 C:/nburn/nbrtos/include/constants-overload.h:
 
+C:/nburn/nbrtos/include/constants-overload-undefs.h:
+
 C:/nburn/arch/coldfire/include/nbrtoscpu.h:
 
 C:/nburn/arch/coldfire/cpu/MCF5441X/include/sim5441x.h:
@@ -89,7 +92,7 @@ C:/nburn/nbrtos/include/iosys.h:
 
 C:/nburn/nbrtos/include/utils.h:
 
-C:/nburn/platform/MOD5441X/include/plat_cfg_types.h:
+C:/nburn/platform/NANO54415/include/plat_cfg_types.h:
 
 C:/nburn/nbrtos/include/netinterface.h:
 

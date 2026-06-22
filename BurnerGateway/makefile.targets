@@ -21,11 +21,18 @@ endif
 clean-nblibs:
 	$(RM) $(OBJDIR)
 
-# Legacy AutoUpdate image (*_APP.s19) for MOD5441x first-time flash. Run from Release after build.
+# Legacy AutoUpdate image (*_APP.s19) for first-time flash. Run from Release after build.
 ifneq ($(strip $(BUILD_ARTIFACT_NAME)),)
 app-s19: $(BUILD_ARTIFACT_NAME).s19
-	@echo 'Building AutoUpdate image: $(BUILD_ARTIFACT_NAME)_APP.s19'
-	compcode $< $(BUILD_ARTIFACT_NAME)_APP.s19 0xC0040000 0xC1FC0000 -PMOD5441X -R -M $(BUILD_ARTIFACT_NAME).map
+	@echo 'Building AutoUpdate image: $(BUILD_ARTIFACT_NAME)_APP.s19 (platform $(PLATFORM))'
+	compcode $< $(BUILD_ARTIFACT_NAME)_APP.s19 $(COMPCODEFLAGS) -P$(PLATFORM) -R -M $(BUILD_ARTIFACT_NAME).map
+
+# Override Eclipse-generated compcode rule so .bin packaging follows $(PLATFORM).
+$(BUILD_ARTIFACT_NAME).bin: $(S19FILE) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+	@echo 'Building target: $@'
+	$(PACKCODE) $(S19FILE) $@ -M $(BUILD_ARTIFACT_NAME).map -B -R $(COMPCODEFLAGS) -P$(PLATFORM)
+	@echo 'Finished building target: $@'
+	@echo ' '
 endif
 
 load-nbimage:
